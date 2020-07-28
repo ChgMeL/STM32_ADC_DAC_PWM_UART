@@ -2081,27 +2081,27 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       832         86          0          1        872     335257   main.o
-        28          8        188          0       1024        624   startup_stm32f051x8.o
-       128         26          0         12          0       7545   stm32f0xx_hal.o
-      1114         54          0          0          0       6467   stm32f0xx_hal_adc.o
-       176          0          0          0          0       1366   stm32f0xx_hal_adc_ex.o
-       148         24          0          0          0      10277   stm32f0xx_hal_cortex.o
-        70          0          0          0          0       1774   stm32f0xx_hal_dac.o
-       118          0          0          0          0       1880   stm32f0xx_hal_dac_ex.o
-       422         16          0          0          0       4087   stm32f0xx_hal_dma.o
-       328         26          0          0          0       1604   stm32f0xx_hal_gpio.o
-       520         64          0          0          0       4675   stm32f0xx_hal_msp.o
-      1376         92          0          0          0       4609   stm32f0xx_hal_rcc.o
-       248         12          0          0          0       1364   stm32f0xx_hal_rcc_ex.o
-      1430        110          0          0          0      11931   stm32f0xx_hal_tim.o
-        96         12          0          0          0       1308   stm32f0xx_hal_tim_ex.o
-      1094         34          0          0          0       6121   stm32f0xx_hal_uart.o
-        32          6          0          0          0       2562   stm32f0xx_it.o
-         2          0         24          4          0       1095   system_stm32f0xx.o
+       832         86          0          1        872     334933   main.o
+        28          8        188          0       1024        608   startup_stm32f051x8.o
+       128         26          0         12          0       7453   stm32f0xx_hal.o
+      1114         54          0          0          0       6339   stm32f0xx_hal_adc.o
+       176          0          0          0          0       1342   stm32f0xx_hal_adc_ex.o
+       148         24          0          0          0      10205   stm32f0xx_hal_cortex.o
+        70          0          0          0          0       1730   stm32f0xx_hal_dac.o
+       118          0          0          0          0       1832   stm32f0xx_hal_dac_ex.o
+       422         16          0          0          0       4011   stm32f0xx_hal_dma.o
+       328         26          0          0          0       1576   stm32f0xx_hal_gpio.o
+       520         64          0          0          0       4559   stm32f0xx_hal_msp.o
+      1376         92          0          0          0       4537   stm32f0xx_hal_rcc.o
+       248         12          0          0          0       1336   stm32f0xx_hal_rcc_ex.o
+      1430        110          0          0          0      11675   stm32f0xx_hal_tim.o
+        96         12          0          0          0       1280   stm32f0xx_hal_tim_ex.o
+      1094         34          0          0          0       6025   stm32f0xx_hal_uart.o
+        32          6          0          0          0       2478   stm32f0xx_it.o
+         2          0         24          4          0       1051   system_stm32f0xx.o
 
     ----------------------------------------------------------------------
-      8180        570        244         20       1900     404546   Object Totals
+      8180        570        244         20       1900     402970   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         18          0          0          3          4          0   (incl. Padding)
 
@@ -2147,8 +2147,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8936        596        244         20       1900     401794   Grand Totals
-      8936        596        244         20       1900     401794   ELF Image Totals
+      8936        596        244         20       1900     400218   Grand Totals
+      8936        596        244         20       1900     400218   ELF Image Totals
       8936        596        244         20          0          0   ROM Totals
 
 ==============================================================================

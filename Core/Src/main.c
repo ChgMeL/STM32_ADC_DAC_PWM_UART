@@ -53,15 +53,15 @@
 	*
 	*																FILES STRUCTURE
 	*
-	*	- 00_ADC_VirtualUSBOut_Keilv5.ioc										(STM32ClubMX project)
+	*	- STM32_ADC_DAC_PWM_UART.ioc										(STM32ClubMX project)
 	*	Core\
 	*			src\ 
-	*					- main.c						
+	*					- main.c																(Main program)						
 	*					-	stm32f0xx_hal_msp.h
 	*					- stm32f0xx_it.h
 	*					- system_stm32f0xx.h
 	*	MDK-ARM\
-	*					- 00_ADC_VirtualUSBOut_Keilv5.uvprojx						(Keil v5 Project)
+	*					- STM32_ADC_DAC_PWM_UART.uvprojx						(Keil v5 Project)
 	* DataSheets\
 	*					- STM32F051x4_DataSheet.pdf
 	*					- STM32F0DISCOVERY_DataSheet.pdf
