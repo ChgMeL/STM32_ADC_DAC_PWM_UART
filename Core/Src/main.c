@@ -18,10 +18,10 @@
   *                               GENERAL INFORMATION
   * 
   * @brief      ADC input works at 10kHz, DAC and PWM outputs work at 100 Hz
-  *             Average value goes to UART every 1 second.
+  *             Average value goes to UART DMA every 1 second.
   * @author     Malenkov K.S.
-  * @version    1.0
-  * @date       28.07.2020
+  * @version    1.01
+  * @date       29.07.2020
   * @warning    This program is made only with educational goal.
   * 
   ****************************************************************************
@@ -30,26 +30,28 @@
   *
   * Необходимо реализовать чтение значений со входа АЦП с использованием DMA с дискретизацией 10 КГц 
   * и установки полученных усреднённых значений на выходе ЦАП и PWM раз в 10млСек. 
-  * А так же выдаче усреднённых за 1 секунду значений по интерфейсу USB (Virtual COM)*. 
+  * А так же выдаче усреднённых за 1 секунду значений по USART DMA*. 
   * Полученные значения выводить в мили вольтах, формат представления в ASCII кодах с символом перевода строки на конце 
   * (пример: «1500 mV\r»). 
   * Дублировать вывод информации по SWD интерфейсу в терминал IDE Keil**.
   *
 	*	*Вывод в USB (Virtual COM PORT) не реализован из-за отсутствия данной функции в ПО STM32CubeMX и соответственно МК.
-	*	*Из-за показанной ошибки в IDE Keil "Target HW not present" сделан вывод, что так же данная функция невозможна
+	*	 Заменено на USART DMA.
+	*	*�?з-за показанной ошибки в IDE Keil "Target HW not present" сделан вывод, что так же данная функция невозможна
 	*		на данной отладочной плате.
 	*
-	*	!!! В связи с этим была реализована функация вывода информации по протоколу UART 
-	*		(номера контактов и параметры работы UART см. в описании пинов)
+	*	
+	*		
 	*
 	******************************************************************************
-	*																HARDWARE INFO
+	*	@brief	
+	*																	HARDWARE INFO
 	*
-	* @Developmentboard 				: STM32F0DISCOVERY
-	* @Microcontroller					:	STM32F051R8T6	(64KB Flash,8 KB RAM, 48 MHz max)
-	*	@FrequencyCLK							: F = 8 MHz
-	*	@DataSheetDevBoard				: https://static.chipdip.ru/lib/735/DOC000735976.pdf
-	*	@DataSheetMicrocontroller	: https://ru.mouser.com/datasheet/2/389/dm00039193-1797631.pdf
+	* Developmentboard 					: STM32F0DISCOVERY
+	* Microcontroller						:	STM32F051R8T6	(64KB Flash,8 KB RAM, 48 MHz max)
+	*	FrequencyCLK							: F = 8 MHz
+	*	DataSheetDevBoard					: https://static.chipdip.ru/lib/735/DOC000735976.pdf
+	*	DataSheetMicrocontroller	: https://ru.mouser.com/datasheet/2/389/dm00039193-1797631.pdf
 	*
 	*																FILES STRUCTURE
 	*
@@ -61,7 +63,7 @@
 	*					- stm32f0xx_it.h
 	*					- system_stm32f0xx.h
 	*	MDK-ARM\
-	*					- STM32_ADC_DAC_PWM_UART.uvprojx						(Keil v5 Project)
+	*					- STM32_ADC_DAC_PWM_UART.uvprojx				(Keil v5 Project)
 	* DataSheets\
 	*					- STM32F051x4_DataSheet.pdf
 	*					- STM32F0DISCOVERY_DataSheet.pdf
@@ -122,6 +124,7 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 char trans_str[63];																													///< Variable for Text(string) to UART
@@ -251,7 +254,8 @@ int main(void)
 				}
 				ADC_Res_avg_to_UART /= SAMPLES_NUMBER;
 				snprintf(trans_str, 63, "%d mV\r\n", ADC_Res_avg_to_UART * 732 / 1000);
-				HAL_UART_Transmit(&huart1, (uint8_t *)trans_str, strlen(trans_str), 100);
+				huart1.gState = HAL_UART_STATE_READY;
+				HAL_UART_Transmit_DMA(&huart1, (uint8_t *)trans_str, strlen(trans_str));
 				j = 0;																	
 				ADC_Res_avg_to_UART = 0;
 			}
@@ -545,6 +549,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
 
