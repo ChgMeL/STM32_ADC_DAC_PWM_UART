@@ -2,90 +2,83 @@
 /**
   ******************************************************************************
   * @file           : main.c
-  * @brief          : Main program body
+  * @brief          : <h2><center>Основная программа</center></h2>
   ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  *                               GENERAL INFORMATION
   * 
-  * @brief      ADC input works at 10kHz, DAC and PWM outputs work at 100 Hz
-  *             Average value goes to UART DMA every 1 second.
-  * @author     Malenkov K.S.
-  * @version    1.01
-  * @date       29.07.2020
-  * @warning    This program is made only with educational goal.
+  *
+  ******************************************************************************
+  ***************************************************************************
+  *                  <h3><center>Общая информация</center></h3>
+  * 
+  * @brief      Работа с АЦП в режиме DMA, ЦАП, ШИМ сигналом и UART в режиме DMA.
+  *  
+  * @author     Маленков К.С.
+  * @version    1.02
+  * @date       30.07.2020
+  * @warning    Эта программа используется в образовательных целях.
   * 
   ****************************************************************************
+  ****************************************************************************
   *
-  *																		THE TASK
+  *													<h2><center>Условие задачи</center></h2>
   *
   * Необходимо реализовать чтение значений со входа АЦП с использованием DMA с дискретизацией 10 КГц 
   * и установки полученных усреднённых значений на выходе ЦАП и PWM раз в 10млСек. 
-  * А так же выдаче усреднённых за 1 секунду значений по USART DMA*. 
+  * А так же выдаче усреднённых за 1 секунду значений по USART DMA(1)). 
   * Полученные значения выводить в мили вольтах, формат представления в ASCII кодах с символом перевода строки на конце 
   * (пример: «1500 mV\r»). 
-  * Дублировать вывод информации по SWD интерфейсу в терминал IDE Keil**.
+  * Дублировать вывод информации по SWD интерфейсу в терминал IDE Keil(2).
   *
-	*	*Вывод в USB (Virtual COM PORT) не реализован из-за отсутствия данной функции в ПО STM32CubeMX и соответственно МК.
+	*	1.Вывод в USB (Virtual COM PORT) не реализован из-за отсутствия данной функции в ПО STM32CubeMX и соответственно МК.
 	*	 Заменено на USART DMA.
-	*	*�?з-за показанной ошибки в IDE Keil "Target HW not present" сделан вывод, что так же данная функция невозможна
-	*		на данной отладочной плате.
+	*	2.Отладно по SWD интерфейсу невозможна из-за того, что компания ST заблокировала её на аппаратном уровне в программе Keil.
+	*	****************************************************************************
+	*****************************************************************************
 	*
-	*	
-	*		
-	*
+  *		
+	*											
+  *|		Устройство		|		  Название			
+	*|  :-------------: | :-----------: 	| 
+	*|Отладочная плата	|	STM32F0DISCOVERY|	
+	*|Микроконтроллер		|	STM32F051R8T6		|
+  *
 	******************************************************************************
-	*	@brief	
-	*																	HARDWARE INFO
+  ******************************************************************************
+  *
+	*													<h2><center>Структура проекта</center></h2>
 	*
-	* Developmentboard 					: STM32F0DISCOVERY
-	* Microcontroller						:	STM32F051R8T6	(64KB Flash,8 KB RAM, 48 MHz max)
-	*	FrequencyCLK							: F = 8 MHz
-	*	DataSheetDevBoard					: https://static.chipdip.ru/lib/735/DOC000735976.pdf
-	*	DataSheetMicrocontroller	: https://ru.mouser.com/datasheet/2/389/dm00039193-1797631.pdf
+	*	STM32_ADC_DAC_PWM_UART.ioc 									(Проект STM32ClubMX)										
+	*	Core\src\main.c 														(Основная программа)
+	*	MDK-ARM\STM32_ADC_DAC_PWM_UART.uvprojx			(Проект Keil v5)																										
+	* DataSheets
+	*					- STM32F051x4_DataSheet.pdf					(Справочный материал по микроконтроллеру)
+	*					- STM32F0DISCOVERY_DataSheet.pdf		(Справочный материал по отладочной плате)
+	* 
+	*					
+	*					
+	*******************************************************************************
+  *******************************************************************************
+	*											<h2><center>Используемые контакты</center></h2>
+  *
+	*|		Назначение		|	Номер контакта|					Дополнительная информация				|
+	*|  :-------------: | :-----------: | :------------------------------------:  | 
+	*|				ADC				|			PA0				|							ADC_IN0 (Vref = 3V)***			|
+	*|				DAC				|			PA4				|									DAC1_OUT1								|
+	*|		PWM_OUTPUT		|			PA5				|									TIM2_CH1								|
+	*|		UART_RX				|			PA10			| Baud rate:115200, parity:None  					|
+	*|		UART_TX				|			PA9				|						^															|
+	*|		OSC_IN				|			PF0				|		 	Внешний кварцевый резонатор					|
+	*|		OSC_OUT				|			PF1				|				^																	|
 	*
-	*																FILES STRUCTURE
+	* @warning *** ! : Максимальное значение АЦП может быть 3В !
+	******************************************************************************
+  ******************************************************************************
+	*																<h2><center>Параметры счетчиков</center></h2>
 	*
-	*	- STM32_ADC_DAC_PWM_UART.ioc										(STM32ClubMX project)
-	*	Core\
-	*			src\ 
-	*					- main.c																(Main program)						
-	*					-	stm32f0xx_hal_msp.h
-	*					- stm32f0xx_it.h
-	*					- system_stm32f0xx.h
-	*	MDK-ARM\
-	*					- STM32_ADC_DAC_PWM_UART.uvprojx				(Keil v5 Project)
-	* DataSheets\
-	*					- STM32F051x4_DataSheet.pdf
-	*					- STM32F0DISCOVERY_DataSheet.pdf
-	*
-	*																USED PINS
-
-	*		Description		|			PIN				|						Additional information				|
-	*===========================================================================|
-	*				ADC				|			PA0				|							ADC_IN0 (Vref = 3V)***			|
-	*				DAC				|			PA4				|									DAC1_OUT1								|
-	*		PWM_OUTPUT		|			PA5				|									TIM2_CH1								|
-	*		UART_RX				|			PA10			|USART1_RX Baud rate:115200, parity:None  |
-	*		UART_TX				|			PA9				|									USART1_TX								|
-	*
-	* *** ! Warning: ADC volatage can be maximum 3V !
-	*
-	*																TIMER PARAMETERS
-	*
-	*		Timer name		|									Timer Parameters												|
-	*=============================================================================
-	*			TIM1				|			Prescaler 0, Counter period 799											|
-	*			TIM2				|			Prescaler	0, Counter period	79999										|
+	*|Обозначение	таймера	|									Параметры счетчика											|
+	*|  :-------------: 	| :----------------------------------------------------:  |
+	*|			TIM1					|			Prescaler 0, Counter period 799											|
+	*|			TIM2					|			Prescaler	0, Counter period	79999										|
 	*
 	*
   */
@@ -106,7 +99,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define SAMPLES_NUMBER	100																									///< Value for ADC	Fs = 10 kHz (0.1ms), 100 Samples = 10ms				
+#define SAMPLES_NUMBER	100																									///< Количество преобразований АЦП (частота дискретизации 10кГц, 100 отсчетов = 0.1мс)				
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -115,29 +108,29 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc;
-DMA_HandleTypeDef hdma_adc;
+ADC_HandleTypeDef hadc;																											///< Переменная АЦП
+DMA_HandleTypeDef hdma_adc;																									///< Переменная АЦП в режиме DMA
 
-DAC_HandleTypeDef hdac1;
+DAC_HandleTypeDef hdac1;																										///< Переменная ЦАП 
 
-TIM_HandleTypeDef htim1;
-TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim1;																										///< Переменная Счетчика №1
+TIM_HandleTypeDef htim2;																										///< Переменная Счетчика №2
 
-UART_HandleTypeDef huart1;
-DMA_HandleTypeDef hdma_usart1_tx;
+UART_HandleTypeDef huart1;																									///< Переменная для работы с UART1
+DMA_HandleTypeDef hdma_usart1_tx;																						///< Переменная для работы с UART1 в режиме DMA
 
 /* USER CODE BEGIN PV */
-char trans_str[63];																													///< Variable for Text(string) to UART
-uint16_t	ADC_to_memory [2*SAMPLES_NUMBER];																	///< Variable for storing ADC data (to DMA) 
-/// States from ADC(DMA) conversion 
+char trans_str[63];																													///< Переменная для хранения текса в формате string для отправки по UART
+uint16_t	ADC_to_memory [2*SAMPLES_NUMBER];																	///< Переменная для хранения данных преобразований АЦП 
+/// Состояние АЦП в режиме DMA
 typedef enum {
-		NO_INTERRUPT,				///< There is no interrupt
-		HALF_INTERRUPT,			///< Interrupt half samples number
-		FULL_INTERRUPT			///< Interrupt all samples number
+		NO_INTERRUPT,				///< АЦП в процессе выполнения преобразований
+		HALF_INTERRUPT,			///< АЦП выполнил половину преобразований
+		FULL_INTERRUPT			///< АЦП выполнил полный цикл преобразований
 } 
-adc_conversion_state_t;			///< enum Variable
+adc_conversion_state_t;			///< Переменная enum
 
-adc_conversion_state_t adc_state; 																						///< Variable for interrupts flags after half Data to DMA and full data to DMA
+adc_conversion_state_t adc_state; 																						///< Переменная , которая указывает о прерывании АЦП на разных этапах преобразований в режиме DMA
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -156,20 +149,22 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 /**
-  * @brief  Conversion complete callback in non blocking mode 
-  * @param  hadc ADC handle
-  * @retval None
-  * @description When ADC completed conversion of all data , then send interrupt to while block in main
+	* @brief  АЦП выполнил все преобразования и ставит флаг(неблокирующий) об этом действии  
+	* Когда АЦП выполнил все преобрзования, тогда отправляет об этом окончании в основную программу
+	* @param  hadc Обращение к АЦП
+  * @retval void
+  *  
   */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 			adc_state = FULL_INTERRUPT;
 }
 /**
-  * @brief  Conversion complete callback in non blocking mode 
-  * @param  hadc ADC handle
-  * @retval None
-  * @description When ADC completed conversing of half data , then send interrupt to while block in main
+  * @brief  АЦП выполнил половину преобразования и ставит флаг(неблокирующий) об этом действии  
+  * огда АЦП выполнил половину преобрзований, тогда отправляет об этом окончании в основную программу
+  * @param  hadc Обращение к АЦП
+  * @retval void
+  *  
   */
 void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
 {
@@ -178,16 +173,16 @@ void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
+  * @brief  В этом программе выполняется основное условие задачи
   * @retval int
   */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-		uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};									///< local massive for calculate every data every 10msec
-		uint32_t ADC_avg_value = 0;																						///< local variable for calculate average ADC data every 10msec
-		uint32_t ADC_Res_avg_to_UART = 0;																			///< local variable for calculate average ADC data every 1 sec for UART
-		int j = 0;																														///< general counter
+	uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};										///<  массив для хранения усредненный даннаых за 10 мс.
+	uint32_t ADC_avg_value = 0;																							///<  переменная усреденных данных АЦП за 10мс
+	uint32_t ADC_Res_avg_to_UART = 0;																				///<  переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART
+	int j = 0;																															///< 	Общий счтчик для усреденных значний за 10 мс
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -215,15 +210,15 @@ int main(void)
   MX_DAC1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-	HAL_ADCEx_Calibration_Start(&hadc);																			///< Start Colibration ADC before working with this one
-	HAL_ADC_Start_DMA(&hadc, (uint32_t*)&ADC_to_memory, 2*SAMPLES_NUMBER);	///< Start ADC working in DMA mode with Channel 1 ADC and Samples = 100
-	HAL_TIM_Base_Start(&htim1);																							///< Start TIMER 1 (Frequency for ADC1 = 10khz)
-	HAL_TIM_Base_Start(&htim2);																							///< Start TIMER 2 (Frequency for DAC,PWM = 100 Hz)
+	HAL_ADCEx_Calibration_Start(&hadc);																			// Колибровка АЦП
+	HAL_ADC_Start_DMA(&hadc, (uint32_t*)&ADC_to_memory, 2*SAMPLES_NUMBER);	// АЦП в режиме DMA
+	HAL_TIM_Base_Start(&htim1);																							// Считчик 1(Частота 10кГц)
+	HAL_TIM_Base_Start(&htim2);																							// Счетчик 2 (для ЦАП и ШИМ сигнала с частотой = 100 Гц)
 	//============================================== TIMER PWM OUTPUT ================================================================/
-	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																///< TIMER 2 CHANNEL 1 Set as PWM generated output
+	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																// Счетчик 1 канал 1 как выход ШИМ
 																							
 	//============================================== DAC SETTINGS ====================================================================/
-	HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);																		///< Start DAC1 CHANNEL1 working
+	HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);																		// ЦАП канал 1
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -232,37 +227,37 @@ int main(void)
 	{
 		if (adc_state)
 		{
-			if (adc_state == HALF_INTERRUPT)																		///< If half convert completed calculating sum value
+			if (adc_state == HALF_INTERRUPT)																		// Если пришло прерывания с половины преобразований АЦП, вычисляем сумму этих данных
 			{
 				for (int i = 0; i < SAMPLES_NUMBER; i++)
 					ADC_avg_value += ADC_to_memory[i];
 			}	
-			else if (adc_state == FULL_INTERRUPT)																///< If full convert complete calculating sum value
+			else if (adc_state == FULL_INTERRUPT)																// Если пришло прерывания со всех преобразований АЦП, вычисляем сумму этих данных
 			{
 				for (int i = SAMPLES_NUMBER; i < 2*SAMPLES_NUMBER; i++)
 					ADC_avg_value += ADC_to_memory[i];
 			}
-			adc_state = NO_INTERRUPT;																						///< After each calculation reset our interrupt
-			ADC_avg_value /= SAMPLES_NUMBER;																		///< Calculate average value
+			adc_state = NO_INTERRUPT;																						// Сбрасываем прерывания АЦП
+			ADC_avg_value /= SAMPLES_NUMBER;																		// Высчитываем среднее значение
 	
-			ADC_avg_to_UART[j] = ADC_avg_value; 																///< Send average data to massive (which will be prepared for sending average/sec)		
-			if (j == SAMPLES_NUMBER - 1)																				///< If our massive is filled, then begin to calculate average value of this one
+			ADC_avg_to_UART[j] = ADC_avg_value; 																// Добавляем среднее значение в массив для будущей отправки в UART за 1 секунду.
+			if (j == SAMPLES_NUMBER - 1)																				// Если массив для отправки в UART заполнен данными - высчитываем сумму
 			{
 				for (int i = 0; i < SAMPLES_NUMBER; i++)
 				{
 				  ADC_Res_avg_to_UART += ADC_avg_to_UART[i];
 				}
-				ADC_Res_avg_to_UART /= SAMPLES_NUMBER;
-				snprintf(trans_str, 63, "%d mV\r\n", ADC_Res_avg_to_UART * 732 / 1000);
-				huart1.gState = HAL_UART_STATE_READY;
-				HAL_UART_Transmit_DMA(&huart1, (uint8_t *)trans_str, strlen(trans_str));
-				j = 0;																	
-				ADC_Res_avg_to_UART = 0;
+				ADC_Res_avg_to_UART /= SAMPLES_NUMBER;														//	Высчитываем среднее значение для отправки в UART
+				snprintf(trans_str, 63, "%d mV\r\n", ADC_Res_avg_to_UART * 732 / 1000);		//Преобразуем это значение в строковую переменную, проводя данные к новой шкале (максимум 3000 мВ)
+				huart1.gState = HAL_UART_STATE_READY;															// Так как UART  работае в DMA  режиме и находится в режиме ожидания, выставляем режим готовности к отправки.					
+				HAL_UART_Transmit_DMA(&huart1, (uint8_t *)trans_str, strlen(trans_str));		//Отправляем данные по UART  в режиме DMA
+				j = 0;																														// 	Обнуляем счетчик
+				ADC_Res_avg_to_UART = 0;																					// Обнуляем среднее значение для UART
 			}
-			j++;
-			HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_1, DAC_ALIGN_12B_R, ADC_avg_value);	///< Send average data to DAC
-			TIM2->CCR1 = ADC_avg_value*80000/4095;															///< send average data to PWM channel	(REGISTER)										
-			ADC_avg_value = 0;
+			j++;																																
+			HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_1, DAC_ALIGN_12B_R, ADC_avg_value);	// Записываем в ЦАП среднее значение за 10мс
+			TIM2->CCR1 = ADC_avg_value*80000/4095;															// Записываем в регистр ШИМ сигнала за 10 мс										
+			ADC_avg_value = 0;																									// Обнуляем среднее значение за 10мс.
 		}	
 			
 	}	
@@ -274,7 +269,7 @@ int main(void)
 }
 
 /**
-  * @brief System Clock Configuration
+  * @brief Настройка параметров работы с частотой
   * @retval None
   */
 void SystemClock_Config(void)
@@ -283,24 +278,23 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSI14;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  // Initializes the RCC Oscillators according to the specified parameters
+	// in the RCC_OscInitTypeDef structure.
+  //
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI14|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSI14State = RCC_HSI14_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.HSI14CalibrationValue = 16;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
+  // Initializes the CPU, AHB and APB buses clocks
+  //
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
 
@@ -564,6 +558,7 @@ static void MX_GPIO_Init(void)
 {
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
 }
