@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: F:/github/STM32_ADC_DAC_PWM_UART/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/inc/templates/template.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">F:/github/STM32_ADC_DAC_PWM_UART/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/inc/templates/template.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Template for calling a function.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Surround function arguments with the <a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN()</a> macro.</dd></dl>
+<p>void my_func(int arg1, int arg2);</p>
+<p><a class="el" href="template_8h.html#a57a3d4d8f6984849f907afaecff12200">TEMPLATE_CALL_FN(my_func, PAREN(3, 7))</a>;</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#ifndef _TEMPLATE_H_</span></div>
+<div class="line"><span class="preprocessor">#define _TEMPLATE_H_</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><span class="comment">/* Looping and Iteration */</span></div>
+<div class="line"><span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_LOOP(setup, loop_def, body)    \</span></div>
+<div class="line"><span class="preprocessor">    do                                          \</span></div>
+<div class="line"><span class="preprocessor">    {                                           \</span></div>
+<div class="line"><span class="preprocessor">        setup;                                  \</span></div>
+<div class="line"><span class="preprocessor">        loop_def {                              \</span></div>
+<div class="line"><span class="preprocessor">            body;                               \</span></div>
+<div class="line"><span class="preprocessor">        }                                       \</span></div>
+<div class="line"><span class="preprocessor">    } while (0)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_DO_ARR_LIKE(iter_idx, type,                            \</span></div>
+<div class="line"><span class="preprocessor">                             arr, arr_length,                           \</span></div>
+<div class="line"><span class="preprocessor">                             iter_elem_setup,                           \</span></div>
+<div class="line"><span class="preprocessor">                             body)                                      \</span></div>
+<div class="line"><span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><span class="preprocessor">        TEMPLATE_LOOP(                                                  \</span></div>
+<div class="line"><span class="preprocessor">            int iter_idx,                                               \</span></div>
+<div class="line"><span class="preprocessor">            for(iter_idx = 0; iter_idx &lt; (arr_length); ++iter_idx),     \</span></div>
+<div class="line"><span class="preprocessor">            iter_elem_setup;                                            \</span></div>
+<div class="line"><span class="preprocessor">            body);                                                      \</span></div>
+<div class="line"><span class="preprocessor">    } while (0)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_DO_ARR(iter_idx, type, iter_elem, arr, arr_length, body) \</span></div>
+<div class="line"><span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><span class="preprocessor">        TEMPLATE_DO_ARR_LIKE(                                           \</span></div>
+<div class="line"><span class="preprocessor">            iter_idx, type, arr, arr_length,                            \</span></div>
+<div class="line"><span class="preprocessor">            type iter_elem = (arr)[iter_idx],                           \</span></div>
+<div class="line"><span class="preprocessor">            body);                                                      \</span></div>
+<div class="line"><span class="preprocessor">    } while (0)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_DO_ARR_DESC(iter_idx, type, iter_elem, arr_desc, body) \</span></div>
+<div class="line"><span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><span class="preprocessor">        TEMPLATE_DO_ARR_LIKE(                                           \</span></div>
+<div class="line"><span class="preprocessor">            iter_idx, type, arr_desc, (arr_desc).element_count,         \</span></div>
+<div class="line"><span class="preprocessor">            type iter_elem = ARR_DESC_ELT(type, iter_idx, &amp;(arr_desc)), \</span></div>
+<div class="line"><span class="preprocessor">            body);                                                      \</span></div>
+<div class="line"><span class="preprocessor">    } while (0)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><span class="comment">/* Test Definition */</span></div>
+<div class="line"><span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_TEST(setup, body, teardown)    \</span></div>
+<div class="line"><span class="preprocessor">        do                                      \</span></div>
+<div class="line"><span class="preprocessor">        {                                       \</span></div>
+<div class="line"><span class="preprocessor">            setup;                              \</span></div>
+<div class="line"><span class="preprocessor">            body;                               \</span></div>
+<div class="line"><span class="preprocessor">            teardown;                           \</span></div>
+<div class="line"><span class="preprocessor">        } while (0)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define TEMPLATE_CALL_FN(fn, fn_args)           \</span></div>
+<div class="line"><span class="preprocessor">        fn fn_args</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">/* _TEMPLATE_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

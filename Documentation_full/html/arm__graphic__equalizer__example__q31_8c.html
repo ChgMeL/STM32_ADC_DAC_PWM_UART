@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/arm_graphic_equalizer_example_q31.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_94aa63e0f0315d3d64a42422f2e40bc3.html">Examples</a></li><li class="navelem"><a class="el" href="dir_70e1a0838c318c6a83ee7353de1353cd.html">ARM</a></li><li class="navelem"><a class="el" href="dir_bd54f40337f520e253df7876a212617b.html">arm_graphic_equalizer_example</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл arm_graphic_equalizer_example_q31.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_examples_2_a_r_m_2arm__graphic__equalizer__example_2math__helper_8h_source.html">math_helper.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a4f4a95eaace4e7b4e2f5243ed24f6b28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>&#160;&#160;&#160;320</td></tr>
+<tr class="separator:a4f4a95eaace4e7b4e2f5243ed24f6b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf795f5a96fd55561abe69f56224630"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:afcf795f5a96fd55561abe69f56224630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814e34126e1b8150f4de047e1a9e7030"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a814e34126e1b8150f4de047e1a9e7030">NUMBLOCKS</a>&#160;&#160;&#160;(<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>/<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>)</td></tr>
+<tr class="separator:a814e34126e1b8150f4de047e1a9e7030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f8e430b510dfdb3ebe53bffca0d864"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a23f8e430b510dfdb3ebe53bffca0d864">NUMSTAGES</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a23f8e430b510dfdb3ebe53bffca0d864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d1dd4deffa8e7ed6429e5dd0fe1812"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#af7d1dd4deffa8e7ed6429e5dd0fe1812">SNR_THRESHOLD_F32</a>&#160;&#160;&#160;98</td></tr>
+<tr class="separator:af7d1dd4deffa8e7ed6429e5dd0fe1812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a52d2cba30e6946c95578be946ac12a65"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a52d2cba30e6946c95578be946ac12a65">main</a> (void)</td></tr>
+<tr class="separator:a52d2cba30e6946c95578be946ac12a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aa4699dc6ee05353c83e0be4e69f6ad05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#aa4699dc6ee05353c83e0be4e69f6ad05">testInput_f32</a> [<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>]</td></tr>
+<tr class="separator:aa4699dc6ee05353c83e0be4e69f6ad05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbbafa975d67bc8ee8ea3260fdd5638"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a9cbbafa975d67bc8ee8ea3260fdd5638">testRefOutput_f32</a> [<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>]</td></tr>
+<tr class="separator:a9cbbafa975d67bc8ee8ea3260fdd5638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79521a4d6a9adb144c4d999ae713413c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a79521a4d6a9adb144c4d999ae713413c">inputQ31</a> [<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>]</td></tr>
+<tr class="separator:a79521a4d6a9adb144c4d999ae713413c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9862488450f2547b07aee8035d6b4d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a9862488450f2547b07aee8035d6b4d8a">outputQ31</a> [<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>]</td></tr>
+<tr class="separator:a9862488450f2547b07aee8035d6b4d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024c59772b9603698b898721c1e8204e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a024c59772b9603698b898721c1e8204e">coeffTable</a> [950]</td></tr>
+<tr class="separator:a024c59772b9603698b898721c1e8204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963aee85bb41a50fc943ac9048d123ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a963aee85bb41a50fc943ac9048d123ab">gainDB</a> [5] = {0, -3, 6, 4, -6}</td></tr>
+<tr class="separator:a963aee85bb41a50fc943ac9048d123ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06013f588a7003278de222913c9d819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__graphic__equalizer__example__q31_8c.html#af06013f588a7003278de222913c9d819">snr</a></td></tr>
+<tr class="separator:af06013f588a7003278de222913c9d819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="afcf795f5a96fd55561abe69f56224630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf795f5a96fd55561abe69f56224630">&#9670;&nbsp;</a></span>BLOCKSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCKSIZE&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a814e34126e1b8150f4de047e1a9e7030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814e34126e1b8150f4de047e1a9e7030">&#9670;&nbsp;</a></span>NUMBLOCKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUMBLOCKS&#160;&#160;&#160;(<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>/<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23f8e430b510dfdb3ebe53bffca0d864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f8e430b510dfdb3ebe53bffca0d864">&#9670;&nbsp;</a></span>NUMSTAGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUMSTAGES&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7d1dd4deffa8e7ed6429e5dd0fe1812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d1dd4deffa8e7ed6429e5dd0fe1812">&#9670;&nbsp;</a></span>SNR_THRESHOLD_F32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SNR_THRESHOLD_F32&#160;&#160;&#160;98</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f4a95eaace4e7b4e2f5243ed24f6b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4a95eaace4e7b4e2f5243ed24f6b28">&#9670;&nbsp;</a></span>TESTLENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TESTLENGTH&#160;&#160;&#160;320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a52d2cba30e6946c95578be946ac12a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d2cba30e6946c95578be946ac12a65">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a024c59772b9603698b898721c1e8204e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024c59772b9603698b898721c1e8204e">&#9670;&nbsp;</a></span>coeffTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> coeffTable[950]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a963aee85bb41a50fc943ac9048d123ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963aee85bb41a50fc943ac9048d123ab">&#9670;&nbsp;</a></span>gainDB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gainDB[5] = {0, -3, 6, 4, -6}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79521a4d6a9adb144c4d999ae713413c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79521a4d6a9adb144c4d999ae713413c">&#9670;&nbsp;</a></span>inputQ31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> inputQ31[<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9862488450f2547b07aee8035d6b4d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9862488450f2547b07aee8035d6b4d8a">&#9670;&nbsp;</a></span>outputQ31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> outputQ31[<a class="el" href="arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630">BLOCKSIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af06013f588a7003278de222913c9d819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06013f588a7003278de222913c9d819">&#9670;&nbsp;</a></span>snr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> snr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4699dc6ee05353c83e0be4e69f6ad05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4699dc6ee05353c83e0be4e69f6ad05">&#9670;&nbsp;</a></span>testInput_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> testInput_f32[<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cbbafa975d67bc8ee8ea3260fdd5638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cbbafa975d67bc8ee8ea3260fdd5638">&#9670;&nbsp;</a></span>testRefOutput_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> testRefOutput_f32[<a class="el" href="arm__graphic__equalizer__example__q31_8c.html#a4f4a95eaace4e7b4e2f5243ed24f6b28">TESTLENGTH</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

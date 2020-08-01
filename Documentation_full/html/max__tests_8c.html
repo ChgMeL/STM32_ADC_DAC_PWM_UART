@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/statistics_tests/max_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_5d30159b3ca216e4845554416f40bac9.html">statistics_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл max_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="statistics__test__data_8h_source.html">statistics_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="statistics__templates_8h_source.html">statistics_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a03f28685351d4223153726880ad00be7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a03f28685351d4223153726880ad00be7">JTEST_ARM_MAX_TEST</a>(suffix)</td></tr>
+<tr class="separator:a03f28685351d4223153726880ad00be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a49ba929078e88ce4ba50cb0b8c0c2168"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a49ba929078e88ce4ba50cb0b8c0c2168">JTEST_ARM_MAX_TEST</a> (f32)</td></tr>
+<tr class="separator:a49ba929078e88ce4ba50cb0b8c0c2168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a57f48599d43ea2df896c59c86a6ee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a6a57f48599d43ea2df896c59c86a6ee7">JTEST_ARM_MAX_TEST</a> (q31)</td></tr>
+<tr class="separator:a6a57f48599d43ea2df896c59c86a6ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a8438845117a53a384ab2308c2c515f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a6a8438845117a53a384ab2308c2c515f">JTEST_ARM_MAX_TEST</a> (q15)</td></tr>
+<tr class="separator:a6a8438845117a53a384ab2308c2c515f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e3749d9f9c393f245452ee8a1a3720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a74e3749d9f9c393f245452ee8a1a3720">JTEST_ARM_MAX_TEST</a> (q7)</td></tr>
+<tr class="separator:a74e3749d9f9c393f245452ee8a1a3720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a019d77734f13898b759698729effeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="max__tests_8c.html#a3a019d77734f13898b759698729effeb">JTEST_DEFINE_GROUP</a> (max_tests)</td></tr>
+<tr class="separator:a3a019d77734f13898b759698729effeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a03f28685351d4223153726880ad00be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f28685351d4223153726880ad00be7">&#9670;&nbsp;</a></span>JTEST_ARM_MAX_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JTEST_ARM_MAX_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="statistics__templates_8h.html#ace82317125f100a5198f88f48451132e">STATISTICS_DEFINE_TEST_TEMPLATE_BUF1_BLK</a>(   \</div>
+<div class="line">        max,                                    \</div>
+<div class="line">        suffix,                                 \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix),               \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix),               \</div>
+<div class="line">        <a class="code" href="statistics__templates_8h.html#aff105e40d7d77cf9d2a3d53121363609">STATISTICS_COMPARE_INTERFACE</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a49ba929078e88ce4ba50cb0b8c0c2168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ba929078e88ce4ba50cb0b8c0c2168">&#9670;&nbsp;</a></span>JTEST_ARM_MAX_TEST() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAX_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a8438845117a53a384ab2308c2c515f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8438845117a53a384ab2308c2c515f">&#9670;&nbsp;</a></span>JTEST_ARM_MAX_TEST() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAX_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a57f48599d43ea2df896c59c86a6ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a57f48599d43ea2df896c59c86a6ee7">&#9670;&nbsp;</a></span>JTEST_ARM_MAX_TEST() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAX_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74e3749d9f9c393f245452ee8a1a3720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e3749d9f9c393f245452ee8a1a3720">&#9670;&nbsp;</a></span>JTEST_ARM_MAX_TEST() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAX_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a019d77734f13898b759698729effeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a019d77734f13898b759698729effeb">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">max_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="astatistics__templates_8h_html_ace82317125f100a5198f88f48451132e"><div class="ttname"><a href="statistics__templates_8h.html#ace82317125f100a5198f88f48451132e">STATISTICS_DEFINE_TEST_TEMPLATE_BUF1_BLK</a></div><div class="ttdeci">#define STATISTICS_DEFINE_TEST_TEMPLATE_BUF1_BLK(fn_name, suffix, input_type, output_type, comparison_interface)</div><div class="ttdef"><b>Definition:</b> statistics_templates.h:136</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="astatistics__templates_8h_html_aff105e40d7d77cf9d2a3d53121363609"><div class="ttname"><a href="statistics__templates_8h.html#aff105e40d7d77cf9d2a3d53121363609">STATISTICS_COMPARE_INTERFACE</a></div><div class="ttdeci">#define STATISTICS_COMPARE_INTERFACE(block_size, output_type)</div><div class="ttdef"><b>Definition:</b> statistics_templates.h:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

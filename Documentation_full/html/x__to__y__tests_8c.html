@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/support_tests/x_to_y_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_6519712e548e9b7b5dfd4160924f9db2.html">support_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл x_to_y_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="support__test__data_8h_source.html">support_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="support__templates_8h_source.html">support_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a982a86f528634ddd8c86184ed21a626b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a982a86f528634ddd8c86184ed21a626b">arm_f32_to_q31</a>&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga177704107f94564e9abe4daaa36f4554">arm_float_to_q31</a></td></tr>
+<tr class="separator:a982a86f528634ddd8c86184ed21a626b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2debe9cef3ad7c5eb36321863215e4ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a2debe9cef3ad7c5eb36321863215e4ff">arm_f32_to_q15</a>&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga215456e35a18db86882e1d3f0d24e1f2">arm_float_to_q15</a></td></tr>
+<tr class="separator:a2debe9cef3ad7c5eb36321863215e4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9feb7135a4e5d6b0bb337127606b91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#aaa9feb7135a4e5d6b0bb337127606b91">arm_f32_to_q7</a>&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga44a393818cdee8dce80f2d66add25411">arm_float_to_q7</a></td></tr>
+<tr class="separator:aaa9feb7135a4e5d6b0bb337127606b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4114ccec74c92cdd05d87eb6d881c9fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a4114ccec74c92cdd05d87eb6d881c9fb">arm_q31_to_f32</a>&#160;&#160;&#160;<a class="el" href="group__q31__to__x.html#gacf407b007a37da18e99dabd9023c56b4">arm_q31_to_float</a></td></tr>
+<tr class="separator:a4114ccec74c92cdd05d87eb6d881c9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5630c8b859e0486c90bec003bbf5b3f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a5630c8b859e0486c90bec003bbf5b3f3">arm_q15_to_f32</a>&#160;&#160;&#160;<a class="el" href="group__q15__to__x.html#gaf8b0d2324de273fc430b0e61ad4e9eb2">arm_q15_to_float</a></td></tr>
+<tr class="separator:a5630c8b859e0486c90bec003bbf5b3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26af3e194a8ddcbf184ff40552a31e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#aa26af3e194a8ddcbf184ff40552a31e6">arm_q7_to_f32</a>&#160;&#160;&#160;<a class="el" href="group__q7__to__x.html#ga656620f957b65512ed83db03fd455ec5">arm_q7_to_float</a></td></tr>
+<tr class="separator:aa26af3e194a8ddcbf184ff40552a31e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e71a18952884536fb4f34baec02d8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a36e71a18952884536fb4f34baec02d8a">ref_f32_to_q31</a>&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#af07bf977b4d31b2f3eb17d97733fdf3a">ref_float_to_q31</a></td></tr>
+<tr class="separator:a36e71a18952884536fb4f34baec02d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c760658ae2413c2694bfc2832619976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a9c760658ae2413c2694bfc2832619976">ref_f32_to_q15</a>&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#aad75efb7d5ac7f79b99c23d0ac89b6d7">ref_float_to_q15</a></td></tr>
+<tr class="separator:a9c760658ae2413c2694bfc2832619976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1851dda5abfe72164a0368cfc4c60948"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a1851dda5abfe72164a0368cfc4c60948">ref_f32_to_q7</a>&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#a9d8a7cbfb5e3b2dcf4434b42756c73b3">ref_float_to_q7</a></td></tr>
+<tr class="separator:a1851dda5abfe72164a0368cfc4c60948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969e1fe4785d6980ad298ecf4543a191"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a969e1fe4785d6980ad298ecf4543a191">ref_q31_to_f32</a>&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#af266cef77695737f162bb12cfbb53a9e">ref_q31_to_float</a></td></tr>
+<tr class="separator:a969e1fe4785d6980ad298ecf4543a191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7fb3397881644cd38351cbbe22506b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#aa7fb3397881644cd38351cbbe22506b6">ref_q15_to_f32</a>&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#a81597629e91f700be68b06e3f4fd9f87">ref_q15_to_float</a></td></tr>
+<tr class="separator:aa7fb3397881644cd38351cbbe22506b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00af90206b340a0c6b4510e6897c9738"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a00af90206b340a0c6b4510e6897c9738">ref_q7_to_f32</a>&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#a39c0ef37085c0bf2e4531184a863f494">ref_q7_to_float</a></td></tr>
+<tr class="separator:a00af90206b340a0c6b4510e6897c9738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad637f3a7ef3ceb72d27f10ed7fad6b34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#ad637f3a7ef3ceb72d27f10ed7fad6b34">JTEST_ARM_X_TO_Y_TEST</a>(prefix,  suffix)</td></tr>
+<tr class="separator:ad637f3a7ef3ceb72d27f10ed7fad6b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad6a50e501438b9cc9b18df0e87a621dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#ad6a50e501438b9cc9b18df0e87a621dd">JTEST_ARM_X_TO_Y_TEST</a> (f32, q31)</td></tr>
+<tr class="separator:ad6a50e501438b9cc9b18df0e87a621dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986a4d25723be437610716d846dde862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a986a4d25723be437610716d846dde862">JTEST_ARM_X_TO_Y_TEST</a> (f32, q15)</td></tr>
+<tr class="separator:a986a4d25723be437610716d846dde862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cee750b4bf1bd21a3e10450acedf6d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a2cee750b4bf1bd21a3e10450acedf6d3">JTEST_ARM_X_TO_Y_TEST</a> (f32, q7)</td></tr>
+<tr class="separator:a2cee750b4bf1bd21a3e10450acedf6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a291f6a2dfdfbae7b5044ad17c051b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a6a291f6a2dfdfbae7b5044ad17c051b6">JTEST_ARM_X_TO_Y_TEST</a> (q31, f32)</td></tr>
+<tr class="separator:a6a291f6a2dfdfbae7b5044ad17c051b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53f3f9305d4d8f73385cb3b10ac65fb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a53f3f9305d4d8f73385cb3b10ac65fb7">JTEST_ARM_X_TO_Y_TEST</a> (q31, q15)</td></tr>
+<tr class="separator:a53f3f9305d4d8f73385cb3b10ac65fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f8b79fea0fb8b960302e834cca2a39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a15f8b79fea0fb8b960302e834cca2a39">JTEST_ARM_X_TO_Y_TEST</a> (q31, q7)</td></tr>
+<tr class="separator:a15f8b79fea0fb8b960302e834cca2a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5cfe3e9fb17911ebc767c7b6e0cca0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a2b5cfe3e9fb17911ebc767c7b6e0cca0">JTEST_ARM_X_TO_Y_TEST</a> (q15, f32)</td></tr>
+<tr class="separator:a2b5cfe3e9fb17911ebc767c7b6e0cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e130ba4e37bbe7956b399f24cb59a8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a0e130ba4e37bbe7956b399f24cb59a8e">JTEST_ARM_X_TO_Y_TEST</a> (q15, q31)</td></tr>
+<tr class="separator:a0e130ba4e37bbe7956b399f24cb59a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b18a7f3969408b483da49464198aea6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a3b18a7f3969408b483da49464198aea6">JTEST_ARM_X_TO_Y_TEST</a> (q15, q7)</td></tr>
+<tr class="separator:a3b18a7f3969408b483da49464198aea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33511a82543d8c3cc7437b723244022"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#ac33511a82543d8c3cc7437b723244022">JTEST_ARM_X_TO_Y_TEST</a> (q7, f32)</td></tr>
+<tr class="separator:ac33511a82543d8c3cc7437b723244022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe56e3957d073454f979ea5de5f0b0ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#afe56e3957d073454f979ea5de5f0b0ab">JTEST_ARM_X_TO_Y_TEST</a> (q7, q31)</td></tr>
+<tr class="separator:afe56e3957d073454f979ea5de5f0b0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6163e62732d6cc3b723b1907f33b20ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a6163e62732d6cc3b723b1907f33b20ad">JTEST_ARM_X_TO_Y_TEST</a> (q7, q15)</td></tr>
+<tr class="separator:a6163e62732d6cc3b723b1907f33b20ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3561a69b8d7fefc018b35a37ca53f224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x__to__y__tests_8c.html#a3561a69b8d7fefc018b35a37ca53f224">JTEST_DEFINE_GROUP</a> (x_to_y_tests)</td></tr>
+<tr class="separator:a3561a69b8d7fefc018b35a37ca53f224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a2debe9cef3ad7c5eb36321863215e4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2debe9cef3ad7c5eb36321863215e4ff">&#9670;&nbsp;</a></span>arm_f32_to_q15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_f32_to_q15&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga215456e35a18db86882e1d3f0d24e1f2">arm_float_to_q15</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a982a86f528634ddd8c86184ed21a626b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982a86f528634ddd8c86184ed21a626b">&#9670;&nbsp;</a></span>arm_f32_to_q31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_f32_to_q31&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga177704107f94564e9abe4daaa36f4554">arm_float_to_q31</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa9feb7135a4e5d6b0bb337127606b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9feb7135a4e5d6b0bb337127606b91">&#9670;&nbsp;</a></span>arm_f32_to_q7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_f32_to_q7&#160;&#160;&#160;<a class="el" href="group__float__to__x.html#ga44a393818cdee8dce80f2d66add25411">arm_float_to_q7</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5630c8b859e0486c90bec003bbf5b3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5630c8b859e0486c90bec003bbf5b3f3">&#9670;&nbsp;</a></span>arm_q15_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_q15_to_f32&#160;&#160;&#160;<a class="el" href="group__q15__to__x.html#gaf8b0d2324de273fc430b0e61ad4e9eb2">arm_q15_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4114ccec74c92cdd05d87eb6d881c9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4114ccec74c92cdd05d87eb6d881c9fb">&#9670;&nbsp;</a></span>arm_q31_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_q31_to_f32&#160;&#160;&#160;<a class="el" href="group__q31__to__x.html#gacf407b007a37da18e99dabd9023c56b4">arm_q31_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa26af3e194a8ddcbf184ff40552a31e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26af3e194a8ddcbf184ff40552a31e6">&#9670;&nbsp;</a></span>arm_q7_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_q7_to_f32&#160;&#160;&#160;<a class="el" href="group__q7__to__x.html#ga656620f957b65512ed83db03fd455ec5">arm_q7_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad637f3a7ef3ceb72d27f10ed7fad6b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad637f3a7ef3ceb72d27f10ed7fad6b34">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JTEST_ARM_X_TO_Y_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="jtest__test__define_8h.html#ab2888383445d5ac789089c7ed58eea95">JTEST_DEFINE_TEST</a>(arm_##prefix##_to_##suffix##_test,    \</div>
+<div class="line">                      arm_##prefix##_to_##suffix)           \</div>
+<div class="line">    {                                                       \</div>
+<div class="line">        TEST_TEMPLATE_BUF1_BLK(                             \</div>
+<div class="line">            support_f_all,                                  \</div>
+<div class="line">            support_block_sizes,                            \</div>
+<div class="line">            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(prefix),                       \</div>
+<div class="line">            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix),                       \</div>
+<div class="line">            arm_##prefix##_to_##suffix,                     \</div>
+<div class="line">            <a class="code" href="support__templates_8h.html#aaa8aa667104625d6757b932b63122a2e">ARM_x_to_y_INPUT_INTERFACE</a>,                     \</div>
+<div class="line">            ref_##prefix##_to_##suffix,                     \</div>
+<div class="line">            <a class="code" href="support__templates_8h.html#ac01217b858c18d276ea5f5ece7c813af">REF_x_to_y_INPUT_INTERFACE</a>,                     \</div>
+<div class="line">            <a class="code" href="support__templates_8h.html#a50a0a436cb524d64a677518c7709107c">SUPPORT_COMPARE_INTERFACE</a>);                     \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9c760658ae2413c2694bfc2832619976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c760658ae2413c2694bfc2832619976">&#9670;&nbsp;</a></span>ref_f32_to_q15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_f32_to_q15&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#aad75efb7d5ac7f79b99c23d0ac89b6d7">ref_float_to_q15</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36e71a18952884536fb4f34baec02d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e71a18952884536fb4f34baec02d8a">&#9670;&nbsp;</a></span>ref_f32_to_q31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_f32_to_q31&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#af07bf977b4d31b2f3eb17d97733fdf3a">ref_float_to_q31</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1851dda5abfe72164a0368cfc4c60948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1851dda5abfe72164a0368cfc4c60948">&#9670;&nbsp;</a></span>ref_f32_to_q7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_f32_to_q7&#160;&#160;&#160;<a class="el" href="float__to__fixed_8c.html#a9d8a7cbfb5e3b2dcf4434b42756c73b3">ref_float_to_q7</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7fb3397881644cd38351cbbe22506b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7fb3397881644cd38351cbbe22506b6">&#9670;&nbsp;</a></span>ref_q15_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_q15_to_f32&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#a81597629e91f700be68b06e3f4fd9f87">ref_q15_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a969e1fe4785d6980ad298ecf4543a191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a969e1fe4785d6980ad298ecf4543a191">&#9670;&nbsp;</a></span>ref_q31_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_q31_to_f32&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#af266cef77695737f162bb12cfbb53a9e">ref_q31_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00af90206b340a0c6b4510e6897c9738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00af90206b340a0c6b4510e6897c9738">&#9670;&nbsp;</a></span>ref_q7_to_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ref_q7_to_f32&#160;&#160;&#160;<a class="el" href="fixed__to__float_8c.html#a39c0ef37085c0bf2e4531184a863f494">ref_q7_to_float</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a986a4d25723be437610716d846dde862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986a4d25723be437610716d846dde862">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[1/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6a50e501438b9cc9b18df0e87a621dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a50e501438b9cc9b18df0e87a621dd">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cee750b4bf1bd21a3e10450acedf6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cee750b4bf1bd21a3e10450acedf6d3">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[3/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b5cfe3e9fb17911ebc767c7b6e0cca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5cfe3e9fb17911ebc767c7b6e0cca0">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[4/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e130ba4e37bbe7956b399f24cb59a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e130ba4e37bbe7956b399f24cb59a8e">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[5/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b18a7f3969408b483da49464198aea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b18a7f3969408b483da49464198aea6">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[6/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a291f6a2dfdfbae7b5044ad17c051b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a291f6a2dfdfbae7b5044ad17c051b6">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[7/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53f3f9305d4d8f73385cb3b10ac65fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f3f9305d4d8f73385cb3b10ac65fb7">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[8/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15f8b79fea0fb8b960302e834cca2a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f8b79fea0fb8b960302e834cca2a39">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[9/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac33511a82543d8c3cc7437b723244022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33511a82543d8c3cc7437b723244022">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6163e62732d6cc3b723b1907f33b20ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6163e62732d6cc3b723b1907f33b20ad">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[11/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe56e3957d073454f979ea5de5f0b0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe56e3957d073454f979ea5de5f0b0ab">&#9670;&nbsp;</a></span>JTEST_ARM_X_TO_Y_TEST() <span class="overload">[12/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_X_TO_Y_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3561a69b8d7fefc018b35a37ca53f224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3561a69b8d7fefc018b35a37ca53f224">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">x_to_y_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="asupport__templates_8h_html_a50a0a436cb524d64a677518c7709107c"><div class="ttname"><a href="support__templates_8h.html#a50a0a436cb524d64a677518c7709107c">SUPPORT_COMPARE_INTERFACE</a></div><div class="ttdeci">#define SUPPORT_COMPARE_INTERFACE(block_size, output_type)</div><div class="ttdef"><b>Definition:</b> support_templates.h:17</div></div>
+<div class="ttc" id="asupport__templates_8h_html_ac01217b858c18d276ea5f5ece7c813af"><div class="ttname"><a href="support__templates_8h.html#ac01217b858c18d276ea5f5ece7c813af">REF_x_to_y_INPUT_INTERFACE</a></div><div class="ttdeci">#define REF_x_to_y_INPUT_INTERFACE(input, block_size)</div><div class="ttdef"><b>Definition:</b> support_templates.h:60</div></div>
+<div class="ttc" id="asupport__templates_8h_html_aaa8aa667104625d6757b932b63122a2e"><div class="ttname"><a href="support__templates_8h.html#aaa8aa667104625d6757b932b63122a2e">ARM_x_to_y_INPUT_INTERFACE</a></div><div class="ttdeci">#define ARM_x_to_y_INPUT_INTERFACE(input, block_size)</div><div class="ttdef"><b>Definition:</b> support_templates.h:57</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="ajtest__test__define_8h_html_ab2888383445d5ac789089c7ed58eea95"><div class="ttname"><a href="jtest__test__define_8h.html#ab2888383445d5ac789089c7ed58eea95">JTEST_DEFINE_TEST</a></div><div class="ttdeci">#define JTEST_DEFINE_TEST(...)</div><div class="ttdef"><b>Definition:</b> jtest_test_define.h:98</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

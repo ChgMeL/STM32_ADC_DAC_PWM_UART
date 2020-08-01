@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Исходный файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/inc/util/util.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_f3ad061b6bd950dddc98e05f7d506252.html">JTest</a></li><li class="navelem"><a class="el" href="dir_6522c18ceaa54132d564bb0a9a5dcdfd.html">inc</a></li><li class="navelem"><a class="el" href="dir_812fee22d1c180d63bbd355ea021f9dd.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">util.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="util_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _UTIL_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _UTIL_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/* Macros and Defines */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define STR_NL(x)  STR1_NL(x)</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="util_8h.html#a23c73eaa29576c5f885d7e6ebdf93164">   12</a></span>&#160;<span class="preprocessor">#define STR1_NL(x) (STR2_NL(x)&quot;\n&quot;)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="util_8h.html#a82308eddfa1ccba1efff38907b7dc05f">   13</a></span>&#160;<span class="preprocessor">#define STR2_NL(x) #x</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="util_8h.html#ad0236fc4dbce481877861b8704ae2954">   14</a></span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define STR(x)  STR1(x)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="util_8h.html#a18d295a837ac71add5578860b55e5502">   19</a></span>&#160;<span class="preprocessor">#define STR1(x) STR2(x)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="util_8h.html#aabea237c99adb3ae800aeba6c7fe1e1e">   20</a></span>&#160;<span class="preprocessor">#define STR2(x) #x</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="util_8h.html#ac8a66a18d26209f0d893dbe246f6cc1f">   21</a></span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define CONCAT(a, b)  CONCAT1(a, b)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="util_8h.html#a88fa737059e67b4b17ec980e5877361e">   26</a></span>&#160;<span class="preprocessor">#define CONCAT1(a, b) CONCAT2(a, b)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="util_8h.html#ac1bd762df6f68795cfe6a980728bf233">   27</a></span>&#160;<span class="preprocessor">#define CONCAT2(a, b) a##b</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="util_8h.html#a2fef427b1927dac8bf612d1384f00503">   28</a></span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define CURLY(...) {__VA_ARGS__}</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">   34</a></span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define PAREN(...) (__VA_ARGS__)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="util_8h.html#a5352f941f9919424a56f7537d2654179">   39</a></span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/* Standard min/max macros. */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define MIN(x,y) (((x) &lt; (y)) ? (x) : (y) )</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="util_8h.html#a74e75242132eaabbc1c512488a135926">   42</a></span>&#160;<span class="preprocessor">#define MAX(x,y) (((x) &gt; (y)) ? (x) : (y) )</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="util_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">   43</a></span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define BOUND(low, high, value)                 \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="util_8h.html#a5f86e2fe52809a42966b727c19394823">   50</a></span>&#160;<span class="preprocessor">    MAX(MIN(high, value), low)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _UTIL_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

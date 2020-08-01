@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/filtering_tests/fir_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_c18f262ad5a587f1e442dedc24e7e8cb.html">filtering_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл fir_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__test__data_8h_source.html">filtering_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__templates_8h_source.html">filtering_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:abe71b020f571fb667df6537db3c0ea4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#abe71b020f571fb667df6537db3c0ea4b">FIR_DEFINE_TEST</a>(suffix,  config_suffix,  output_type)</td></tr>
+<tr class="separator:abe71b020f571fb667df6537db3c0ea4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6bdff45fce6eec21c81ba8fd853fc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a6a6bdff45fce6eec21c81ba8fd853fc3">FIR_INTERPOLATE_DEFINE_TEST</a>(suffix,  output_type)</td></tr>
+<tr class="separator:a6a6bdff45fce6eec21c81ba8fd853fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f10791009e4551968f3ff3554f8de9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a91f10791009e4551968f3ff3554f8de9">FIR_DECIMATE_DEFINE_TEST</a>(suffix,  config_suffix,  output_type)</td></tr>
+<tr class="separator:a91f10791009e4551968f3ff3554f8de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460caa2811e0e8494133413438ffec34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a460caa2811e0e8494133413438ffec34">FIR_LATTICE_DEFINE_TEST</a>(suffix,  output_type)</td></tr>
+<tr class="separator:a460caa2811e0e8494133413438ffec34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282db2b0c83198860a704dc93c0bd70b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a282db2b0c83198860a704dc93c0bd70b">FIR_SPARSE_DEFINE_TEST</a>(suffix,  output_type)</td></tr>
+<tr class="separator:a282db2b0c83198860a704dc93c0bd70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449850d8ff71e4c3f302f1799a5cb324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a449850d8ff71e4c3f302f1799a5cb324">FIR_SPARSE2_DEFINE_TEST</a>(suffix,  output_type)</td></tr>
+<tr class="separator:a449850d8ff71e4c3f302f1799a5cb324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ade74f5f387ab28cd4c164678e816dec4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#ade74f5f387ab28cd4c164678e816dec4">FIR_DEFINE_TEST</a> (f32,, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>)</td></tr>
+<tr class="separator:ade74f5f387ab28cd4c164678e816dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1c2577830c647dfb8466d266eeb112"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a9e1c2577830c647dfb8466d266eeb112">FIR_DEFINE_TEST</a> (q31,, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:a9e1c2577830c647dfb8466d266eeb112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b71f3ed9492762b2864d42d93a902e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#ad3b71f3ed9492762b2864d42d93a902e">FIR_DEFINE_TEST</a> (q15,, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:ad3b71f3ed9492762b2864d42d93a902e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f773a9744c0b92cc1359fa104c65ed0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a2f773a9744c0b92cc1359fa104c65ed0">FIR_DEFINE_TEST</a> (q31, _fast, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:a2f773a9744c0b92cc1359fa104c65ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f72326f5c0c798de5bab8938e451337"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a2f72326f5c0c798de5bab8938e451337">FIR_DEFINE_TEST</a> (q15, _fast, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:a2f72326f5c0c798de5bab8938e451337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c32847ec3e80dcd868455835ffd198"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a71c32847ec3e80dcd868455835ffd198">FIR_DEFINE_TEST</a> (q7,, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>)</td></tr>
+<tr class="separator:a71c32847ec3e80dcd868455835ffd198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e98ccac0ce880976144e89a10bd3951"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a5e98ccac0ce880976144e89a10bd3951">FIR_LATTICE_DEFINE_TEST</a> (f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>)</td></tr>
+<tr class="separator:a5e98ccac0ce880976144e89a10bd3951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37a6ef204c867ac5cc18b6eb09136f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#ae37a6ef204c867ac5cc18b6eb09136f2">FIR_LATTICE_DEFINE_TEST</a> (q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:ae37a6ef204c867ac5cc18b6eb09136f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e831478e54451b2f7a8fe0c29d4a07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a81e831478e54451b2f7a8fe0c29d4a07">FIR_LATTICE_DEFINE_TEST</a> (q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:a81e831478e54451b2f7a8fe0c29d4a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cbfa267575cf0d55f6388f259d71e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a26cbfa267575cf0d55f6388f259d71e7">FIR_INTERPOLATE_DEFINE_TEST</a> (f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>)</td></tr>
+<tr class="separator:a26cbfa267575cf0d55f6388f259d71e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f59f9883155a5906fe0f921217ed45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a89f59f9883155a5906fe0f921217ed45">FIR_INTERPOLATE_DEFINE_TEST</a> (q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:a89f59f9883155a5906fe0f921217ed45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bff08ce111da974cd0abc5b62ef502"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a01bff08ce111da974cd0abc5b62ef502">FIR_INTERPOLATE_DEFINE_TEST</a> (q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:a01bff08ce111da974cd0abc5b62ef502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cf5cf5eed27a01e5c1e5aea6fa7d54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a69cf5cf5eed27a01e5c1e5aea6fa7d54">FIR_DECIMATE_DEFINE_TEST</a> (f32,, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>)</td></tr>
+<tr class="separator:a69cf5cf5eed27a01e5c1e5aea6fa7d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fc1217ee0718802f5e6fe127eec33b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a56fc1217ee0718802f5e6fe127eec33b">FIR_DECIMATE_DEFINE_TEST</a> (q31,, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:a56fc1217ee0718802f5e6fe127eec33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b0ee05a41c1c2a996ca6267bd9f17b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#ab4b0ee05a41c1c2a996ca6267bd9f17b">FIR_DECIMATE_DEFINE_TEST</a> (q15,, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:ab4b0ee05a41c1c2a996ca6267bd9f17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fa23c0f0252e92a862eed34ddb988d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#ae2fa23c0f0252e92a862eed34ddb988d">FIR_DECIMATE_DEFINE_TEST</a> (q31, _fast, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:ae2fa23c0f0252e92a862eed34ddb988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5953ca2dc539e27ddb21f60d669f82c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a5953ca2dc539e27ddb21f60d669f82c1">FIR_DECIMATE_DEFINE_TEST</a> (q15, _fast, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:a5953ca2dc539e27ddb21f60d669f82c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af917f1b50ffd7db2673bc420423cb627"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#af917f1b50ffd7db2673bc420423cb627">FIR_SPARSE_DEFINE_TEST</a> (f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>)</td></tr>
+<tr class="separator:af917f1b50ffd7db2673bc420423cb627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7461773fd0f4e7aaffc05d97883e5cd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a7461773fd0f4e7aaffc05d97883e5cd4">FIR_SPARSE_DEFINE_TEST</a> (q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>)</td></tr>
+<tr class="separator:a7461773fd0f4e7aaffc05d97883e5cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22916911df65d7b5cf539f6e83c5c7eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#a22916911df65d7b5cf539f6e83c5c7eb">FIR_SPARSE2_DEFINE_TEST</a> (q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>)</td></tr>
+<tr class="separator:a22916911df65d7b5cf539f6e83c5c7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bcd1eed7f51692f48d31869f019da5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#aa4bcd1eed7f51692f48d31869f019da5">FIR_SPARSE2_DEFINE_TEST</a> (q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>)</td></tr>
+<tr class="separator:aa4bcd1eed7f51692f48d31869f019da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b99595f9c87b7ed701d14cb54be9d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fir__tests_8c.html#af8b99595f9c87b7ed701d14cb54be9d5">JTEST_DEFINE_GROUP</a> (fir_tests)</td></tr>
+<tr class="separator:af8b99595f9c87b7ed701d14cb54be9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a91f10791009e4551968f3ff3554f8de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f10791009e4551968f3ff3554f8de9">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_DECIMATE_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">config_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe71b020f571fb667df6537db3c0ea4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe71b020f571fb667df6537db3c0ea4b">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">config_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a6bdff45fce6eec21c81ba8fd853fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6bdff45fce6eec21c81ba8fd853fc3">&#9670;&nbsp;</a></span>FIR_INTERPOLATE_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_INTERPOLATE_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a460caa2811e0e8494133413438ffec34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460caa2811e0e8494133413438ffec34">&#9670;&nbsp;</a></span>FIR_LATTICE_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_LATTICE_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a449850d8ff71e4c3f302f1799a5cb324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449850d8ff71e4c3f302f1799a5cb324">&#9670;&nbsp;</a></span>FIR_SPARSE2_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_SPARSE2_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a282db2b0c83198860a704dc93c0bd70b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282db2b0c83198860a704dc93c0bd70b">&#9670;&nbsp;</a></span>FIR_SPARSE_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIR_SPARSE_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a69cf5cf5eed27a01e5c1e5aea6fa7d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69cf5cf5eed27a01e5c1e5aea6fa7d54">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DECIMATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5953ca2dc539e27ddb21f60d669f82c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5953ca2dc539e27ddb21f60d669f82c1">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DECIMATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4b0ee05a41c1c2a996ca6267bd9f17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b0ee05a41c1c2a996ca6267bd9f17b">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DECIMATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2fa23c0f0252e92a862eed34ddb988d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fa23c0f0252e92a862eed34ddb988d">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DECIMATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56fc1217ee0718802f5e6fe127eec33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fc1217ee0718802f5e6fe127eec33b">&#9670;&nbsp;</a></span>FIR_DECIMATE_DEFINE_TEST() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DECIMATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade74f5f387ab28cd4c164678e816dec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade74f5f387ab28cd4c164678e816dec4">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f72326f5c0c798de5bab8938e451337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f72326f5c0c798de5bab8938e451337">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3b71f3ed9492762b2864d42d93a902e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b71f3ed9492762b2864d42d93a902e">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f773a9744c0b92cc1359fa104c65ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f773a9744c0b92cc1359fa104c65ed0">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e1c2577830c647dfb8466d266eeb112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1c2577830c647dfb8466d266eeb112">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71c32847ec3e80dcd868455835ffd198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c32847ec3e80dcd868455835ffd198">&#9670;&nbsp;</a></span>FIR_DEFINE_TEST() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26cbfa267575cf0d55f6388f259d71e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26cbfa267575cf0d55f6388f259d71e7">&#9670;&nbsp;</a></span>FIR_INTERPOLATE_DEFINE_TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_INTERPOLATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01bff08ce111da974cd0abc5b62ef502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01bff08ce111da974cd0abc5b62ef502">&#9670;&nbsp;</a></span>FIR_INTERPOLATE_DEFINE_TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_INTERPOLATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f59f9883155a5906fe0f921217ed45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f59f9883155a5906fe0f921217ed45">&#9670;&nbsp;</a></span>FIR_INTERPOLATE_DEFINE_TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_INTERPOLATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e98ccac0ce880976144e89a10bd3951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e98ccac0ce880976144e89a10bd3951">&#9670;&nbsp;</a></span>FIR_LATTICE_DEFINE_TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_LATTICE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e831478e54451b2f7a8fe0c29d4a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e831478e54451b2f7a8fe0c29d4a07">&#9670;&nbsp;</a></span>FIR_LATTICE_DEFINE_TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_LATTICE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae37a6ef204c867ac5cc18b6eb09136f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37a6ef204c867ac5cc18b6eb09136f2">&#9670;&nbsp;</a></span>FIR_LATTICE_DEFINE_TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_LATTICE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22916911df65d7b5cf539f6e83c5c7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22916911df65d7b5cf539f6e83c5c7eb">&#9670;&nbsp;</a></span>FIR_SPARSE2_DEFINE_TEST() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_SPARSE2_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4bcd1eed7f51692f48d31869f019da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4bcd1eed7f51692f48d31869f019da5">&#9670;&nbsp;</a></span>FIR_SPARSE2_DEFINE_TEST() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_SPARSE2_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af917f1b50ffd7db2673bc420423cb627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af917f1b50ffd7db2673bc420423cb627">&#9670;&nbsp;</a></span>FIR_SPARSE_DEFINE_TEST() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_SPARSE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7461773fd0f4e7aaffc05d97883e5cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7461773fd0f4e7aaffc05d97883e5cd4">&#9670;&nbsp;</a></span>FIR_SPARSE_DEFINE_TEST() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIR_SPARSE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8b99595f9c87b7ed701d14cb54be9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b99595f9c87b7ed701d14cb54be9d5">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">fir_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

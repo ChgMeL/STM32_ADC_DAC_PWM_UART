@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['basic_5fmath_5fbiggest_5finput_5ftype_18855',['BASIC_MATH_BIGGEST_INPUT_TYPE',['../basic__math__test__data_8h.html#a7eaf5155ff9811ae18e156d378ee8dd7',1,'basic_math_test_data.h']]],
+  ['basic_5fmath_5fcompare_5finterface_18856',['BASIC_MATH_COMPARE_INTERFACE',['../basic__math__templates_8h.html#a3e6154d6d4a9805e29fa79628f098a79',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fdefine_5ftest_5ftemplate_5fbuf1_5fblk_18857',['BASIC_MATH_DEFINE_TEST_TEMPLATE_BUF1_BLK',['../basic__math__templates_8h.html#a563f06c0ccb5a6f101335969840f9da8',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fdefine_5ftest_5ftemplate_5fbuf1_5felt1_5fblk_18858',['BASIC_MATH_DEFINE_TEST_TEMPLATE_BUF1_ELT1_BLK',['../basic__math__templates_8h.html#a1c6a992db301385cc5e40886f057b3e4',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fdefine_5ftest_5ftemplate_5fbuf1_5felt2_5fblk_18859',['BASIC_MATH_DEFINE_TEST_TEMPLATE_BUF1_ELT2_BLK',['../basic__math__templates_8h.html#a26570d7f670ef99fef30851102cbd5d3',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fdefine_5ftest_5ftemplate_5fbuf2_5fblk_18860',['BASIC_MATH_DEFINE_TEST_TEMPLATE_BUF2_BLK',['../basic__math__templates_8h.html#aa677cb6c31914f59d9b56d1a1b8254c0',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fmax_5finput_5felements_18861',['BASIC_MATH_MAX_INPUT_ELEMENTS',['../basic__math__test__data_8h.html#a2d9ebac4cb0ed125507ccebe40142fb6',1,'basic_math_test_data.h']]],
+  ['basic_5fmath_5fsnr_5fcompare_5finterface_18862',['BASIC_MATH_SNR_COMPARE_INTERFACE',['../basic__math__templates_8h.html#a47b03d0ad73f2bb68a39f5dd0c9a6e2d',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fsnr_5felt1_5fcompare_5finterface_18863',['BASIC_MATH_SNR_ELT1_COMPARE_INTERFACE',['../basic__math__templates_8h.html#a4b47bb6bf3d38d86d2e297eb51debd82',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fsnr_5fthreshold_5ffloat32_5ft_18864',['BASIC_MATH_SNR_THRESHOLD_float32_t',['../basic__math__templates_8h.html#a12ba398b964700d24a054ae3a115f796',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fsnr_5fthreshold_5fq15_5ft_18865',['BASIC_MATH_SNR_THRESHOLD_q15_t',['../basic__math__templates_8h.html#a654e3c90f190783f8f7c22a0ca5d1b91',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fsnr_5fthreshold_5fq31_5ft_18866',['BASIC_MATH_SNR_THRESHOLD_q31_t',['../basic__math__templates_8h.html#a3b1ed972f97cf12136f76c385e1b89d1',1,'basic_math_templates.h']]],
+  ['basic_5fmath_5fsnr_5fthreshold_5fq7_5ft_18867',['BASIC_MATH_SNR_THRESHOLD_q7_t',['../basic__math__templates_8h.html#a6cd82ef85c52e7dd84513aafeed30e8c',1,'basic_math_templates.h']]],
+  ['biggest_5finput_5ftype_18868',['BIGGEST_INPUT_TYPE',['../support__test__common__data_8c.html#ac5806bc984c18d4aad8380680f3bff0d',1,'support_test_common_data.c']]],
+  ['biquad_5fdefine_5ftest_18869',['BIQUAD_DEFINE_TEST',['../biquad__tests_8c.html#a2329c4b73810b250b93244010aeb43d8',1,'biquad_tests.c']]],
+  ['biquad_5fwith_5fpostshift_5fdefine_5ftest_18870',['BIQUAD_WITH_POSTSHIFT_DEFINE_TEST',['../biquad__tests_8c.html#a8074eb1a6a8147031a0716a2d2c7f40f',1,'biquad_tests.c']]],
+  ['block_5fsize_18871',['BLOCK_SIZE',['../arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced',1,'arm_fir_example_f32.c']]],
+  ['blocksize_18872',['BLOCKSIZE',['../arm__graphic__equalizer__example__q31_8c.html#afcf795f5a96fd55561abe69f56224630',1,'BLOCKSIZE():&#160;arm_graphic_equalizer_example_q31.c'],['../arm__signal__converge__example__f32_8c.html#afcf795f5a96fd55561abe69f56224630',1,'BLOCKSIZE():&#160;arm_signal_converge_example_f32.c']]],
+  ['bound_18873',['BOUND',['../util_8h.html#a5f86e2fe52809a42966b727c19394823',1,'util.h']]]
+];

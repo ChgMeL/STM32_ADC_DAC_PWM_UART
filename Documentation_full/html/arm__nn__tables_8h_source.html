@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Исходный файл Drivers/CMSIS/NN/Include/arm_nn_tables.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_942f58f7027350fa066ed296bd14d9e4.html">NN</a></li><li class="navelem"><a class="el" href="dir_4d3b0036c84f3d291cff5a801b0b8175.html">Include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">arm_nn_tables.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="arm__nn__tables_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Project:      CMSIS NN Library</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Title:        arm_nn_tables.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Description:  Extern declaration for NN tables</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * $Date:        17. January 2018</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * $Revision:    V.1.0.0</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Target Processor:  Cortex-M cores</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * -------------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Copyright (C) 2010-2018 Arm Limited or its affiliates. All rights reserved.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the License); you may</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * distributed under the License is distributed on an AS IS BASIS, WITHOUT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * limitations under the License.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef _ARM_NN_TABLES_H</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define _ARM_NN_TABLES_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="arm__math_8h.html">arm_math.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#ab4d7b07c387a3537d4efe21da86115b0">sigmoidTable_q15</a>[256];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> <a class="code" href="arm__nn__tables_8h.html#ae2ff3f4e7014f535358167150bdd544f">sigmoidTable_q7</a>[256];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> <a class="code" href="arm__nn__tables_8h.html#a4f854bdf13f630ec21b3ad074491e32f">tanhTable_q7</a>[256];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#a6faad2fec173b2702fd0f219a83ca320">tanhTable_q15</a>[256];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#ab5096856d08f98c906b9b02e6c6a8bdf">sigmoidHTable_q15</a>[192];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#add5ca535701805d3cb61287219975838">sigmoidLTable_q15</a>[128];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="arm__nn__tables_8h.html#add5ca535701805d3cb61287219975838">   56</a></span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#add5ca535701805d3cb61287219975838">sigmoidLTable_q15</a>[128];</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="arm__nn__tables_8h.html#ab5096856d08f98c906b9b02e6c6a8bdf">   57</a></span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> <a class="code" href="arm__nn__tables_8h.html#ab5096856d08f98c906b9b02e6c6a8bdf">sigmoidHTable_q15</a>[192];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif                          </span><span class="comment">/*  ARM_NN_TABLES_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aarm__math_8h_html"><div class="ttname"><a href="arm__math_8h.html">arm_math.h</a></div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_add5ca535701805d3cb61287219975838"><div class="ttname"><a href="arm__nn__tables_8h.html#add5ca535701805d3cb61287219975838">sigmoidLTable_q15</a></div><div class="ttdeci">const q15_t sigmoidLTable_q15[128]</div><div class="ttdef"><b>Definition:</b> arm_nn_tables.h:56</div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_a4f854bdf13f630ec21b3ad074491e32f"><div class="ttname"><a href="arm__nn__tables_8h.html#a4f854bdf13f630ec21b3ad074491e32f">tanhTable_q7</a></div><div class="ttdeci">const q7_t tanhTable_q7[256]</div><div class="ttdef"><b>Definition:</b> arm_nntables.c:183</div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_ab4d7b07c387a3537d4efe21da86115b0"><div class="ttname"><a href="arm__nn__tables_8h.html#ab4d7b07c387a3537d4efe21da86115b0">sigmoidTable_q15</a></div><div class="ttdeci">const q15_t sigmoidTable_q15[256]</div><div class="ttdoc">tables for various activation functions</div><div class="ttdef"><b>Definition:</b> arm_nntables.c:102</div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_ae2ff3f4e7014f535358167150bdd544f"><div class="ttname"><a href="arm__nn__tables_8h.html#ae2ff3f4e7014f535358167150bdd544f">sigmoidTable_q7</a></div><div class="ttdeci">const q7_t sigmoidTable_q7[256]</div><div class="ttdoc">tables for various activation functions</div><div class="ttdef"><b>Definition:</b> arm_nntables.c:67</div></div>
+<div class="ttc" id="aarm__math_8h_html_ab5a8fb21a5b3b983d5f54f31614052ea"><div class="ttname"><a href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a></div><div class="ttdeci">int16_t q15_t</div><div class="ttdoc">16-bit fractional data type in 1.15 format.</div><div class="ttdef"><b>Definition:</b> arm_math.h:418</div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_a6faad2fec173b2702fd0f219a83ca320"><div class="ttname"><a href="arm__nn__tables_8h.html#a6faad2fec173b2702fd0f219a83ca320">tanhTable_q15</a></div><div class="ttdeci">const q15_t tanhTable_q15[256]</div><div class="ttdef"><b>Definition:</b> arm_nntables.c:218</div></div>
+<div class="ttc" id="aarm__nn__tables_8h_html_ab5096856d08f98c906b9b02e6c6a8bdf"><div class="ttname"><a href="arm__nn__tables_8h.html#ab5096856d08f98c906b9b02e6c6a8bdf">sigmoidHTable_q15</a></div><div class="ttdeci">const q15_t sigmoidHTable_q15[192]</div><div class="ttdoc">2-way tables for various activation functions</div><div class="ttdef"><b>Definition:</b> arm_nn_tables.h:57</div></div>
+<div class="ttc" id="aarm__math_8h_html_ae541b6f232c305361e9b416fc9eed263"><div class="ttname"><a href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a></div><div class="ttdeci">int8_t q7_t</div><div class="ttdoc">8-bit fractional data type in 1.7 format.</div><div class="ttdef"><b>Definition:</b> arm_math.h:413</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

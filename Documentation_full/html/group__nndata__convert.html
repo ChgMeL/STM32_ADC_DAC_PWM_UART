@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Neural Network Data Conversion Functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Neural Network Data Conversion Functions<div class="ingroups"><a class="el" href="group__group_support.html">Support Functions</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Perform data type conversion in-between neural network operations.  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gae349de4dba8d253c89d45794ccf05680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__nndata__convert.html#gae349de4dba8d253c89d45794ccf05680">arm_q7_to_q15_no_shift</a> (const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memdesc:gae349de4dba8d253c89d45794ccf05680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the elements of the Q7 vector to Q15 vector without left-shift.  <a href="group__nndata__convert.html#gae349de4dba8d253c89d45794ccf05680">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae349de4dba8d253c89d45794ccf05680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba8fd446d5f54760b406ee63b25d1aee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__nndata__convert.html#gaba8fd446d5f54760b406ee63b25d1aee">arm_q7_to_q15_reordered_no_shift</a> (const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memdesc:gaba8fd446d5f54760b406ee63b25d1aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the elements of the Q7 vector to reordered Q15 vector without left-shift.  <a href="group__nndata__convert.html#gaba8fd446d5f54760b406ee63b25d1aee">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaba8fd446d5f54760b406ee63b25d1aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Perform data type conversion in-between neural network operations. </p>
+<p><br  />
+</p>
+<p><br  />
+</p>
+<p><br  />
+ </p>
+<h2 class="groupheader">Функции</h2>
+<a id="gae349de4dba8d253c89d45794ccf05680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae349de4dba8d253c89d45794ccf05680">&#9670;&nbsp;</a></span>arm_q7_to_q15_no_shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_q7_to_q15_no_shift </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>blockSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the elements of the Q7 vector to Q15 vector without left-shift. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pSrc</td><td>points to the Q7 input vector <br  />
+ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pDst</td><td>points to the Q15 output vector <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockSize</td><td>length of the input vector <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. <br  />
+</dd></dl>
+<dl class="section user"><dt>Description: </dt><dd><br  />
+</dd></dl>
+<p>The equation used for the conversion process is: <br  />
+</p>
+<pre>    
+    pDst[n] = (q15_t) pSrc[n];   0 &lt;= n &lt; blockSize.    
+</pre><p> <br  />
+ </p>
+
+</div>
+</div>
+<a id="gaba8fd446d5f54760b406ee63b25d1aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba8fd446d5f54760b406ee63b25d1aee">&#9670;&nbsp;</a></span>arm_q7_to_q15_reordered_no_shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_q7_to_q15_reordered_no_shift </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>blockSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the elements of the Q7 vector to reordered Q15 vector without left-shift. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pSrc</td><td>points to the Q7 input vector <br  />
+ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pDst</td><td>points to the Q15 output vector <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockSize</td><td>length of the input vector <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. <br  />
+</dd></dl>
+<p>This function does the q7 to q15 expansion with re-ordering</p>
+<pre>
+                         |   A1   |   A2   |   A3   |   A4   |</pre><pre>                          0      7 8     15 16    23 24    31
+</pre><p>is converted into:</p>
+<pre>
+ |       A1       |       A3       |   and  |       A2       |       A4       |</pre><pre>  0             15 16            31          0             15 16            31
+</pre><p>This looks strange but is natural considering how sign-extension is done at assembly level.</p>
+<p>The expansion of other other oprand will follow the same rule so that the end results are the same.</p>
+<p>The tail (i.e., last (N % 4) elements) will still be in original order. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

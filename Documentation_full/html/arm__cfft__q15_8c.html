@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/Source/TransformFunctions/arm_cfft_q15.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_f0c0c9921dcf87321c5a47a86689bac2.html">Source</a></li><li class="navelem"><a class="el" href="dir_5232f83294a6be7d794871045bcc05e6.html">TransformFunctions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл arm_cfft_q15.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abf1a2f9aa9f44ad5da1f0dbae8b54f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__cfft__q15_8c.html#abf1a2f9aa9f44ad5da1f0dbae8b54f2f">arm_radix4_butterfly_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, uint32_t fftLen, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoef, uint32_t twidCoefModifier)</td></tr>
+<tr class="memdesc:abf1a2f9aa9f44ad5da1f0dbae8b54f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core function for the Q15 CFFT butterfly process.  <a href="arm__cfft__q15_8c.html#abf1a2f9aa9f44ad5da1f0dbae8b54f2f">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf1a2f9aa9f44ad5da1f0dbae8b54f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734ecff00f21a6a10e9ec437c8987eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__cfft__q15_8c.html#a734ecff00f21a6a10e9ec437c8987eb1">arm_radix4_butterfly_inverse_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, uint32_t fftLen, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoef, uint32_t twidCoefModifier)</td></tr>
+<tr class="memdesc:a734ecff00f21a6a10e9ec437c8987eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core function for the Q15 CIFFT butterfly process.  <a href="arm__cfft__q15_8c.html#a734ecff00f21a6a10e9ec437c8987eb1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a734ecff00f21a6a10e9ec437c8987eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773957c278f4d9e728711f27e8a6e278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__cfft__q15_8c.html#a773957c278f4d9e728711f27e8a6e278">arm_bitreversal_16</a> (uint16_t *pSrc, const uint16_t bitRevLen, const uint16_t *pBitRevTable)</td></tr>
+<tr class="separator:a773957c278f4d9e728711f27e8a6e278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d4a751153857c173511e0c77ab4fa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__cfft__q15_8c.html#af1d4a751153857c173511e0c77ab4fa9">arm_cfft_radix4by2_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, uint32_t fftLen, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoef)</td></tr>
+<tr class="separator:af1d4a751153857c173511e0c77ab4fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe669acc8db57d1fb9b1e2bba30f2224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__cfft__q15_8c.html#abe669acc8db57d1fb9b1e2bba30f2224">arm_cfft_radix4by2_inverse_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, uint32_t fftLen, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoef)</td></tr>
+<tr class="separator:abe669acc8db57d1fb9b1e2bba30f2224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68cdacd2267a2967955e40e6b7ec1229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___complex_f_f_t.html#ga68cdacd2267a2967955e40e6b7ec1229">arm_cfft_q15</a> (const <a class="el" href="structarm__cfft__instance__q15.html">arm_cfft_instance_q15</a> *S, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *p1, uint8_t <a class="el" href="arm__fft__bin__example__f32_8c.html#a379ccb99013d369a41b49619083c16ef">ifftFlag</a>, uint8_t bitReverseFlag)</td></tr>
+<tr class="memdesc:ga68cdacd2267a2967955e40e6b7ec1229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q15 complex FFT.  <a href="group___complex_f_f_t.html#ga68cdacd2267a2967955e40e6b7ec1229">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga68cdacd2267a2967955e40e6b7ec1229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a773957c278f4d9e728711f27e8a6e278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773957c278f4d9e728711f27e8a6e278">&#9670;&nbsp;</a></span>arm_bitreversal_16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_bitreversal_16 </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>bitRevLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *&#160;</td>
+          <td class="paramname"><em>pBitRevTable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe669acc8db57d1fb9b1e2bba30f2224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe669acc8db57d1fb9b1e2bba30f2224">&#9670;&nbsp;</a></span>arm_cfft_radix4by2_inverse_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_cfft_radix4by2_inverse_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pCoef</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1d4a751153857c173511e0c77ab4fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d4a751153857c173511e0c77ab4fa9">&#9670;&nbsp;</a></span>arm_cfft_radix4by2_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_cfft_radix4by2_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pCoef</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>end of ComplexFFT group </p>
+
+</div>
+</div>
+<a id="a734ecff00f21a6a10e9ec437c8987eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734ecff00f21a6a10e9ec437c8987eb1">&#9670;&nbsp;</a></span>arm_radix4_butterfly_inverse_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_radix4_butterfly_inverse_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc16</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pCoef16</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>twidCoefModifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Core function for the Q15 CIFFT butterfly process. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*pSrc16</td><td>points to the in-place buffer of Q15 data type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fftLen</td><td>length of the FFT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pCoef16</td><td>points to twiddle coefficient buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">twidCoefModifier</td><td>twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. </dd></dl>
+
+</div>
+</div>
+<a id="abf1a2f9aa9f44ad5da1f0dbae8b54f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1a2f9aa9f44ad5da1f0dbae8b54f2f">&#9670;&nbsp;</a></span>arm_radix4_butterfly_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_radix4_butterfly_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc16</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pCoef16</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>twidCoefModifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Core function for the Q15 CFFT butterfly process. </p>
+<p>end of ComplexFFT group </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*pSrc16</td><td>points to the in-place buffer of Q15 data type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fftLen</td><td>length of the FFT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pCoef16</td><td>points to twiddle coefficient buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">twidCoefModifier</td><td>twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

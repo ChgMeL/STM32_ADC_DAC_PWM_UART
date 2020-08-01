@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/transform_tests/cfft_family_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_6e093da9891638219f956c67e4d07a1d.html">transform_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cfft_family_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transform__templates_8h_source.html">transform_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transform__test__data_8h_source.html">transform_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:af96253bfe0b540b610d4d8fd6fc10e9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#af96253bfe0b540b610d4d8fd6fc10e9c">CFFT_FN_NAME</a>(fn_specifier,  type_suffix)&#160;&#160;&#160;arm_cfft_##fn_specifier##_##type_suffix     \</td></tr>
+<tr class="separator:af96253bfe0b540b610d4d8fd6fc10e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe4f63813bbece92bb945023f2f090d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#adbe4f63813bbece92bb945023f2f090d">CFFT_TEST_NAME</a>(fn_specifier,  type_suffix,  config_suffix)&#160;&#160;&#160;arm_cfft_##fn_specifier##_##type_suffix##_##config_suffix##_test    \</td></tr>
+<tr class="separator:adbe4f63813bbece92bb945023f2f090d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad800c72d1fb12d1305e684d63b6ba387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ad800c72d1fb12d1305e684d63b6ba387">arm_cfft_mag_init_f32</a>&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#gaf336459f684f0b17bfae539ef1b1b78a">arm_cfft_radix4_init_f32</a></td></tr>
+<tr class="separator:ad800c72d1fb12d1305e684d63b6ba387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00aba43518ce6b395a39d87478fe892"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#aa00aba43518ce6b395a39d87478fe892">arm_cfft_mag_init_q31</a>&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#gad5caaafeec900c8ff72321c01bbd462c">arm_cfft_radix4_init_q31</a></td></tr>
+<tr class="separator:aa00aba43518ce6b395a39d87478fe892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf8b03c05992f5abf23dce95d719a67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#afcf8b03c05992f5abf23dce95d719a67">arm_cfft_mag_init_q15</a>&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#ga0c2acfda3126c452e75b81669e8ad9ef">arm_cfft_radix4_init_q15</a></td></tr>
+<tr class="separator:afcf8b03c05992f5abf23dce95d719a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62b771a83afe92bf7cf8236178d2994"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ac62b771a83afe92bf7cf8236178d2994">arm_cfft_mag_instance_f32</a>&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a></td></tr>
+<tr class="separator:ac62b771a83afe92bf7cf8236178d2994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839bd296e705042d540ab2f1061d4f44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#a839bd296e705042d540ab2f1061d4f44">arm_cfft_mag_instance_q31</a>&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__q31.html">arm_cfft_radix4_instance_q31</a></td></tr>
+<tr class="separator:a839bd296e705042d540ab2f1061d4f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad272839112491bb149151eddaf1a9f77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ad272839112491bb149151eddaf1a9f77">arm_cfft_mag_instance_q15</a>&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__q15.html">arm_cfft_radix4_instance_q15</a></td></tr>
+<tr class="separator:ad272839112491bb149151eddaf1a9f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5078f46044774d3d477c531aa983266"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ae5078f46044774d3d477c531aa983266">transform_mag_fftlens</a>&#160;&#160;&#160;transform_radix4_fftlens</td></tr>
+<tr class="separator:ae5078f46044774d3d477c531aa983266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52609fa4e8081a0e6e4781c2ceea256"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ac52609fa4e8081a0e6e4781c2ceea256">CFFT_FAMILY_DEFINE_TEST</a>(fn_specifier,  type_suffix,  config_suffix,  comparison_interface,  output_type,  ifft_flag)</td></tr>
+<tr class="separator:ac52609fa4e8081a0e6e4781c2ceea256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a69a37785c6170817e5eb19344afb88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#a0a69a37785c6170817e5eb19344afb88">CFFT_FAMILY_DEFINE_ALL_TESTS</a>(config_suffix,  ifft_flag)</td></tr>
+<tr class="separator:a0a69a37785c6170817e5eb19344afb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ace82f8109f93ff39c86abd61375453c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#ace82f8109f93ff39c86abd61375453c3">CFFT_FAMILY_DEFINE_ALL_TESTS</a> (forward, 0U)</td></tr>
+<tr class="separator:ace82f8109f93ff39c86abd61375453c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5ed53572a75777cddd5bd380a9104e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#a5e5ed53572a75777cddd5bd380a9104e">CFFT_FAMILY_DEFINE_ALL_TESTS</a> (inverse, 1U)</td></tr>
+<tr class="separator:a5e5ed53572a75777cddd5bd380a9104e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab46f66872330f97f147bcf9e7238b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__family__tests_8c.html#a1ab46f66872330f97f147bcf9e7238b3">JTEST_DEFINE_GROUP</a> (cfft_family_tests)</td></tr>
+<tr class="separator:a1ab46f66872330f97f147bcf9e7238b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ad800c72d1fb12d1305e684d63b6ba387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad800c72d1fb12d1305e684d63b6ba387">&#9670;&nbsp;</a></span>arm_cfft_mag_init_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_init_f32&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#gaf336459f684f0b17bfae539ef1b1b78a">arm_cfft_radix4_init_f32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcf8b03c05992f5abf23dce95d719a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf8b03c05992f5abf23dce95d719a67">&#9670;&nbsp;</a></span>arm_cfft_mag_init_q15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_init_q15&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#ga0c2acfda3126c452e75b81669e8ad9ef">arm_cfft_radix4_init_q15</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa00aba43518ce6b395a39d87478fe892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00aba43518ce6b395a39d87478fe892">&#9670;&nbsp;</a></span>arm_cfft_mag_init_q31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_init_q31&#160;&#160;&#160;<a class="el" href="group___complex_f_f_t.html#gad5caaafeec900c8ff72321c01bbd462c">arm_cfft_radix4_init_q31</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac62b771a83afe92bf7cf8236178d2994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62b771a83afe92bf7cf8236178d2994">&#9670;&nbsp;</a></span>arm_cfft_mag_instance_f32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_instance_f32&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad272839112491bb149151eddaf1a9f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad272839112491bb149151eddaf1a9f77">&#9670;&nbsp;</a></span>arm_cfft_mag_instance_q15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_instance_q15&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__q15.html">arm_cfft_radix4_instance_q15</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a839bd296e705042d540ab2f1061d4f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839bd296e705042d540ab2f1061d4f44">&#9670;&nbsp;</a></span>arm_cfft_mag_instance_q31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define arm_cfft_mag_instance_q31&#160;&#160;&#160;<a class="el" href="structarm__cfft__radix4__instance__q31.html">arm_cfft_radix4_instance_q31</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a69a37785c6170817e5eb19344afb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a69a37785c6170817e5eb19344afb88">&#9670;&nbsp;</a></span>CFFT_FAMILY_DEFINE_ALL_TESTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_FAMILY_DEFINE_ALL_TESTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">config_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ifft_flag&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <span class="comment">/* Radix2 tests*/</span>                                               \</div>
+<div class="line">    CFFT_FAMILY_DEFINE_TEST(radix2, q31, config_suffix,             \</div>
+<div class="line">                            <a class="code" href="transform__templates_8h.html#ab64fdc21e280fab2744ab09ea363b583">TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE</a>,  \</div>
+<div class="line">                            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(q31),                  \</div>
+<div class="line">                            ifft_flag);                             \</div>
+<div class="line">    CFFT_FAMILY_DEFINE_TEST(radix2, q15, config_suffix,             \</div>
+<div class="line">                            <a class="code" href="transform__templates_8h.html#ab64fdc21e280fab2744ab09ea363b583">TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE</a>,  \</div>
+<div class="line">                            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(q15),                  \</div>
+<div class="line">                            ifft_flag);                             \</div>
+<div class="line">    <span class="comment">/* Radix4 tests*/</span>                                               \</div>
+<div class="line">    CFFT_FAMILY_DEFINE_TEST(radix4, q31, config_suffix,             \</div>
+<div class="line">                            <a class="code" href="transform__templates_8h.html#ab64fdc21e280fab2744ab09ea363b583">TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE</a>,  \</div>
+<div class="line">                            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(q31),                  \</div>
+<div class="line">                            ifft_flag);                             \</div>
+<div class="line">    CFFT_FAMILY_DEFINE_TEST(radix4, q15, config_suffix,             \</div>
+<div class="line">                            <a class="code" href="transform__templates_8h.html#ab64fdc21e280fab2744ab09ea363b583">TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE</a>,  \</div>
+<div class="line">                            <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(q15),                  \</div>
+<div class="line">                            ifft_flag)</div>
+</div><!-- fragment --><p>Bulk wrapper for all tests instantiated using <a class="el" href="cfft__family__tests_8c.html#ac52609fa4e8081a0e6e4781c2ceea256">CFFT_FAMILY_DEFINE_TEST()</a>.</p>
+<p>This macro allows several test definitions to share the same config_suffix and ifft_flag settings. </p>
+
+</div>
+</div>
+<a id="ac52609fa4e8081a0e6e4781c2ceea256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52609fa4e8081a0e6e4781c2ceea256">&#9670;&nbsp;</a></span>CFFT_FAMILY_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_FAMILY_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fn_specifier, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">config_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">comparison_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ifft_flag&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Defines a test for the family of CFFT transforms.</p>
+<p>The family of CFFT transforms includes:</p>
+<ul>
+<li>arm_cfft_radix4_xxx</li>
+<li>arm_cfft_radix2_xxx</li>
+<li>arm_cfft_mag_xxx</li>
+</ul>
+<p>Where xxx can be f32, q31, or q15.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn_specifier</td><td>Allowed values: radix4, radix2, mag. </td></tr>
+    <tr><td class="paramname">type_suffix</td><td>Allowed values: f32, q31, q15.</td></tr>
+    <tr><td class="paramname">config_suffix</td><td>Used to differentiate test names based configuration (in this case whether the ifft_flag is set or not.)</td></tr>
+    <tr><td class="paramname">comparison_interface</td><td>Macro name used to compare reference and fut outputs.</td></tr>
+    <tr><td class="paramname">output_tpe</td><td>The type of variable contained in the output (e.g. float32_t, uint32_t, etc).</td></tr>
+    <tr><td class="paramname">ifft_flag</td><td>Determines whether the arm_cfft_instance_xxx is configured for an inverse FFT. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af96253bfe0b540b610d4d8fd6fc10e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96253bfe0b540b610d4d8fd6fc10e9c">&#9670;&nbsp;</a></span>CFFT_FN_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_FN_NAME</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fn_specifier, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;arm_cfft_##fn_specifier##_##type_suffix     \</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbe4f63813bbece92bb945023f2f090d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe4f63813bbece92bb945023f2f090d">&#9670;&nbsp;</a></span>CFFT_TEST_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_TEST_NAME</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fn_specifier, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">config_suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;arm_cfft_##fn_specifier##_##type_suffix##_##config_suffix##_test    \</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5078f46044774d3d477c531aa983266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5078f46044774d3d477c531aa983266">&#9670;&nbsp;</a></span>transform_mag_fftlens</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define transform_mag_fftlens&#160;&#160;&#160;transform_radix4_fftlens</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ace82f8109f93ff39c86abd61375453c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace82f8109f93ff39c86abd61375453c3">&#9670;&nbsp;</a></span>CFFT_FAMILY_DEFINE_ALL_TESTS() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFFT_FAMILY_DEFINE_ALL_TESTS </td>
+          <td>(</td>
+          <td class="paramtype">forward&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0U&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e5ed53572a75777cddd5bd380a9104e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5ed53572a75777cddd5bd380a9104e">&#9670;&nbsp;</a></span>CFFT_FAMILY_DEFINE_ALL_TESTS() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFFT_FAMILY_DEFINE_ALL_TESTS </td>
+          <td>(</td>
+          <td class="paramtype">inverse&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1U&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ab46f66872330f97f147bcf9e7238b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab46f66872330f97f147bcf9e7238b3">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">cfft_family_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="atransform__templates_8h_html_ab64fdc21e280fab2744ab09ea363b583"><div class="ttname"><a href="transform__templates_8h.html#ab64fdc21e280fab2744ab09ea363b583">TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE</a></div><div class="ttdeci">#define TRANSFORM_SNR_COMPARE_CMPLX_INTERFACE(block_size, output_type)</div><div class="ttdef"><b>Definition:</b> transform_templates.h:68</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Исходный файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/inc/arr_desc/arr_desc.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_f3ad061b6bd950dddc98e05f7d506252.html">JTest</a></li><li class="navelem"><a class="el" href="dir_6522c18ceaa54132d564bb0a9a5dcdfd.html">inc</a></li><li class="navelem"><a class="el" href="dir_7bd7a83a6209ae2a0ca6aa77383af987.html">arr_desc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">arr_desc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="arr__desc_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ARR_DESC_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _ARR_DESC_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/* Includes */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span>             <span class="comment">/* memset() */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../util/util.h&quot;</span>       <span class="comment">/* CONCAT() */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Type Definitions */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_a_r_r___d_e_s_c__struct.html">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_struct</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_a_r_r___d_e_s_c__struct.html#abd166fdd046bf6ad359ddbd822a90911">   20</a></span>&#160;    <span class="keywordtype">void</span> *  <a class="code" href="struct_a_r_r___d_e_s_c__struct.html#abd166fdd046bf6ad359ddbd822a90911">data_ptr</a>;                <span class="comment">/* Pointer to the array contents. */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_a_r_r___d_e_s_c__struct.html#a66c2f0479bf051107fe5c689dfaa0eea">   21</a></span>&#160;    int32_t <a class="code" href="struct_a_r_r___d_e_s_c__struct.html#a66c2f0479bf051107fe5c689dfaa0eea">element_count</a>;           <span class="comment">/* Number of current elements. */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_a_r_r___d_e_s_c__struct.html#abc38bac0168c2f0d239967c015de4bb2">   22</a></span>&#160;    int32_t <a class="code" href="struct_a_r_r___d_e_s_c__struct.html#abc38bac0168c2f0d239967c015de4bb2">element_size</a>;            <span class="comment">/* Size of current elements in bytes. */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_a_r_r___d_e_s_c__struct.html#a55d1e73beff5fe2d8f0d03ea56747782">   23</a></span>&#160;    int32_t <a class="code" href="struct_a_r_r___d_e_s_c__struct.html#a55d1e73beff5fe2d8f0d03ea56747782">underlying_size</a>;         <span class="comment">/* Size of underlying array in bytes. */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">   24</a></span>&#160;} <a class="code" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* Macros and Defines */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define ARR_DESC_ARR_PREFIX ARR_DESC_ARR_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#ae472b4e3fe4d3d1afc13965b98a00548">   35</a></span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define ARR_DESC_ARR_NAME(name)                 \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#aecdcf127ef19ebe51058ec741b62a232">   41</a></span>&#160;<span class="preprocessor">    CONCAT(ARR_DESC_ARR_PREFIX, name)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define ARR_DESC_INTERNAL_DEFINE(name, data_ptr,                \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#ab5bc76aa759af1d7bafff4fb8386c14b">   50</a></span>&#160;<span class="preprocessor">                                 element_count, element_size)   \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    ARR_DESC_t name = {                                         \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        data_ptr,                                               \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        element_count,                                          \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">        element_size,                                           \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">        element_count * element_size                            \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    }                                                           \</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define ARR_DESC_DEFINE(type, name, element_count, content)             \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a8f15c929af05febcba685cec5114ac68">   65</a></span>&#160;<span class="preprocessor">    type ARR_DESC_ARR_NAME(name)[element_count] = content;              \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    ARR_DESC_INTERNAL_DEFINE(name,                                      \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">                             &amp;ARR_DESC_ARR_NAME(name),                  \</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">                             element_count,                             \</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">                             sizeof(type)) </span><span class="comment">/* Note the lacking semicolon */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define ARR_DESC_DEFINE_SUBSET(name, original, element_cnt)         \</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a5b4ca6155a83a3fe12bd5eb61eeda2ae">   78</a></span>&#160;<span class="preprocessor">    ARR_DESC_INTERNAL_DEFINE(name,                                  \</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">                             &amp;ARR_DESC_ARR_NAME(original),          \</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">                             element_cnt,                           \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">                             sizeof(ARR_DESC_ARR_NAME(original)[0]) \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">        ) </span><span class="comment">/* Note the lacking semicolon */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define ARR_DESC_DEFINE_USING_ARR(type, name, array_ptr, start_idx, element_cnt) \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">  108</a></span>&#160;<span class="preprocessor">    ARR_DESC_INTERNAL_DEFINE(                                           \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">        name,                                                           \</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">        (type *) (array_ptr + start_idx),                               \</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">        element_cnt,                                                    \</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">        sizeof(type)                                                    \</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">        ) </span><span class="comment">/* Note the lacking semicolon*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define ARR_DESC_DECLARE(name)                              \</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a3dfdf3ce44e47081deb8388fb78eb039">  119</a></span>&#160;<span class="preprocessor">    extern ARR_DESC_t name </span><span class="comment">/* Note the lacking semicolon */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define ARR_DESC_BYTES(arr_desc_ptr)                                \</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a90f6494bfe3cf7c7a38bbd2aac92821e">  125</a></span>&#160;<span class="preprocessor">    ((arr_desc_ptr)-&gt;element_count * (arr_desc_ptr)-&gt;element_size)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#define ARR_DESC_MEMSET(arr_desc_ptr, value, bytes)     \</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#ace0fffb93071dc70c53e80397b19f1ad">  131</a></span>&#160;<span class="preprocessor">    do                                                  \</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">    {                                                   \</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">        memset((arr_desc_ptr)-&gt;data_ptr,                \</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">               value,                                   \</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">               BOUND(0,                                 \</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">                     (arr_desc_ptr)-&gt;underlying_size,   \</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">                     bytes)                             \</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">            );                                          \</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#define ARR_DESC_MEMCPY(arr_desc_dest_ptr, arr_desc_src_ptr, bytes) \</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a8d5d0bcb2f708384275880761b9d1283">  146</a></span>&#160;<span class="preprocessor">    do                                                              \</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">    {                                                               \</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">        memcpy((arr_desc_dest_ptr)-&gt;data_ptr,                       \</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">               (arr_desc_src_ptr)-&gt;data_ptr,                        \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">               BOUND(0,                                             \</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">                     (arr_desc_dest_ptr)-&gt;underlying_size,          \</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">                     bytes));                                       \</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#define ARR_DESC_COPYABLE(arr_desc_dest_ptr, arr_desc_src_ptr)  \</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#af019b73d169c356bae2e0956469b0e34">  160</a></span>&#160;<span class="preprocessor">      (ARR_DESC_BYTES(arr_desc_src_ptr) &lt;=                      \</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">       (arr_desc_dest_ptr)-&gt;underlying_size)</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#define ARR_DESC_COPY(arr_desc_dest_ptr, arr_desc_src_ptr)      \</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a54743d0afed85dbe5194e0f129d0c36c">  171</a></span>&#160;<span class="preprocessor">    do                                                          \</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">    {                                                           \</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">        if (ARR_DESC_COPYABLE(arr_desc_dest_ptr,                 \</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">                             arr_desc_src_ptr))                 \</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">        {                                                       \</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">            ARR_DESC_MEMCPY(arr_desc_dest_ptr,                  \</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">                            arr_desc_src_ptr,                   \</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">                            ARR_DESC_BYTES(arr_desc_src_ptr));  \</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">            </span><span class="comment">/* Update the properties*/</span><span class="preprocessor">                          \</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">            (arr_desc_dest_ptr)-&gt;element_count =                \</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">                (arr_desc_src_ptr)-&gt;element_count;              \</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">            (arr_desc_dest_ptr)-&gt;element_size =                 \</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">                (arr_desc_src_ptr)-&gt;element_size;               \</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">        }                                                       \</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#define ARR_DESC_MEMCMP(arr_desc_ptr_a, arr_desc_ptr_b, bytes)  \</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a75a6472a6df560caa9725bc8b43c6116">  192</a></span>&#160;<span class="preprocessor">        memcmp((arr_desc_ptr_a)-&gt;data_ptr,                      \</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">            (arr_desc_ptr_b)-&gt;data_ptr,                         \</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">               bytes) </span><span class="comment">/* Note the lacking semicolon */</span><span class="preprocessor">          \</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#define ARR_DESC_ZERO(arr_desc_ptr)             \</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#a5b8063d08b0d9fd764e2437cc4db8651">  200</a></span>&#160;<span class="preprocessor">        ARR_DESC_MEMSET(arr_desc_ptr,           \</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">                        0,                      \</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">                        (arr_desc_ptr)-&gt;underlying_size)</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#define ARR_DESC_DATA_ADDR(type, arr_desc_ptr, offset)  \</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#ae5bce7ec54e5eaee8f9df2dff04eeb37">  208</a></span>&#160;<span class="preprocessor">        ((void*)(((type *)                              \</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">                  ((arr_desc_ptr)-&gt;data_ptr))           \</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">                 + offset))</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#define ARR_DESC_ELT(type, idx, arr_desc_ptr)           \</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="arr__desc_8h.html#acdf076495d02c87819fd512388939af8">  216</a></span>&#160;<span class="preprocessor">        (*((type *) ARR_DESC_DATA_ADDR(type,            \</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">                                       arr_desc_ptr,    \</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">                                       idx)))</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _ARR_DESC_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html_a66c2f0479bf051107fe5c689dfaa0eea"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html#a66c2f0479bf051107fe5c689dfaa0eea">ARR_DESC_struct::element_count</a></div><div class="ttdeci">int32_t element_count</div><div class="ttdef"><b>Definition:</b> arr_desc.h:21</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html_a55d1e73beff5fe2d8f0d03ea56747782"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html#a55d1e73beff5fe2d8f0d03ea56747782">ARR_DESC_struct::underlying_size</a></div><div class="ttdeci">int32_t underlying_size</div><div class="ttdef"><b>Definition:</b> arr_desc.h:23</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html_abd166fdd046bf6ad359ddbd822a90911"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html#abd166fdd046bf6ad359ddbd822a90911">ARR_DESC_struct::data_ptr</a></div><div class="ttdeci">void * data_ptr</div><div class="ttdef"><b>Definition:</b> arr_desc.h:20</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html_abc38bac0168c2f0d239967c015de4bb2"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html#abc38bac0168c2f0d239967c015de4bb2">ARR_DESC_struct::element_size</a></div><div class="ttdeci">int32_t element_size</div><div class="ttdef"><b>Definition:</b> arr_desc.h:22</div></div>
+<div class="ttc" id="aarr__desc_8h_html_a28cd77a9ea7b5d9fb1dfbc78784e3068"><div class="ttname"><a href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a></div><div class="ttdeci">struct ARR_DESC_struct ARR_DESC_t</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_struct</a></div><div class="ttdef"><b>Definition:</b> arr_desc.h:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

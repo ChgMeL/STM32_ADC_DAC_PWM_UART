@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Исходный файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/inc/templates/test_templates.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_64b0b220c33a0670d174d8efbdf8aa51.html">inc</a></li><li class="navelem"><a class="el" href="dir_6dc5e2733ef70f3e4137043b94666784.html">templates</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">test_templates.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="test__templates_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _TEST_TEMPLATES_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _TEST_TEMPLATES_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/* Includes */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="template_8h.html">template.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span>             <span class="comment">/* memcmp() */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;inttypes.h&gt;</span>           <span class="comment">/* PRIu32 */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;math_helper.h&quot;</span>        <span class="comment">/* arm_snr_f32() */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/* Function Aliases for use in Templates. */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define ref_q31_t_to_float ref_q31_to_float</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a776a51cfcc437b22b8aad30bcbd69a7f">   16</a></span>&#160;<span class="preprocessor">#define ref_q15_t_to_float ref_q15_to_float</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a7e2bbcc81edf7ec67af1d93c021dfd7c">   17</a></span>&#160;<span class="preprocessor">#define ref_q7_t_to_float  ref_q7_to_float</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a18d2aea2fedc6362138ef866912fecf3">   18</a></span>&#160;<span class="preprocessor">#define ref_float_to_q31_t ref_float_to_q31</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a24248c581f711f32aca1e9f258b58e4b">   19</a></span>&#160;<span class="preprocessor">#define ref_float_to_q15_t ref_float_to_q15</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a1848fc2b2795e4c9ca2632d0c6a30daa">   20</a></span>&#160;<span class="preprocessor">#define ref_float_to_q7_t  ref_float_to_q7</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a44db5fea106ef3096d04b834dd8a834d">   21</a></span>&#160;<span class="preprocessor">#define ref_float32_t_to_float ref_copy_f32</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="test__templates_8h.html#ae4f79c6271cafda40550da3d28e49e97">   22</a></span>&#160;<span class="preprocessor">#define ref_float_to_float32_t ref_copy_f32</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="test__templates_8h.html#afd72c949ad306284d29809c18a094eac">   23</a></span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* Macros and Defines */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*--------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define TEST_CALL_FUT(fut, fut_args)                    \</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a9c07e265d7d05b8e3798613b661593f8">   33</a></span>&#160;<span class="preprocessor">    JTEST_COUNT_CYCLES(TEMPLATE_CALL_FN(fut, fut_args))</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define TEST_CALL_REF(ref, ref_args)            \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="test__templates_8h.html#aa08d64d18c49465bcd06775b37dc3b2d">   39</a></span>&#160;<span class="preprocessor">    TEMPLATE_CALL_FN(ref, ref_args)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define TEST_CALL_FUT_AND_REF(fut, fut_args, ref, ref_args) \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="test__templates_8h.html#ab7424e55ceef09b3130ef9c3d1b7c02e">   45</a></span>&#160;<span class="preprocessor">    do {                                                    \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">        TEST_CALL_FUT(fut, fut_args);                       \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">        TEST_CALL_REF(ref, ref_args);                       \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define TEST_NULL_STATEMENT(...) (void) &quot;TEST_NULL_STATEMENT&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="test__templates_8h.html#aaac2a48e60276222b87595d969e95fbc">   55</a></span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define TEST_NULL_FN TEST_NULL_STATEMENT</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="test__templates_8h.html#acb8ecfad55e892e2bb926ca89c371097">   61</a></span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define TEST_ASSERT_BUFFERS_EQUAL(buf_a, buf_b, bytes)  \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a8affd7b1f601fc7d8869dde946885b10">   66</a></span>&#160;<span class="preprocessor">    do                                                  \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    {                                                   \</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">        if (memcmp(buf_a, buf_b, bytes) != 0)           \</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">        {                                               \</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">            return JTEST_TEST_FAILED;                   \</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">        }                                               \</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define TEST_ASSERT_EQUAL(a, b)                         \</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="test__templates_8h.html#ae6c41b7c1bbedf43aabbc2edfc93db90">   78</a></span>&#160;<span class="preprocessor">    do                                                  \</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">    {                                                   \</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">        if ((a) != (b))                                 \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">        {                                               \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">            return JTEST_TEST_FAILED;                   \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">        }                                               \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define TEST_CONVERT_TO_FLOAT(src_ptr, dst_ptr, block_size, src_type)   \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="test__templates_8h.html#afc0672ea4a452d15fd34d58459ec6795">   90</a></span>&#160;<span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        ref_##src_type##_to_float(                                      \</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">            src_ptr,                                                    \</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">            dst_ptr,                                                    \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">            block_size);                                                \</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">        } while (0)                                                      \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define TEST_CONVERT_FLOAT_TO(src_ptr, dst_ptr, block_size, dst_type)   \</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a0945e196be31f45d9bea606d65ccdadd">  102</a></span>&#160;<span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">        ref_float_to_##dst_type(                                        \</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">            src_ptr,                                                    \</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">            dst_ptr,                                                    \</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">            block_size);                                                \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    } while (0)                                                          \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define TEST_ASSERT_SNR(ref_ptr, tst_ptr, block_size, threshold)    \</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="test__templates_8h.html#af272c94cfac4c739ac46364e36e71d5d">  115</a></span>&#160;<span class="preprocessor">    do                                                              \</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">    {                                                               \</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">        float32_t snr = arm_snr_f32(ref_ptr, tst_ptr, block_size);  \</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">        if ( snr &lt;= threshold)                                       \</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">        {                                                           \</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">            JTEST_DUMP_STRF(&quot;SNR: %f\n&quot;, snr);                      \</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">            return JTEST_TEST_FAILED;                               \</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">        }                                                           \</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">    } while (0)                                                      \</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#define TEST_ASSERT_DBL_SNR(ref_ptr, tst_ptr, block_size, threshold)    \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a4693cc4b48d670f749d658b90c39670d">  130</a></span>&#160;<span class="preprocessor">    do                                                              \</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">    {                                                               \</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">        float64_t snr = arm_snr_f64(ref_ptr, tst_ptr, block_size);  \</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">        if ( snr &lt;= threshold)                                       \</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">        {                                                           \</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">            JTEST_DUMP_STRF(&quot;SNR: %f\n&quot;, snr);                      \</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">            return JTEST_TEST_FAILED;                               \</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">        }                                                           \</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">    } while (0)                                                      \</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#define TEST_CONVERT_AND_ASSERT_SNR(ref_dst_ptr, ref_src_ptr,   \</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a65f0cf1532b1a7f952a59bed73012e90">  148</a></span>&#160;<span class="preprocessor">                                    tst_dst_ptr, tst_src_ptr,   \</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">                                    block_size,                 \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">                                    tst_src_type,               \</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">                                    threshold)                  \</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">        do                                                      \</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">        {                                                       \</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">            TEST_CONVERT_TO_FLOAT(ref_src_ptr,                  \</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">                                  ref_dst_ptr,                  \</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">                                  block_size,                   \</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">                                  tst_src_type);                \</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">            TEST_CONVERT_TO_FLOAT(tst_src_ptr,                  \</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">                                  tst_dst_ptr,                  \</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">                                  block_size,                   \</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">                                  tst_src_type);                \</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">            TEST_ASSERT_SNR(ref_dst_ptr,                        \</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">                            tst_dst_ptr,                        \</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">                            block_size,                         \</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">                            threshold);                         \</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#define TEST_DO_VALID_BLOCKSIZE(block_size, fn_type_spec,   \</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a0e2d505cacdfbaa6c1622ee23773d967">  178</a></span>&#160;<span class="preprocessor">                                input_arr_desc, body)       \</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">    do                                                      \</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">    {                                                       \</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">        if (block_size * sizeof(fn_type_spec) &lt;=             \</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">           ARR_DESC_BYTES(input_arr_desc))                  \</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">        {                                                   \</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">            JTEST_DUMP_STRF(&quot;Block Size: %&quot;PRIu32&quot;\n&quot;, block_size); \</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">            body;                                           \</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">        }                                                   \</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">    } while (0)                                              \</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_BUF1_BLK(arr_desc_inputs,                         \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a08efd8ef2da98b80e90f81e8877b5fec">  199</a></span>&#160;<span class="preprocessor">                              arr_desc_block_sizes,                     \</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">                              input_type, output_type,                  \</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">                              fut, fut_arg_interface,                   \</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">                              ref, ref_arg_interface,                   \</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">                              compare_interface)                        \</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">        TEMPLATE_DO_ARR_DESC(                                           \</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">            input_idx, ARR_DESC_t *, input_ptr, arr_desc_inputs         \</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">            ,                                                           \</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                       \</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">                block_size_idx, uint32_t, block_size, arr_desc_block_sizes \</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">                ,                                                       \</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">                void *   input_data_ptr = input_ptr-&gt;data_ptr;          \</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">                TEST_DO_VALID_BLOCKSIZE(                                \</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">                    block_size, input_type, input_ptr                   \</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">                    ,                                                   \</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">                    TEST_CALL_FUT_AND_REF(                              \</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">                        fut, fut_arg_interface(                         \</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">                            input_data_ptr, block_size),                \</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">                        ref, ref_arg_interface(                         \</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">                            input_data_ptr, block_size));               \</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">                    compare_interface(block_size, output_type))));      \</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">        return JTEST_TEST_PASSED;                                       \</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_BUF1_ELT1(arr_desc_inputs,                        \</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="test__templates_8h.html#ab333f89712428b68db21050b238209a1">  236</a></span>&#160;<span class="preprocessor">                                arr_desc_elts,                          \</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">                                input_type, elt_type, output_type,      \</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">                                fut, fut_arg_interface,                 \</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">                                ref, ref_arg_interface,                 \</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">                                compare_interface)                      \</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">        do                                                              \</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">        {                                                               \</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                       \</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">                input_idx, ARR_DESC_t *, input_ptr, arr_desc_inputs     \</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">                ,                                                       \</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">                TEMPLATE_DO_ARR_DESC(                                   \</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">                    elt_idx, elt_type, elt, arr_desc_elts               \</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">                    ,                                                   \</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">                    void * input_data_ptr = input_ptr-&gt;data_ptr;        \</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">                    TEST_CALL_FUT_AND_REF(                              \</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">                        fut, fut_arg_interface(input_data_ptr, elt),    \</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">                        ref, ref_arg_interface(input_data_ptr, elt));   \</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">                    compare_interface(output_type)));                   \</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">            return JTEST_TEST_PASSED;                                   \</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_BUF1_ELT1_BLK(arr_desc_inputs,                \</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="test__templates_8h.html#afe7031aaa615880a338023c70349bed1">  263</a></span>&#160;<span class="preprocessor">                                    arr_desc_elts,                  \</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">                                    arr_desc_block_sizes,           \</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">                                    input_type, elt_type, output_type,  \</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">                                    fut, fut_arg_interface,         \</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">                                    ref, ref_arg_interface,         \</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">                                    compare_interface);             \</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">    do                                                              \</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">    {                                                               \</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">        TEMPLATE_DO_ARR_DESC(                                       \</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">            inut_idx, ARR_DESC_t *, input_ptr, arr_desc_inputs      \</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">            ,                                                       \</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                   \</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">                block_size_idx, uint32_t, block_size,               \</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">                arr_desc_block_sizes                                \</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">                ,                                                   \</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">                TEMPLATE_DO_ARR_DESC(                               \</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">                    elt_idx, elt_type, elt, arr_desc_elts           \</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">                    ,                                               \</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">                    void * input_data_ptr = input_ptr-&gt;data_ptr;    \</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">                    TEST_DO_VALID_BLOCKSIZE(                        \</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">                        block_size, input_type, input_ptr,          \</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">                                              \</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">                        TEST_CALL_FUT_AND_REF(                      \</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">                            fut, fut_arg_interface(                 \</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">                                input_data_ptr, elt, block_size),   \</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">                            ref, ref_arg_interface(                 \</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">                                input_data_ptr, elt, block_size));  \</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">                        compare_interface(block_size, output_type))))); \</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">        return JTEST_TEST_PASSED;                                   \</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_BUF1_ELT2_BLK(arr_desc_inputs,                    \</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="test__templates_8h.html#aa58c0ec584436c00f164411f314179fd">  299</a></span>&#160;<span class="preprocessor">                                    arr_desc_elt1s,                     \</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">                                    arr_desc_elt2s,                     \</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">                                    arr_desc_block_sizes,               \</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">                                    input_type, elt1_type,              \</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">                                    elt2_type, output_type,             \</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">                                    fut, fut_arg_interface,             \</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">                                    ref, ref_arg_interface,             \</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">                                    compare_interface)                  \</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">        do                                                              \</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">        {                                                               \</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                       \</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">                inut_idx, ARR_DESC_t *, input_ptr, arr_desc_inputs      \</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">                ,                                                       \</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">                TEMPLATE_DO_ARR_DESC(                                   \</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">                    block_size_idx, uint32_t, block_size,               \</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">                    arr_desc_block_sizes                                \</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">                    ,                                                   \</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">                    TEMPLATE_DO_ARR_DESC(                               \</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">                        elt1_idx, elt1_type, elt1, arr_desc_elt1s       \</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">                        ,                                               \</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">                        TEMPLATE_DO_ARR_DESC(                           \</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">                            elt2_idx, elt2_type, elt2, arr_desc_elt2s   \</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">                            ,                                           \</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor">                            void * input_data_ptr = input_ptr-&gt;data_ptr; \</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">                            TEST_DO_VALID_BLOCKSIZE(                    \</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">                                block_size, input_type, input_ptr,      \</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">                                TEST_CALL_FUT_AND_REF(                  \</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">                                    fut, fut_arg_interface(             \</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">                                        input_data_ptr, elt1, elt2, block_size), \</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">                                    ref, ref_arg_interface(             \</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">                                        input_data_ptr, elt1, elt2, block_size)); \</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="preprocessor">                                compare_interface(block_size, output_type)))))); \</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor">            return JTEST_TEST_PASSED;                                   \</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_BUF2_BLK(arr_desc_inputs_a,                       \</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a38b0dc590b03d57c8890dd5df03da5a4">  341</a></span>&#160;<span class="preprocessor">                              arr_desc_inputs_b,                        \</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">                              arr_desc_block_sizes,                     \</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">                              input_type, output_type,                  \</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">                              fut, fut_arg_interface,                   \</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">                              ref, ref_arg_interface,                   \</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">                              compare_interface)                        \</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">    do                                                                  \</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">        </span><span class="comment">/* Iterate over two input arrays in parallel.*/</span><span class="preprocessor">                 \</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">        TEMPLATE_DO_ARR_DESC(                                           \</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">            input_idx, ARR_DESC_t *, input_ptr, arr_desc_inputs_a       \</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">            ,                                                           \</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                       \</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">                block_size_idx, uint32_t, block_size, arr_desc_block_sizes, \</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">                void * input_a_ptr = input_ptr-&gt;data_ptr;               \</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">                void * input_b_ptr = ARR_DESC_ELT(                      \</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">                    ARR_DESC_t *, input_idx,                            \</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">                    &amp;(arr_desc_inputs_b))-&gt;data_ptr;                    \</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">                TEST_DO_VALID_BLOCKSIZE(                                \</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">                    block_size, input_type, input_ptr                   \</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">                    ,                                                   \</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">                    TEST_CALL_FUT_AND_REF(                              \</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">                        fut, fut_arg_interface(                         \</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">                            input_a_ptr, input_b_ptr, block_size),      \</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">                        ref, ref_arg_interface(                         \</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">                            input_a_ptr, input_b_ptr, block_size));     \</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">                    compare_interface(block_size, output_type))));      \</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">        return JTEST_TEST_PASSED;                                       \</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_ELT1(arr_desc_elts,                       \</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a574117e4b518d4a036623c5e9fc8237e">  377</a></span>&#160;<span class="preprocessor">                           elt_type, output_type,               \</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">                           fut, fut_arg_interface,              \</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">                           ref, ref_arg_interface,              \</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">                           compare_interface)                   \</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">        do                                                      \</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">        {                                                       \</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                               \</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">                elt_idx, elt_type, elt, arr_desc_elts           \</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">                ,                                               \</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">                TEST_CALL_FUT_AND_REF(                          \</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">                    fut, fut_arg_interface(                     \</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">                        elt),                                   \</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">                    ref, ref_arg_interface(                     \</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">                        elt));                                  \</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">                </span><span class="comment">/* Comparison interfaces typically accept */</span><span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">                </span><span class="comment">/* a block_size. Pass a dummy value 1.*/</span><span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">                compare_interface(1, output_type));             \</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">            return JTEST_TEST_PASSED;                           \</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_ELT2(arr_desc_elts_a,                     \</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno"><a class="line" href="test__templates_8h.html#a3ba1bc2d6a53a5698f501fa948bf6079">  403</a></span>&#160;<span class="preprocessor">                           arr_desc_elts_b,                     \</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">                           elt_a_type, elt_b_type, output_type, \</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">                           fut, fut_arg_interface,              \</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">                           ref, ref_arg_interface,              \</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">                           compare_interface)                   \</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">        do                                                      \</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">        {                                                       \</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                               \</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">                elt_a_idx, elt_a_type, elt_a, arr_desc_elts_a   \</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="preprocessor">                ,                                               \</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="preprocessor">                elt_b_type * elt_b = ARR_DESC_ELT(              \</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">                    elt_b_type,                                 \</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">                    elt_a_idx,                                  \</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">                    arr_desc_elts_b);                           \</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">                                                                \</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor">                TEST_CALL_FUT_AND_REF(                          \</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">                    fut, fut_arg_interface(                     \</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="preprocessor">                        elt_a, elt_b),                          \</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="preprocessor">                    ref, ref_arg_interface(                     \</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">                        elt_a, elt_b));                         \</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="preprocessor">                </span><span class="comment">/* Comparison interfaces typically accept */</span><span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">                </span><span class="comment">/* a block_size. Pass a dummy value 1.*/</span><span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">                compare_interface(1, output_type));             \</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">            return JTEST_TEST_PASSED;                           \</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">#define TEST_TEMPLATE_ELT1_BLK(arr_desc_elts,                       \</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="test__templates_8h.html#aab52236d41ff50f1f75b2b5c955656b2">  433</a></span>&#160;<span class="preprocessor">                               arr_desc_block_sizes,                \</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">                               elt_type, output_type,               \</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">                               fut, fut_arg_interface,              \</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">                               ref, ref_arg_interface,              \</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">                               compare_interface)                   \</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor">        do                                                          \</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="preprocessor">        {                                                           \</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">            TEMPLATE_DO_ARR_DESC(                                   \</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor">                block_size_idx, uint32_t, block_size,               \</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">                arr_desc_block_sizes                                \</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="preprocessor">                ,                                                   \</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">                TEMPLATE_DO_ARR_DESC(                               \</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">                    elt_idx, elt_type, elt, arr_desc_elts           \</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">                    ,                                               \</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">                    JTEST_DUMP_STRF(&quot;Block Size: %d\n&quot;,             \</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">                         (int)block_size);                          \</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">                    TEST_CALL_FUT_AND_REF(                          \</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">                        fut, fut_arg_interface(                     \</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">                            elt, block_size),                       \</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor">                        ref, ref_arg_interface(                     \</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="preprocessor">                            elt, block_size));                      \</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="preprocessor">                    compare_interface(block_size, output_type)));   \</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="preprocessor">            return JTEST_TEST_PASSED;                               \</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _TEST_TEMPLATES_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atemplate_8h_html"><div class="ttname"><a href="template_8h.html">template.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

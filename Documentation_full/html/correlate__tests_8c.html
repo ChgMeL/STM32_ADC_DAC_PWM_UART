@@ -1,0 +1,1528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/filtering_tests/correlate_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_c18f262ad5a587f1e442dedc24e7e8cb.html">filtering_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл correlate_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__test__data_8h_source.html">filtering_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__templates_8h_source.html">filtering_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ae0e74919210a21600127b00a182cce27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:ae0e74919210a21600127b00a182cce27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d9b0905c9221de312ab940c7ee3319"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a55d9b0905c9221de312ab940c7ee3319">CORRELATE_MAX_OUTPUT_ELTS</a>&#160;&#160;&#160;(<a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a> * 2)</td></tr>
+<tr class="separator:a55d9b0905c9221de312ab940c7ee3319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04d4f215ab9e2e9d3c823f4e25477f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#af04d4f215ab9e2e9d3c823f4e25477f9">CORRELATE_arm_correlate_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td></tr>
+<tr class="separator:af04d4f215ab9e2e9d3c823f4e25477f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208ec0572989cd30cb29f39eb81234b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a208ec0572989cd30cb29f39eb81234b8">CORRELATE_ref_correlate_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td></tr>
+<tr class="separator:a208ec0572989cd30cb29f39eb81234b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae400345252bbc17f6eb19d30b761829b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ae400345252bbc17f6eb19d30b761829b">CORRELATE_arm_correlate_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:ae400345252bbc17f6eb19d30b761829b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b88096cef8c3df52da18525668c910a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a2b88096cef8c3df52da18525668c910a">CORRELATE_arm_correlate_opt_q7_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:a2b88096cef8c3df52da18525668c910a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b63d8e905208b3f1c96d92e06cd7dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a54b63d8e905208b3f1c96d92e06cd7dc">CORRELATE_ref_correlate_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:a54b63d8e905208b3f1c96d92e06cd7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f8c7b9e2c3c27be24a4d86291a77bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ac3f8c7b9e2c3c27be24a4d86291a77bc">CORRELATE_ref_correlate_opt_q7_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:ac3f8c7b9e2c3c27be24a4d86291a77bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66dcb4a0f86c5a33c9079a50986e06fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a66dcb4a0f86c5a33c9079a50986e06fe">CORRELATE_arm_correlate_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td></tr>
+<tr class="separator:a66dcb4a0f86c5a33c9079a50986e06fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccc7cb4e00103066806fe51a6a7307d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#aeccc7cb4e00103066806fe51a6a7307d">CORRELATE_ref_correlate_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td></tr>
+<tr class="separator:aeccc7cb4e00103066806fe51a6a7307d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71f776a80e565b45d1e5041dc727328"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ac71f776a80e565b45d1e5041dc727328">CORRELATE_arm_correlate_fast_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:ac71f776a80e565b45d1e5041dc727328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ffb04b2abe6b9a76cf12b33af6806e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ad6ffb04b2abe6b9a76cf12b33af6806e">CORRELATE_ref_correlate_fast_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:ad6ffb04b2abe6b9a76cf12b33af6806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45da13567a652fbde370e1039d373361"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a45da13567a652fbde370e1039d373361">CORRELATE_f32_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#afc0ff090b5645adc76f1bf9b96749aac">filtering_f32_inputs</a></td></tr>
+<tr class="separator:a45da13567a652fbde370e1039d373361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae093e02e638913d919e6f52e5a9a3fd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ae093e02e638913d919e6f52e5a9a3fd9">CORRELATE_q31_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:ae093e02e638913d919e6f52e5a9a3fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0b5abd900ffa0b95d69c320cbbccf6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#acf0b5abd900ffa0b95d69c320cbbccf6">CORRELATE_q15_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:acf0b5abd900ffa0b95d69c320cbbccf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b0996c1a983ee272a43b5eee8b4367"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a76b0996c1a983ee272a43b5eee8b4367">CORRELATE_q7_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:a76b0996c1a983ee272a43b5eee8b4367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061780451f8e0c3b1067c05086830425"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a061780451f8e0c3b1067c05086830425">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</a>(type_suffix)</td></tr>
+<tr class="separator:a061780451f8e0c3b1067c05086830425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2992d935e47881ee26686346e5881c6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a2992d935e47881ee26686346e5881c6d">CORRELATE_DEFINE_ALL_INPUTS</a>(type_suffix)</td></tr>
+<tr class="separator:a2992d935e47881ee26686346e5881c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad614dce52dc27cc5a874214135476155"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ad614dce52dc27cc5a874214135476155">CORRELATE_TEST_TEMPLATE</a>(fut,  fut_arg_interface,  ref,  ref_arg_interface,  suffix,  output_type)</td></tr>
+<tr class="separator:ad614dce52dc27cc5a874214135476155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bed62752c0ba1af962e04dee713821d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a1bed62752c0ba1af962e04dee713821d">CORRELATE_DEFINE_TEST</a>(fn_name,  suffix,  output_type,  test_template)</td></tr>
+<tr class="separator:a1bed62752c0ba1af962e04dee713821d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2b06c97203bc52030bc1bcea266b4e79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a2b06c97203bc52030bc1bcea266b4e79">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</a> (f32)</td></tr>
+<tr class="separator:a2b06c97203bc52030bc1bcea266b4e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a9e6f04b1acaf9118a50569a9037e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a56a9e6f04b1acaf9118a50569a9037e4">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</a> (q31)</td></tr>
+<tr class="separator:a56a9e6f04b1acaf9118a50569a9037e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fafe400e9590ebca5d2a806f328e238"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a5fafe400e9590ebca5d2a806f328e238">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</a> (q15)</td></tr>
+<tr class="separator:a5fafe400e9590ebca5d2a806f328e238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d8d44ff8d4d3a162d3334b8a65871d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ae8d8d44ff8d4d3a162d3334b8a65871d">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</a> (q7)</td></tr>
+<tr class="separator:ae8d8d44ff8d4d3a162d3334b8a65871d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49aa9558bc5bf45df8da4cf485d2831"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#af49aa9558bc5bf45df8da4cf485d2831">ARR_DESC_DEFINE</a> (<a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, correlate_input_zeros, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0))</td></tr>
+<tr class="separator:af49aa9558bc5bf45df8da4cf485d2831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e20e5569dee5f7193146a16c86cb277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a7e20e5569dee5f7193146a16c86cb277">CORRELATE_DEFINE_ALL_INPUTS</a> (f32)</td></tr>
+<tr class="separator:a7e20e5569dee5f7193146a16c86cb277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a166112f426acb6696c93d811797ed5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a1a166112f426acb6696c93d811797ed5">CORRELATE_DEFINE_ALL_INPUTS</a> (q31)</td></tr>
+<tr class="separator:a1a166112f426acb6696c93d811797ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2b57d783e75113c46dfc05806cfb57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#adf2b57d783e75113c46dfc05806cfb57">CORRELATE_DEFINE_ALL_INPUTS</a> (q15)</td></tr>
+<tr class="separator:adf2b57d783e75113c46dfc05806cfb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d17fbd00b122abaf3ad4e7f231d7f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a49d17fbd00b122abaf3ad4e7f231d7f8">CORRELATE_DEFINE_ALL_INPUTS</a> (q7)</td></tr>
+<tr class="separator:a49d17fbd00b122abaf3ad4e7f231d7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59dbc3ea0c0a572de4326aad062fd0d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a59dbc3ea0c0a572de4326aad062fd0d1">ARR_DESC_DEFINE</a> (uint32_t, correlate_lens_a, 5, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 1, 17, 15, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>))</td></tr>
+<tr class="separator:a59dbc3ea0c0a572de4326aad062fd0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15c6fcdaee7bd754700ce3753d47791"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#aa15c6fcdaee7bd754700ce3753d47791">ARR_DESC_DEFINE</a> (uint32_t, correlate_lens_b, 5, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 2, 1, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>))</td></tr>
+<tr class="separator:aa15c6fcdaee7bd754700ce3753d47791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cdb3964c591dd72cd61e8ba2e611a35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a0cdb3964c591dd72cd61e8ba2e611a35">CORRELATE_DEFINE_TEST</a> (correlate, f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a0cdb3964c591dd72cd61e8ba2e611a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15a6526d91f4876390d9db4ec0a0c08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#ab15a6526d91f4876390d9db4ec0a0c08">CORRELATE_DEFINE_TEST</a> (correlate, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:ab15a6526d91f4876390d9db4ec0a0c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd7fa58ad8b05f5768bf097ccf0a71e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a4cd7fa58ad8b05f5768bf097ccf0a71e">CORRELATE_DEFINE_TEST</a> (correlate, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a4cd7fa58ad8b05f5768bf097ccf0a71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788b41bc404064603d5c6160b71b05ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a788b41bc404064603d5c6160b71b05ab">CORRELATE_DEFINE_TEST</a> (correlate, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a788b41bc404064603d5c6160b71b05ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b85f14da96ebecb2c93ef82327c0f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a05b85f14da96ebecb2c93ef82327c0f6">CORRELATE_DEFINE_TEST</a> (correlate_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a05b85f14da96ebecb2c93ef82327c0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436eea566d83e7ad697a9d867c089099"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a> (<a class="el" href="group___corr.html#ga746e8857cafe33ec5d6780729c18c311">arm_correlate_opt_q7</a>, <a class="el" href="correlate__tests_8c.html#a2b88096cef8c3df52da18525668c910a">CORRELATE_arm_correlate_opt_q7_INPUT_INTERFACE</a>, <a class="el" href="ref_8h.html#a806161ea05b175e84913cbb33e1034b3">ref_correlate_opt_q7</a>, <a class="el" href="correlate__tests_8c.html#ac3f8c7b9e2c3c27be24a4d86291a77bc">CORRELATE_ref_correlate_opt_q7_INPUT_INTERFACE</a>, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>)</td></tr>
+<tr class="separator:a436eea566d83e7ad697a9d867c089099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ee28070584921e5e79d0220e60015e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a77ee28070584921e5e79d0220e60015e">CORRELATE_DEFINE_TEST</a> (correlate_fast, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a77ee28070584921e5e79d0220e60015e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42319532c5bfffcdd9c42c19c410dd11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a42319532c5bfffcdd9c42c19c410dd11">CORRELATE_DEFINE_TEST</a> (correlate_fast, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a42319532c5bfffcdd9c42c19c410dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38cbdb9845bf7527de715901e3d55b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a38cbdb9845bf7527de715901e3d55b4f">CORRELATE_DEFINE_TEST</a> (correlate_fast_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a38cbdb9845bf7527de715901e3d55b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e101f8fe2fd86abc4df4925aef9a9fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="correlate__tests_8c.html#a2e101f8fe2fd86abc4df4925aef9a9fa">JTEST_DEFINE_GROUP</a> (correlate_tests)</td></tr>
+<tr class="separator:a2e101f8fe2fd86abc4df4925aef9a9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a66dcb4a0f86c5a33c9079a50986e06fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66dcb4a0f86c5a33c9079a50986e06fe">&#9670;&nbsp;</a></span>CORRELATE_arm_correlate_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_arm_correlate_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac71f776a80e565b45d1e5041dc727328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71f776a80e565b45d1e5041dc727328">&#9670;&nbsp;</a></span>CORRELATE_arm_correlate_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_arm_correlate_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,       \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>,                     \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af04d4f215ab9e2e9d3c823f4e25477f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04d4f215ab9e2e9d3c823f4e25477f9">&#9670;&nbsp;</a></span>CORRELATE_arm_correlate_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_arm_correlate_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae400345252bbc17f6eb19d30b761829b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae400345252bbc17f6eb19d30b761829b">&#9670;&nbsp;</a></span>CORRELATE_arm_correlate_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_arm_correlate_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b88096cef8c3df52da18525668c910a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b88096cef8c3df52da18525668c910a">&#9670;&nbsp;</a></span>CORRELATE_arm_correlate_opt_q7_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_arm_correlate_opt_q7_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>,                  \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                     \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2992d935e47881ee26686346e5881c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2992d935e47881ee26686346e5881c6d">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_ALL_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_DEFINE_ALL_INPUTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="correlate__tests_8c.html#af49aa9558bc5bf45df8da4cf485d2831">ARR_DESC_DEFINE</a>(<a class="code" href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_t</a> *,                                 \</div>
+<div class="line">                    correlate_##type_suffix##_a_inputs,           \</div>
+<div class="line">                    4,                                            \</div>
+<div class="line">                    <a class="code" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(                                        \</div>
+<div class="line">                        &amp;correlate_input_zeros,                   \</div>
+<div class="line">                        &amp;correlate_input_zeros,                   \</div>
+<div class="line">                        &amp;correlate_input_rand1_##type_suffix,     \</div>
+<div class="line">                        &amp;correlate_input_rand1_##type_suffix      \</div>
+<div class="line">                        ));                                       \</div>
+<div class="line">    ARR_DESC_DEFINE(<a class="code" href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_t</a> *,                                 \</div>
+<div class="line">                    correlate_##type_suffix##_b_inputs,           \</div>
+<div class="line">                    4,                                            \</div>
+<div class="line">                    <a class="code" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(                                        \</div>
+<div class="line">                        &amp;correlate_input_zeros,                   \</div>
+<div class="line">                        &amp;correlate_input_rand1_##type_suffix,     \</div>
+<div class="line">                        &amp;correlate_input_zeros,                   \</div>
+<div class="line">                        &amp;correlate_input_rand2_##type_suffix      \</div>
+<div class="line">                        )) <span class="comment">/* Note the lacking semicolon */</span></div>
+</div><!-- fragment --><p>Define Input <a class="el" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a> arrays by type suffix.</p>
+<p>Taking inputs in parallel from the 'a' and 'b' arrays yields the following test cases (star is correlate):</p>
+<ul>
+<li>zero_array * zero_array</li>
+<li>zero_array * random_array</li>
+<li>random_array * zero_array</li>
+<li>random_array * different_random_arary </li>
+</ul>
+
+</div>
+</div>
+<a id="a061780451f8e0c3b1067c05086830425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061780451f8e0c3b1067c05086830425">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">ARR_DESC_DEFINE_USING_ARR</a>(                                  \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(type_suffix),                          \</div>
+<div class="line">        correlate_input_rand1_##type_suffix,                    \</div>
+<div class="line">        CORRELATE_##type_suffix##_INPUTS,                       \</div>
+<div class="line">        0,                                                      \</div>
+<div class="line">        <a class="code" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>);                              <a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">\</a></div>
+<div class="line"><a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">                                                                \</a></div>
+<div class="line"><a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">    ARR_DESC_DEFINE_USING_ARR</a>(                                  \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(type_suffix),                          \</div>
+<div class="line">        correlate_input_rand2_##type_suffix,                    \</div>
+<div class="line">        CORRELATE_##type_suffix##_INPUTS,                       \</div>
+<div class="line">        1,                                                      \</div>
+<div class="line">        <a class="code" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>)  <span class="comment">/* Note the lacking semicolon */</span></div>
+</div><!-- fragment --><p>Defines <a class="el" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a> objects that wrap existing, type-specific, common inputs. </p>
+
+</div>
+</div>
+<a id="a1bed62752c0ba1af962e04dee713821d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bed62752c0ba1af962e04dee713821d">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fn_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test_template&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    test_template(                                                            \</div>
+<div class="line">        arm_##fn_name##_##suffix,                                             \</div>
+<div class="line">        CORRELATE_arm_##fn_name##_INPUT_INTERFACE,                            \</div>
+<div class="line">        ref_##fn_name##_##suffix,                                             \</div>
+<div class="line">        CORRELATE_ref_##fn_name##_INPUT_INTERFACE,                            \</div>
+<div class="line">        suffix,                                                               \</div>
+<div class="line">        output_type                                                           \</div>
+<div class="line">        ) <span class="comment">/* Note the lacking semicolon*/</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a45da13567a652fbde370e1039d373361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45da13567a652fbde370e1039d373361">&#9670;&nbsp;</a></span>CORRELATE_f32_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_f32_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#afc0ff090b5645adc76f1bf9b96749aac">filtering_f32_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0e74919210a21600127b00a182cce27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e74919210a21600127b00a182cce27">&#9670;&nbsp;</a></span>CORRELATE_MAX_INPUT_ELTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_MAX_INPUT_ELTS&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55d9b0905c9221de312ab940c7ee3319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d9b0905c9221de312ab940c7ee3319">&#9670;&nbsp;</a></span>CORRELATE_MAX_OUTPUT_ELTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_MAX_OUTPUT_ELTS&#160;&#160;&#160;(<a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a> * 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf0b5abd900ffa0b95d69c320cbbccf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0b5abd900ffa0b95d69c320cbbccf6">&#9670;&nbsp;</a></span>CORRELATE_q15_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_q15_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae093e02e638913d919e6f52e5a9a3fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae093e02e638913d919e6f52e5a9a3fd9">&#9670;&nbsp;</a></span>CORRELATE_q31_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_q31_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76b0996c1a983ee272a43b5eee8b4367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b0996c1a983ee272a43b5eee8b4367">&#9670;&nbsp;</a></span>CORRELATE_q7_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_q7_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeccc7cb4e00103066806fe51a6a7307d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeccc7cb4e00103066806fe51a6a7307d">&#9670;&nbsp;</a></span>CORRELATE_ref_correlate_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_ref_correlate_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6ffb04b2abe6b9a76cf12b33af6806e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ffb04b2abe6b9a76cf12b33af6806e">&#9670;&nbsp;</a></span>CORRELATE_ref_correlate_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_ref_correlate_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,       \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>,                     \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a208ec0572989cd30cb29f39eb81234b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208ec0572989cd30cb29f39eb81234b8">&#9670;&nbsp;</a></span>CORRELATE_ref_correlate_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_ref_correlate_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54b63d8e905208b3f1c96d92e06cd7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b63d8e905208b3f1c96d92e06cd7dc">&#9670;&nbsp;</a></span>CORRELATE_ref_correlate_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_ref_correlate_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3f8c7b9e2c3c27be24a4d86291a77bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f8c7b9e2c3c27be24a4d86291a77bc">&#9670;&nbsp;</a></span>CORRELATE_ref_correlate_opt_q7_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_ref_correlate_opt_q7_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad614dce52dc27cc5a874214135476155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad614dce52dc27cc5a874214135476155">&#9670;&nbsp;</a></span>CORRELATE_TEST_TEMPLATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORRELATE_TEST_TEMPLATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="af49aa9558bc5bf45df8da4cf485d2831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49aa9558bc5bf45df8da4cf485d2831">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">correlate_input_zeros&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59dbc3ea0c0a572de4326aad062fd0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59dbc3ea0c0a572de4326aad062fd0d1">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">correlate_lens_a&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">5&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 1, 17, 15, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa15c6fcdaee7bd754700ce3753d47791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15c6fcdaee7bd754700ce3753d47791">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">correlate_lens_b&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">5&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 2, 1, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>, <a class="el" href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e20e5569dee5f7193146a16c86cb277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e20e5569dee5f7193146a16c86cb277">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_ALL_INPUTS() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2b57d783e75113c46dfc05806cfb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2b57d783e75113c46dfc05806cfb57">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_ALL_INPUTS() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a166112f426acb6696c93d811797ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a166112f426acb6696c93d811797ed5">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_ALL_INPUTS() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49d17fbd00b122abaf3ad4e7f231d7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d17fbd00b122abaf3ad4e7f231d7f8">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_ALL_INPUTS() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b06c97203bc52030bc1bcea266b4e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b06c97203bc52030bc1bcea266b4e79">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fafe400e9590ebca5d2a806f328e238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fafe400e9590ebca5d2a806f328e238">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56a9e6f04b1acaf9118a50569a9037e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a9e6f04b1acaf9118a50569a9037e4">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8d8d44ff8d4d3a162d3334b8a65871d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d8d44ff8d4d3a162d3334b8a65871d">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cdb3964c591dd72cd61e8ba2e611a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cdb3964c591dd72cd61e8ba2e611a35">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cd7fa58ad8b05f5768bf097ccf0a71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd7fa58ad8b05f5768bf097ccf0a71e">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab15a6526d91f4876390d9db4ec0a0c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15a6526d91f4876390d9db4ec0a0c08">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a788b41bc404064603d5c6160b71b05ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788b41bc404064603d5c6160b71b05ab">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42319532c5bfffcdd9c42c19c410dd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42319532c5bfffcdd9c42c19c410dd11">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77ee28070584921e5e79d0220e60015e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ee28070584921e5e79d0220e60015e">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38cbdb9845bf7527de715901e3d55b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cbdb9845bf7527de715901e3d55b4f">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate_fast_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05b85f14da96ebecb2c93ef82327c0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b85f14da96ebecb2c93ef82327c0f6">&#9670;&nbsp;</a></span>CORRELATE_DEFINE_TEST() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">correlate_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a436eea566d83e7ad697a9d867c089099">CORRELATE_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a436eea566d83e7ad697a9d867c089099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436eea566d83e7ad697a9d867c089099">&#9670;&nbsp;</a></span>CORRELATE_TEST_TEMPLATE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORRELATE_TEST_TEMPLATE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___corr.html#ga746e8857cafe33ec5d6780729c18c311">arm_correlate_opt_q7</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#a2b88096cef8c3df52da18525668c910a">CORRELATE_arm_correlate_opt_q7_INPUT_INTERFACE</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ref_8h.html#a806161ea05b175e84913cbb33e1034b3">ref_correlate_opt_q7</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="correlate__tests_8c.html#ac3f8c7b9e2c3c27be24a4d86291a77bc">CORRELATE_ref_correlate_opt_q7_INPUT_INTERFACE</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e101f8fe2fd86abc4df4925aef9a9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e101f8fe2fd86abc4df4925aef9a9fa">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">correlate_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="afiltering__test__data_8h_html_ae73d05bc516b767a9646ffa16701e07e"><div class="ttname"><a href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a></div><div class="ttdeci">float32_t filtering_scratch[FILTERING_MAX_BLOCKSIZE *3]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:14</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_a298da672deda3215f2aebf5de7f748e2"><div class="ttname"><a href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a></div><div class="ttdeci">float32_t filtering_scratch2[FILTERING_MAX_BLOCKSIZE *3]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:15</div></div>
+<div class="ttc" id="aarr__desc_8h_html_a5c2327c01746c2b3fc78dd689572a526"><div class="ttname"><a href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">ARR_DESC_DEFINE_USING_ARR</a></div><div class="ttdeci">#define ARR_DESC_DEFINE_USING_ARR(type, name, array_ptr, start_idx, element_cnt)</div><div class="ttdef"><b>Definition:</b> arr_desc.h:107</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_a9ab3da0a69af695428b65fde9c44030f"><div class="ttname"><a href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a></div><div class="ttdeci">float32_t filtering_output_fut[LMS_MAX_BLOCKSIZE *2]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:8</div></div>
+<div class="ttc" id="autil_8h_html_a6dc512e444c5edcd4cede1702f5e77aa"><div class="ttname"><a href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a></div><div class="ttdeci">#define CURLY(...)</div><div class="ttdef"><b>Definition:</b> util.h:33</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_ad37b8ba407456ca8bc2414aec935656f"><div class="ttname"><a href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a></div><div class="ttdeci">float32_t filtering_output_ref[LMS_MAX_BLOCKSIZE *2]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:9</div></div>
+<div class="ttc" id="acorrelate__tests_8c_html_ae0e74919210a21600127b00a182cce27"><div class="ttname"><a href="correlate__tests_8c.html#ae0e74919210a21600127b00a182cce27">CORRELATE_MAX_INPUT_ELTS</a></div><div class="ttdeci">#define CORRELATE_MAX_INPUT_ELTS</div><div class="ttdef"><b>Definition:</b> correlate_tests.c:14</div></div>
+<div class="ttc" id="autil_8h_html_a5352f941f9919424a56f7537d2654179"><div class="ttname"><a href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a></div><div class="ttdeci">#define PAREN(...)</div><div class="ttdef"><b>Definition:</b> util.h:38</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_struct</a></div><div class="ttdef"><b>Definition:</b> arr_desc.h:19</div></div>
+<div class="ttc" id="acorrelate__tests_8c_html_af49aa9558bc5bf45df8da4cf485d2831"><div class="ttname"><a href="correlate__tests_8c.html#af49aa9558bc5bf45df8da4cf485d2831">ARR_DESC_DEFINE</a></div><div class="ttdeci">ARR_DESC_DEFINE(float32_t, correlate_input_zeros, CORRELATE_MAX_INPUT_ELTS, CURLY(0))</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,2444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/filtering_tests/conv_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_c18f262ad5a587f1e442dedc24e7e8cb.html">filtering_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл conv_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__test__data_8h_source.html">filtering_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filtering__templates_8h_source.html">filtering_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a57e985940cc361a4429a7c07c1ec9885"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:a57e985940cc361a4429a7c07c1ec9885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c43af84007de81c409ab69b0130427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ae8c43af84007de81c409ab69b0130427">CONV_MAX_OUTPUT_ELTS</a>&#160;&#160;&#160;(<a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a> * 2)</td></tr>
+<tr class="separator:ae8c43af84007de81c409ab69b0130427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae802898c130634f13c7cdddca5170927"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ae802898c130634f13c7cdddca5170927">CONV_TEST_VALID_PARTIAL_PARAMS</a>(input_a_len,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:ae802898c130634f13c7cdddca5170927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e4d03c1f8dc0bf59916f1d548c3406"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a03e4d03c1f8dc0bf59916f1d548c3406">CONV_arm_conv_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td></tr>
+<tr class="separator:a03e4d03c1f8dc0bf59916f1d548c3406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92cb53d85da886b53bc7be4395ffdeae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a92cb53d85da886b53bc7be4395ffdeae">CONV_ref_conv_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td></tr>
+<tr class="separator:a92cb53d85da886b53bc7be4395ffdeae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2e0c2ac78d4c07228b7d2c0b2a528d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a7e2e0c2ac78d4c07228b7d2c0b2a528d">CONV_arm_conv_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:a7e2e0c2ac78d4c07228b7d2c0b2a528d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707bcb3b914cbcb61a2a430b672dd97d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a707bcb3b914cbcb61a2a430b672dd97d">CONV_ref_conv_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:a707bcb3b914cbcb61a2a430b672dd97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2a606b6af9e843c61b379b45af0f36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aec2a606b6af9e843c61b379b45af0f36">CONV_arm_conv_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td></tr>
+<tr class="separator:aec2a606b6af9e843c61b379b45af0f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af406a4bf51dce4ef51f855b52640e164"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#af406a4bf51dce4ef51f855b52640e164">CONV_ref_conv_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len)&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td></tr>
+<tr class="separator:af406a4bf51dce4ef51f855b52640e164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d559b8d85b8d4a16881f0fc47b1c7bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a5d559b8d85b8d4a16881f0fc47b1c7bc">CONV_arm_conv_fast_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:a5d559b8d85b8d4a16881f0fc47b1c7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ef031675baa148d7f5c81444a2c396"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aa4ef031675baa148d7f5c81444a2c396">CONV_ref_conv_fast_opt_INPUT_INTERFACE</a>( input_a,  input_a_len,  input_b,  input_b_len)</td></tr>
+<tr class="separator:aa4ef031675baa148d7f5c81444a2c396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1069eec34d8553b1d63e9d482f452254"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a1069eec34d8553b1d63e9d482f452254">CONV_arm_conv_partial_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a1069eec34d8553b1d63e9d482f452254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7115176cabde9f370bb6c4d722766c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a5f7115176cabde9f370bb6c4d722766c">CONV_ref_conv_partial_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a5f7115176cabde9f370bb6c4d722766c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45de5e0f58f7bd4f2c2a84dfe141dd06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a45de5e0f58f7bd4f2c2a84dfe141dd06">CONV_arm_conv_partial_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a45de5e0f58f7bd4f2c2a84dfe141dd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06f1d99ba978c4ddf0b1c8995ba9d16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ad06f1d99ba978c4ddf0b1c8995ba9d16">CONV_ref_conv_partial_fast_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:ad06f1d99ba978c4ddf0b1c8995ba9d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02596a26c7c6871394d25e28e37d6ac8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a02596a26c7c6871394d25e28e37d6ac8">CONV_arm_conv_partial_opt_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a02596a26c7c6871394d25e28e37d6ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1aea9e3d4740c7e5b3e553e601fef1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a4f1aea9e3d4740c7e5b3e553e601fef1">CONV_ref_conv_partial_opt_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a4f1aea9e3d4740c7e5b3e553e601fef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cca40c2be6677f716daa9cd544a437f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a4cca40c2be6677f716daa9cd544a437f">CONV_arm_conv_partial_fast_opt_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:a4cca40c2be6677f716daa9cd544a437f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada41ecf2be9aec478b9e926e2b3bbbca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ada41ecf2be9aec478b9e926e2b3bbbca">CONV_ref_conv_partial_fast_opt_INPUT_INTERFACE</a>(input_a,  input_a_len,  input_b,  input_b_len,  first_index,  num_points)</td></tr>
+<tr class="separator:ada41ecf2be9aec478b9e926e2b3bbbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e70b7c22901659566e6ba0ed95f146a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a7e70b7c22901659566e6ba0ed95f146a">CONV_f32_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#afc0ff090b5645adc76f1bf9b96749aac">filtering_f32_inputs</a></td></tr>
+<tr class="separator:a7e70b7c22901659566e6ba0ed95f146a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748e0e3cef886ed502c603e34935535e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a748e0e3cef886ed502c603e34935535e">CONV_q31_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:a748e0e3cef886ed502c603e34935535e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99477198888ada0b89924d9cd18c80f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a99477198888ada0b89924d9cd18c80f6">CONV_q15_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:a99477198888ada0b89924d9cd18c80f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e7289587b6fe1eaa54494972c48256"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a73e7289587b6fe1eaa54494972c48256">CONV_q7_INPUTS</a>&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td></tr>
+<tr class="separator:a73e7289587b6fe1eaa54494972c48256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba88c7271ffd8ab3bf87dbb300be525"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#acba88c7271ffd8ab3bf87dbb300be525">CONV_DEFINE_RAND_INPUT_ARR_DESCS</a>(type_suffix)</td></tr>
+<tr class="separator:acba88c7271ffd8ab3bf87dbb300be525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8164c6fb3c40d43590a9cdd452cea1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aac8164c6fb3c40d43590a9cdd452cea1">CONV_DEFINE_ALL_INPUTS</a>(type_suffix)</td></tr>
+<tr class="separator:aac8164c6fb3c40d43590a9cdd452cea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28951481946e6505df87d7e901950e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>(fut,  fut_arg_interface,  ref,  ref_arg_interface,  suffix,  output_type)</td></tr>
+<tr class="separator:a28951481946e6505df87d7e901950e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ce15886c242a04a0d0546108a47974"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>(fut,  fut_arg_interface,  ref,  ref_arg_interface,  suffix,  output_type)</td></tr>
+<tr class="separator:a07ce15886c242a04a0d0546108a47974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23677ac0128d100731158cee2e9e3815"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a23677ac0128d100731158cee2e9e3815">CONV_DEFINE_TEST</a>(fn_name,  suffix,  output_type,  test_template)</td></tr>
+<tr class="separator:a23677ac0128d100731158cee2e9e3815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8e58a9b88bafd185d377fb88fffd1e8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a8e58a9b88bafd185d377fb88fffd1e8d">CONV_DEFINE_RAND_INPUT_ARR_DESCS</a> (f32)</td></tr>
+<tr class="separator:a8e58a9b88bafd185d377fb88fffd1e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da2508ef1da2ac5f6e00ab4ba8cb705"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a9da2508ef1da2ac5f6e00ab4ba8cb705">CONV_DEFINE_RAND_INPUT_ARR_DESCS</a> (q31)</td></tr>
+<tr class="separator:a9da2508ef1da2ac5f6e00ab4ba8cb705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963b41bf1626bd646b7f7d4a47b56e67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a963b41bf1626bd646b7f7d4a47b56e67">CONV_DEFINE_RAND_INPUT_ARR_DESCS</a> (q15)</td></tr>
+<tr class="separator:a963b41bf1626bd646b7f7d4a47b56e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3125c0e8609abd9cd06e53ed270364b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a3125c0e8609abd9cd06e53ed270364b0">CONV_DEFINE_RAND_INPUT_ARR_DESCS</a> (q7)</td></tr>
+<tr class="separator:a3125c0e8609abd9cd06e53ed270364b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73c0876e96cdd62dc318d5dc4a67300"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#af73c0876e96cdd62dc318d5dc4a67300">ARR_DESC_DEFINE</a> (<a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, conv_input_zeros, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0))</td></tr>
+<tr class="separator:af73c0876e96cdd62dc318d5dc4a67300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8403b1e95bb24fe89aeae7b597609a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ac8403b1e95bb24fe89aeae7b597609a9">CONV_DEFINE_ALL_INPUTS</a> (f32)</td></tr>
+<tr class="separator:ac8403b1e95bb24fe89aeae7b597609a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20f4edf88477e90ce08d4b8a7ef5d2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aa20f4edf88477e90ce08d4b8a7ef5d2e">CONV_DEFINE_ALL_INPUTS</a> (q31)</td></tr>
+<tr class="separator:aa20f4edf88477e90ce08d4b8a7ef5d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab035f2dac24bfb68865ad6de6076f27b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ab035f2dac24bfb68865ad6de6076f27b">CONV_DEFINE_ALL_INPUTS</a> (q15)</td></tr>
+<tr class="separator:ab035f2dac24bfb68865ad6de6076f27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16e0061e439939307c10136b8b49abe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aa16e0061e439939307c10136b8b49abe">CONV_DEFINE_ALL_INPUTS</a> (q7)</td></tr>
+<tr class="separator:aa16e0061e439939307c10136b8b49abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc32d9115a995e7a836901e0c5ccb3c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#afc32d9115a995e7a836901e0c5ccb3c1">ARR_DESC_DEFINE</a> (uint32_t, conv_lens_a, 5, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 1, 17, 15, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>))</td></tr>
+<tr class="separator:afc32d9115a995e7a836901e0c5ccb3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d79bca3d667f26f4e8be305860940bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a0d79bca3d667f26f4e8be305860940bb">ARR_DESC_DEFINE</a> (uint32_t, conv_lens_b, 5, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 2, 1, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>))</td></tr>
+<tr class="separator:a0d79bca3d667f26f4e8be305860940bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9371c3edd2b24de66590808d8957853"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#af9371c3edd2b24de66590808d8957853">ARR_DESC_DEFINE</a> (uint32_t, first_index_arr_desc, 4, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0, 1, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>/2, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>))</td></tr>
+<tr class="separator:af9371c3edd2b24de66590808d8957853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca2c5afe5ca6502036966133805047e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a0ca2c5afe5ca6502036966133805047e">ARR_DESC_DEFINE</a> (uint32_t, num_points_arr_desc, 3, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, <a class="el" href="conv__tests_8c.html#ae8c43af84007de81c409ab69b0130427">CONV_MAX_OUTPUT_ELTS</a>/2, <a class="el" href="conv__tests_8c.html#ae8c43af84007de81c409ab69b0130427">CONV_MAX_OUTPUT_ELTS</a>))</td></tr>
+<tr class="separator:a0ca2c5afe5ca6502036966133805047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eac8b6171128ea41379e662605f707d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a5eac8b6171128ea41379e662605f707d">CONV_DEFINE_TEST</a> (conv, f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a5eac8b6171128ea41379e662605f707d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a69703bcb8edeb040f2a6bde619af1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a7a69703bcb8edeb040f2a6bde619af1b">CONV_DEFINE_TEST</a> (conv, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a7a69703bcb8edeb040f2a6bde619af1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c3fd8c8ce3e34357ec36273760d117"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ad5c3fd8c8ce3e34357ec36273760d117">CONV_DEFINE_TEST</a> (conv, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:ad5c3fd8c8ce3e34357ec36273760d117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96e6471540c6199ba23e416293f4f9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ac96e6471540c6199ba23e416293f4f9c">CONV_DEFINE_TEST</a> (conv, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:ac96e6471540c6199ba23e416293f4f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2511b95242486bd6406dcec9bbc42dab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a2511b95242486bd6406dcec9bbc42dab">CONV_DEFINE_TEST</a> (conv_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a2511b95242486bd6406dcec9bbc42dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7168ff0bf2e8ac25a4ed68aa5925454a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a7168ff0bf2e8ac25a4ed68aa5925454a">CONV_DEFINE_TEST</a> (conv_opt, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a7168ff0bf2e8ac25a4ed68aa5925454a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f3ec920af9ec94560742e91cde88d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a30f3ec920af9ec94560742e91cde88d8">CONV_DEFINE_TEST</a> (conv_fast, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a30f3ec920af9ec94560742e91cde88d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66996da13c4a7ded1de2ebbdbd6766ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a66996da13c4a7ded1de2ebbdbd6766ad">CONV_DEFINE_TEST</a> (conv_fast, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a66996da13c4a7ded1de2ebbdbd6766ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc98bcc8addd0e88fe2b8d68d86ab7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a5cc98bcc8addd0e88fe2b8d68d86ab7b">CONV_DEFINE_TEST</a> (conv_fast_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a5cc98bcc8addd0e88fe2b8d68d86ab7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeff3acd874da79c4a35541ec64cc5be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#adeff3acd874da79c4a35541ec64cc5be">CONV_DEFINE_TEST</a> (conv_partial, f32, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:adeff3acd874da79c4a35541ec64cc5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012e040fd94958d46e5ebfa108106fe3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a012e040fd94958d46e5ebfa108106fe3">CONV_DEFINE_TEST</a> (conv_partial, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a012e040fd94958d46e5ebfa108106fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332acfd0dcd4f8b0662e984a2323a832"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a332acfd0dcd4f8b0662e984a2323a832">CONV_DEFINE_TEST</a> (conv_partial, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a332acfd0dcd4f8b0662e984a2323a832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ebef237728c3ec27e2e1e23a512775"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a14ebef237728c3ec27e2e1e23a512775">CONV_DEFINE_TEST</a> (conv_partial, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a14ebef237728c3ec27e2e1e23a512775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa7a07fb99be54158901574dadc0a214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#aaa7a07fb99be54158901574dadc0a214">CONV_DEFINE_TEST</a> (conv_partial_fast, q31, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:aaa7a07fb99be54158901574dadc0a214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0806f4ea0d2b55ec6359fad3737aab27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a0806f4ea0d2b55ec6359fad3737aab27">CONV_DEFINE_TEST</a> (conv_partial_fast, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a0806f4ea0d2b55ec6359fad3737aab27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e19a95f175ed47f7ade620d8378646"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#ad1e19a95f175ed47f7ade620d8378646">CONV_DEFINE_TEST</a> (conv_partial_fast_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:ad1e19a95f175ed47f7ade620d8378646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602826aad886f000229f40a13c81820d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a602826aad886f000229f40a13c81820d">CONV_DEFINE_TEST</a> (conv_partial_opt, q15, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a602826aad886f000229f40a13c81820d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f261d0479271524c1aa86ade99664be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a8f261d0479271524c1aa86ade99664be">CONV_DEFINE_TEST</a> (conv_partial_opt, q7, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>, <a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>)</td></tr>
+<tr class="separator:a8f261d0479271524c1aa86ade99664be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bee9b591ce47e77cf81cd453d18355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conv__tests_8c.html#a88bee9b591ce47e77cf81cd453d18355">JTEST_DEFINE_GROUP</a> (conv_tests)</td></tr>
+<tr class="separator:a88bee9b591ce47e77cf81cd453d18355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="aec2a606b6af9e843c61b379b45af0f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2a606b6af9e843c61b379b45af0f36">&#9670;&nbsp;</a></span>CONV_arm_conv_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d559b8d85b8d4a16881f0fc47b1c7bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d559b8d85b8d4a16881f0fc47b1c7bc">&#9670;&nbsp;</a></span>CONV_arm_conv_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a03e4d03c1f8dc0bf59916f1d548c3406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e4d03c1f8dc0bf59916f1d548c3406">&#9670;&nbsp;</a></span>CONV_arm_conv_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e2e0c2ac78d4c07228b7d2c0b2a528d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2e0c2ac78d4c07228b7d2c0b2a528d">&#9670;&nbsp;</a></span>CONV_arm_conv_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a45de5e0f58f7bd4f2c2a84dfe141dd06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45de5e0f58f7bd4f2c2a84dfe141dd06">&#9670;&nbsp;</a></span>CONV_arm_conv_partial_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_partial_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                      \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>, first_index, num_points)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4cca40c2be6677f716daa9cd544a437f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cca40c2be6677f716daa9cd544a437f">&#9670;&nbsp;</a></span>CONV_arm_conv_partial_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_partial_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                         \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>, first_index, num_points,               \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                                          \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1069eec34d8553b1d63e9d482f452254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1069eec34d8553b1d63e9d482f452254">&#9670;&nbsp;</a></span>CONV_arm_conv_partial_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_partial_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>, first_index, num_points)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a02596a26c7c6871394d25e28e37d6ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02596a26c7c6871394d25e28e37d6ac8">&#9670;&nbsp;</a></span>CONV_arm_conv_partial_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_arm_conv_partial_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a>, first_index, num_points,         \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac8164c6fb3c40d43590a9cdd452cea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8164c6fb3c40d43590a9cdd452cea1">&#9670;&nbsp;</a></span>CONV_DEFINE_ALL_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_DEFINE_ALL_INPUTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="conv__tests_8c.html#af73c0876e96cdd62dc318d5dc4a67300">ARR_DESC_DEFINE</a>(<a class="code" href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_t</a> *,                           \</div>
+<div class="line">                    conv_##type_suffix##_a_inputs,          \</div>
+<div class="line">                    4,                                      \</div>
+<div class="line">                    <a class="code" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(                                  \</div>
+<div class="line">                        &amp;conv_input_zeros,                  \</div>
+<div class="line">                        &amp;conv_input_zeros,                  \</div>
+<div class="line">                        &amp;conv_input_rand1_##type_suffix,    \</div>
+<div class="line">                        &amp;conv_input_rand1_##type_suffix     \</div>
+<div class="line">                        ));                                 \</div>
+<div class="line">    ARR_DESC_DEFINE(<a class="code" href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_t</a> *,                           \</div>
+<div class="line">                    conv_##type_suffix##_b_inputs,          \</div>
+<div class="line">                    4,                                      \</div>
+<div class="line">                    <a class="code" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(                                  \</div>
+<div class="line">                        &amp;conv_input_zeros,                  \</div>
+<div class="line">                        &amp;conv_input_rand1_##type_suffix,    \</div>
+<div class="line">                        &amp;conv_input_zeros,                  \</div>
+<div class="line">                        &amp;conv_input_rand2_##type_suffix     \</div>
+<div class="line">                        )) <span class="comment">/* Note the lacking semicolon */</span></div>
+</div><!-- fragment --><p>Define Input <a class="el" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a> arrays by type suffix.</p>
+<p>Taking inputs in parallel from the 'a' and 'b' arrays yields the following test cases (star is convolution):</p>
+<ul>
+<li>zero_array * zero_array</li>
+<li>zero_array * random_array</li>
+<li>random_array * zero_array</li>
+<li>random_array * different_random_arary </li>
+</ul>
+
+</div>
+</div>
+<a id="acba88c7271ffd8ab3bf87dbb300be525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba88c7271ffd8ab3bf87dbb300be525">&#9670;&nbsp;</a></span>CONV_DEFINE_RAND_INPUT_ARR_DESCS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_DEFINE_RAND_INPUT_ARR_DESCS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">ARR_DESC_DEFINE_USING_ARR</a>(                                  \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(type_suffix),                          \</div>
+<div class="line">        conv_input_rand1_##type_suffix,                         \</div>
+<div class="line">        CONV_##type_suffix##_INPUTS,                            \</div>
+<div class="line">        0,                                                      \</div>
+<div class="line">        <a class="code" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>);                                   <a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">\</a></div>
+<div class="line"><a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">                                                                \</a></div>
+<div class="line"><a class="code" href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">    ARR_DESC_DEFINE_USING_ARR</a>(                                  \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(type_suffix),                          \</div>
+<div class="line">        conv_input_rand2_##type_suffix,                         \</div>
+<div class="line">        CONV_##type_suffix##_INPUTS,                            \</div>
+<div class="line">        1,                                                      \</div>
+<div class="line">        <a class="code" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>)  <span class="comment">/* Note the lacking semicolon */</span></div>
+</div><!-- fragment --><p>Defines <a class="el" href="arr__desc_8h.html#a28cd77a9ea7b5d9fb1dfbc78784e3068">ARR_DESC_t</a> objects that wrap existing, type-specific, common inputs. </p>
+
+</div>
+</div>
+<a id="a23677ac0128d100731158cee2e9e3815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23677ac0128d100731158cee2e9e3815">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_DEFINE_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fn_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test_template&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    test_template(                                                      \</div>
+<div class="line">        arm_##fn_name##_##suffix,                                       \</div>
+<div class="line">        CONV_arm_##fn_name##_INPUT_INTERFACE,                           \</div>
+<div class="line">        ref_##fn_name##_##suffix,                                       \</div>
+<div class="line">        CONV_ref_##fn_name##_INPUT_INTERFACE,                           \</div>
+<div class="line">        suffix,                                                         \</div>
+<div class="line">        output_type                                                     \</div>
+<div class="line">        ) <span class="comment">/* Note the lacking semicolon*/</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7e70b7c22901659566e6ba0ed95f146a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e70b7c22901659566e6ba0ed95f146a">&#9670;&nbsp;</a></span>CONV_f32_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_f32_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#afc0ff090b5645adc76f1bf9b96749aac">filtering_f32_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57e985940cc361a4429a7c07c1ec9885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e985940cc361a4429a7c07c1ec9885">&#9670;&nbsp;</a></span>CONV_MAX_INPUT_ELTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_MAX_INPUT_ELTS&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8c43af84007de81c409ab69b0130427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c43af84007de81c409ab69b0130427">&#9670;&nbsp;</a></span>CONV_MAX_OUTPUT_ELTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_MAX_OUTPUT_ELTS&#160;&#160;&#160;(<a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a> * 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07ce15886c242a04a0d0546108a47974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ce15886c242a04a0d0546108a47974">&#9670;&nbsp;</a></span>CONV_PARTIAL_TEST_TEMPLATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_PARTIAL_TEST_TEMPLATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99477198888ada0b89924d9cd18c80f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99477198888ada0b89924d9cd18c80f6">&#9670;&nbsp;</a></span>CONV_q15_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_q15_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a748e0e3cef886ed502c603e34935535e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a748e0e3cef886ed502c603e34935535e">&#9670;&nbsp;</a></span>CONV_q31_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_q31_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e7289587b6fe1eaa54494972c48256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e7289587b6fe1eaa54494972c48256">&#9670;&nbsp;</a></span>CONV_q7_INPUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_q7_INPUTS&#160;&#160;&#160;<a class="el" href="filtering__test__common__data_8c.html#a36209333dba534ca27a9968bacda8dc3">filtering_q31_inputs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af406a4bf51dce4ef51f855b52640e164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af406a4bf51dce4ef51f855b52640e164">&#9670;&nbsp;</a></span>CONV_ref_conv_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4ef031675baa148d7f5c81444a2c396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ef031675baa148d7f5c81444a2c396">&#9670;&nbsp;</a></span>CONV_ref_conv_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a92cb53d85da886b53bc7be4395ffdeae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92cb53d85da886b53bc7be4395ffdeae">&#9670;&nbsp;</a></span>CONV_ref_conv_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len, (void*)<a class="el" href="filtering__test__common__data_8c.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a707bcb3b914cbcb61a2a430b672dd97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707bcb3b914cbcb61a2a430b672dd97d">&#9670;&nbsp;</a></span>CONV_ref_conv_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>,                 \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad06f1d99ba978c4ddf0b1c8995ba9d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad06f1d99ba978c4ddf0b1c8995ba9d16">&#9670;&nbsp;</a></span>CONV_ref_conv_partial_fast_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_partial_fast_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                      \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>, first_index, num_points)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada41ecf2be9aec478b9e926e2b3bbbca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada41ecf2be9aec478b9e926e2b3bbbca">&#9670;&nbsp;</a></span>CONV_ref_conv_partial_fast_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_partial_fast_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                         \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>, first_index, num_points,               \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                                          \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5f7115176cabde9f370bb6c4d722766c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7115176cabde9f370bb6c4d722766c">&#9670;&nbsp;</a></span>CONV_ref_conv_partial_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_partial_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>, first_index, num_points)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4f1aea9e3d4740c7e5b3e553e601fef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1aea9e3d4740c7e5b3e553e601fef1">&#9670;&nbsp;</a></span>CONV_ref_conv_partial_opt_INPUT_INTERFACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_ref_conv_partial_opt_INPUT_INTERFACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a>(input_a, input_a_len, input_b, input_b_len,                   \</div>
+<div class="line">          (<span class="keywordtype">void</span>*)<a class="code" href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a>, first_index, num_points,         \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a>,                                    \</div>
+<div class="line">          (<span class="keywordtype">void</span>*) <a class="code" href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a28951481946e6505df87d7e901950e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28951481946e6505df87d7e901950e23">&#9670;&nbsp;</a></span>CONV_TEST_TEMPLATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_TEST_TEMPLATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fut_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ref_arg_interface, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae802898c130634f13c7cdddca5170927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae802898c130634f13c7cdddca5170927">&#9670;&nbsp;</a></span>CONV_TEST_VALID_PARTIAL_PARAMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_TEST_VALID_PARTIAL_PARAMS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_a_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">input_b_len, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first_index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num_points&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    (((((input_a_len) + (input_b_len) - 1)) &gt;= num_points + first_index )  \</div>
+<div class="line">    &amp;&amp; (num_points &gt; 0))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="af73c0876e96cdd62dc318d5dc4a67300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73c0876e96cdd62dc318d5dc4a67300">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">conv_input_zeros&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc32d9115a995e7a836901e0c5ccb3c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc32d9115a995e7a836901e0c5ccb3c1">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">conv_lens_a&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">5&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 1, 17, 15, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d79bca3d667f26f4e8be305860940bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d79bca3d667f26f4e8be305860940bb">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">conv_lens_b&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">5&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, 2, 1, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9371c3edd2b24de66590808d8957853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9371c3edd2b24de66590808d8957853">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">first_index_arr_desc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">4&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0, 1, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>/2, <a class="el" href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ca2c5afe5ca6502036966133805047e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca2c5afe5ca6502036966133805047e">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">num_points_arr_desc&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">3&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(1, <a class="el" href="conv__tests_8c.html#ae8c43af84007de81c409ab69b0130427">CONV_MAX_OUTPUT_ELTS</a>/2, <a class="el" href="conv__tests_8c.html#ae8c43af84007de81c409ab69b0130427">CONV_MAX_OUTPUT_ELTS</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8403b1e95bb24fe89aeae7b597609a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8403b1e95bb24fe89aeae7b597609a9">&#9670;&nbsp;</a></span>CONV_DEFINE_ALL_INPUTS() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab035f2dac24bfb68865ad6de6076f27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab035f2dac24bfb68865ad6de6076f27b">&#9670;&nbsp;</a></span>CONV_DEFINE_ALL_INPUTS() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa20f4edf88477e90ce08d4b8a7ef5d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20f4edf88477e90ce08d4b8a7ef5d2e">&#9670;&nbsp;</a></span>CONV_DEFINE_ALL_INPUTS() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa16e0061e439939307c10136b8b49abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16e0061e439939307c10136b8b49abe">&#9670;&nbsp;</a></span>CONV_DEFINE_ALL_INPUTS() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_ALL_INPUTS </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e58a9b88bafd185d377fb88fffd1e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e58a9b88bafd185d377fb88fffd1e8d">&#9670;&nbsp;</a></span>CONV_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a963b41bf1626bd646b7f7d4a47b56e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963b41bf1626bd646b7f7d4a47b56e67">&#9670;&nbsp;</a></span>CONV_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9da2508ef1da2ac5f6e00ab4ba8cb705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da2508ef1da2ac5f6e00ab4ba8cb705">&#9670;&nbsp;</a></span>CONV_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3125c0e8609abd9cd06e53ed270364b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3125c0e8609abd9cd06e53ed270364b0">&#9670;&nbsp;</a></span>CONV_DEFINE_RAND_INPUT_ARR_DESCS() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_RAND_INPUT_ARR_DESCS </td>
+          <td>(</td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eac8b6171128ea41379e662605f707d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eac8b6171128ea41379e662605f707d">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[1/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5c3fd8c8ce3e34357ec36273760d117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c3fd8c8ce3e34357ec36273760d117">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[2/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a69703bcb8edeb040f2a6bde619af1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a69703bcb8edeb040f2a6bde619af1b">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[3/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac96e6471540c6199ba23e416293f4f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96e6471540c6199ba23e416293f4f9c">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[4/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66996da13c4a7ded1de2ebbdbd6766ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66996da13c4a7ded1de2ebbdbd6766ad">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[5/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30f3ec920af9ec94560742e91cde88d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f3ec920af9ec94560742e91cde88d8">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[6/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cc98bcc8addd0e88fe2b8d68d86ab7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc98bcc8addd0e88fe2b8d68d86ab7b">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[7/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_fast_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2511b95242486bd6406dcec9bbc42dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2511b95242486bd6406dcec9bbc42dab">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[8/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7168ff0bf2e8ac25a4ed68aa5925454a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7168ff0bf2e8ac25a4ed68aa5925454a">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[9/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a28951481946e6505df87d7e901950e23">CONV_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeff3acd874da79c4a35541ec64cc5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeff3acd874da79c4a35541ec64cc5be">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[10/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a332acfd0dcd4f8b0662e984a2323a832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332acfd0dcd4f8b0662e984a2323a832">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[11/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a012e040fd94958d46e5ebfa108106fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012e040fd94958d46e5ebfa108106fe3">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[12/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14ebef237728c3ec27e2e1e23a512775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ebef237728c3ec27e2e1e23a512775">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[13/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0806f4ea0d2b55ec6359fad3737aab27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0806f4ea0d2b55ec6359fad3737aab27">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[14/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa7a07fb99be54158901574dadc0a214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa7a07fb99be54158901574dadc0a214">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[15/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial_fast&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1e19a95f175ed47f7ade620d8378646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e19a95f175ed47f7ade620d8378646">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[16/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial_fast_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a602826aad886f000229f40a13c81820d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602826aad886f000229f40a13c81820d">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[17/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f261d0479271524c1aa86ade99664be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f261d0479271524c1aa86ade99664be">&#9670;&nbsp;</a></span>CONV_DEFINE_TEST() <span class="overload">[18/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CONV_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">conv_partial_opt&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q7&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="conv__tests_8c.html#a07ce15886c242a04a0d0546108a47974">CONV_PARTIAL_TEST_TEMPLATE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88bee9b591ce47e77cf81cd453d18355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bee9b591ce47e77cf81cd453d18355">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">conv_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="afiltering__test__data_8h_html_ae73d05bc516b767a9646ffa16701e07e"><div class="ttname"><a href="filtering__test__data_8h.html#ae73d05bc516b767a9646ffa16701e07e">filtering_scratch</a></div><div class="ttdeci">float32_t filtering_scratch[FILTERING_MAX_BLOCKSIZE *3]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:14</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_a298da672deda3215f2aebf5de7f748e2"><div class="ttname"><a href="filtering__test__data_8h.html#a298da672deda3215f2aebf5de7f748e2">filtering_scratch2</a></div><div class="ttdeci">float32_t filtering_scratch2[FILTERING_MAX_BLOCKSIZE *3]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:15</div></div>
+<div class="ttc" id="aconv__tests_8c_html_a57e985940cc361a4429a7c07c1ec9885"><div class="ttname"><a href="conv__tests_8c.html#a57e985940cc361a4429a7c07c1ec9885">CONV_MAX_INPUT_ELTS</a></div><div class="ttdeci">#define CONV_MAX_INPUT_ELTS</div><div class="ttdef"><b>Definition:</b> conv_tests.c:14</div></div>
+<div class="ttc" id="aarr__desc_8h_html_a5c2327c01746c2b3fc78dd689572a526"><div class="ttname"><a href="arr__desc_8h.html#a5c2327c01746c2b3fc78dd689572a526">ARR_DESC_DEFINE_USING_ARR</a></div><div class="ttdeci">#define ARR_DESC_DEFINE_USING_ARR(type, name, array_ptr, start_idx, element_cnt)</div><div class="ttdef"><b>Definition:</b> arr_desc.h:107</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_a9ab3da0a69af695428b65fde9c44030f"><div class="ttname"><a href="filtering__test__data_8h.html#a9ab3da0a69af695428b65fde9c44030f">filtering_output_fut</a></div><div class="ttdeci">float32_t filtering_output_fut[LMS_MAX_BLOCKSIZE *2]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:8</div></div>
+<div class="ttc" id="autil_8h_html_a6dc512e444c5edcd4cede1702f5e77aa"><div class="ttname"><a href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a></div><div class="ttdeci">#define CURLY(...)</div><div class="ttdef"><b>Definition:</b> util.h:33</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="afiltering__test__data_8h_html_ad37b8ba407456ca8bc2414aec935656f"><div class="ttname"><a href="filtering__test__data_8h.html#ad37b8ba407456ca8bc2414aec935656f">filtering_output_ref</a></div><div class="ttdeci">float32_t filtering_output_ref[LMS_MAX_BLOCKSIZE *2]</div><div class="ttdef"><b>Definition:</b> filtering_test_common_data.c:9</div></div>
+<div class="ttc" id="autil_8h_html_a5352f941f9919424a56f7537d2654179"><div class="ttname"><a href="util_8h.html#a5352f941f9919424a56f7537d2654179">PAREN</a></div><div class="ttdeci">#define PAREN(...)</div><div class="ttdef"><b>Definition:</b> util.h:38</div></div>
+<div class="ttc" id="astruct_a_r_r___d_e_s_c__struct_html"><div class="ttname"><a href="struct_a_r_r___d_e_s_c__struct.html">ARR_DESC_struct</a></div><div class="ttdef"><b>Definition:</b> arr_desc.h:19</div></div>
+<div class="ttc" id="aconv__tests_8c_html_af73c0876e96cdd62dc318d5dc4a67300"><div class="ttname"><a href="conv__tests_8c.html#af73c0876e96cdd62dc318d5dc4a67300">ARR_DESC_DEFINE</a></div><div class="ttdeci">ARR_DESC_DEFINE(float32_t, conv_input_zeros, CONV_MAX_INPUT_ELTS, CURLY(0))</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

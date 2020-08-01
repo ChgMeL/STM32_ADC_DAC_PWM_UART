@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/TransformFunctions/cfft.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_bc61a6bfeca944c6257c764dfb2c557e.html">RefLibs</a></li><li class="navelem"><a class="el" href="dir_90ca70b5c5d471e2cdec7ea7e2c21ffe.html">src</a></li><li class="navelem"><a class="el" href="dir_33370aaf6f47b5cb61997d86a7163d7e.html">TransformFunctions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cfft.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__const__structs_8h_source.html">arm_const_structs.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad1bf9c96907ff5dbb83d0f7157272d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#ad1bf9c96907ff5dbb83d0f7157272d85">ref_cfft_f32</a> (const <a class="el" href="structarm__cfft__instance__f32.html">arm_cfft_instance_f32</a> *S, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *p1, uint8_t <a class="el" href="arm__fft__bin__example__f32_8c.html#a379ccb99013d369a41b49619083c16ef">ifftFlag</a>, uint8_t bitReverseFlag)</td></tr>
+<tr class="separator:ad1bf9c96907ff5dbb83d0f7157272d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49a464c3136a1b135c92f13ff9c7b24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#ae49a464c3136a1b135c92f13ff9c7b24">ref_cfft_q31</a> (const <a class="el" href="structarm__cfft__instance__q31.html">arm_cfft_instance_q31</a> *S, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *p1, uint8_t <a class="el" href="arm__fft__bin__example__f32_8c.html#a379ccb99013d369a41b49619083c16ef">ifftFlag</a>, uint8_t bitReverseFlag)</td></tr>
+<tr class="separator:ae49a464c3136a1b135c92f13ff9c7b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb63104150de5c70c5de1f06f06a535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#a9eb63104150de5c70c5de1f06f06a535">ref_cfft_q15</a> (const <a class="el" href="structarm__cfft__instance__q15.html">arm_cfft_instance_q15</a> *S, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, uint8_t <a class="el" href="arm__fft__bin__example__f32_8c.html#a379ccb99013d369a41b49619083c16ef">ifftFlag</a>, uint8_t bitReverseFlag)</td></tr>
+<tr class="separator:a9eb63104150de5c70c5de1f06f06a535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af863d1252b72b416e52f27fba8aa904e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#af863d1252b72b416e52f27fba8aa904e">ref_cfft_radix2_f32</a> (const <a class="el" href="structarm__cfft__radix2__instance__f32.html">arm_cfft_radix2_instance_f32</a> *S, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc)</td></tr>
+<tr class="separator:af863d1252b72b416e52f27fba8aa904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1f53a1e9b90dd2c24ce2077ab637e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#a0b1f53a1e9b90dd2c24ce2077ab637e3">ref_cfft_radix2_q31</a> (const <a class="el" href="structarm__cfft__radix2__instance__q31.html">arm_cfft_radix2_instance_q31</a> *S, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc)</td></tr>
+<tr class="separator:a0b1f53a1e9b90dd2c24ce2077ab637e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3466c7dad869ea2c0dab5dab07e295c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#a3466c7dad869ea2c0dab5dab07e295c6">ref_cfft_radix2_q15</a> (const <a class="el" href="structarm__cfft__radix2__instance__q15.html">arm_cfft_radix2_instance_q15</a> *S, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc)</td></tr>
+<tr class="separator:a3466c7dad869ea2c0dab5dab07e295c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45cc10d2b63c81ce8f4c801724769e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#a45cc10d2b63c81ce8f4c801724769e48">ref_cfft_radix4_f32</a> (const <a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a> *S, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc)</td></tr>
+<tr class="separator:a45cc10d2b63c81ce8f4c801724769e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2cb67d3ad6d2618082a8e643b3c474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#acc2cb67d3ad6d2618082a8e643b3c474">ref_cfft_radix4_q31</a> (const <a class="el" href="structarm__cfft__radix4__instance__q31.html">arm_cfft_radix4_instance_q31</a> *S, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc)</td></tr>
+<tr class="separator:acc2cb67d3ad6d2618082a8e643b3c474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d70d15ae8321f87f3cb477c61e88d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft_8c.html#a36d70d15ae8321f87f3cb477c61e88d2">ref_cfft_radix4_q15</a> (const <a class="el" href="structarm__cfft__radix4__instance__q15.html">arm_cfft_radix4_instance_q15</a> *S, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc)</td></tr>
+<tr class="separator:a36d70d15ae8321f87f3cb477c61e88d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ad1bf9c96907ff5dbb83d0f7157272d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1bf9c96907ff5dbb83d0f7157272d85">&#9670;&nbsp;</a></span>ref_cfft_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__instance__f32.html">arm_cfft_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ifftFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eb63104150de5c70c5de1f06f06a535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb63104150de5c70c5de1f06f06a535">&#9670;&nbsp;</a></span>ref_cfft_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_q15 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__instance__q15.html">arm_cfft_instance_q15</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ifftFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae49a464c3136a1b135c92f13ff9c7b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49a464c3136a1b135c92f13ff9c7b24">&#9670;&nbsp;</a></span>ref_cfft_q31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_q31 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__instance__q31.html">arm_cfft_instance_q31</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ifftFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af863d1252b72b416e52f27fba8aa904e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af863d1252b72b416e52f27fba8aa904e">&#9670;&nbsp;</a></span>ref_cfft_radix2_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix2_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix2__instance__f32.html">arm_cfft_radix2_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3466c7dad869ea2c0dab5dab07e295c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3466c7dad869ea2c0dab5dab07e295c6">&#9670;&nbsp;</a></span>ref_cfft_radix2_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix2_q15 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix2__instance__q15.html">arm_cfft_radix2_instance_q15</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b1f53a1e9b90dd2c24ce2077ab637e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1f53a1e9b90dd2c24ce2077ab637e3">&#9670;&nbsp;</a></span>ref_cfft_radix2_q31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix2_q31 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix2__instance__q31.html">arm_cfft_radix2_instance_q31</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45cc10d2b63c81ce8f4c801724769e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cc10d2b63c81ce8f4c801724769e48">&#9670;&nbsp;</a></span>ref_cfft_radix4_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix4_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36d70d15ae8321f87f3cb477c61e88d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d70d15ae8321f87f3cb477c61e88d2">&#9670;&nbsp;</a></span>ref_cfft_radix4_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix4_q15 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix4__instance__q15.html">arm_cfft_radix4_instance_q15</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc2cb67d3ad6d2618082a8e643b3c474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2cb67d3ad6d2618082a8e643b3c474">&#9670;&nbsp;</a></span>ref_cfft_radix4_q31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ref_cfft_radix4_q31 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__cfft__radix4__instance__q31.html">arm_cfft_radix4_instance_q31</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

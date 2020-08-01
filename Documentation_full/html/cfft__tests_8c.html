@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/transform_tests/cfft_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_6e093da9891638219f956c67e4d07a1d.html">transform_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cfft_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transform__templates_8h_source.html">transform_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transform__test__data_8h_source.html">transform_test_data.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a97c2641951f354a81bda1c4c2fc6f866"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a97c2641951f354a81bda1c4c2fc6f866">CFFT_SNR_THRESHOLD</a>&#160;&#160;&#160;120</td></tr>
+<tr class="separator:a97c2641951f354a81bda1c4c2fc6f866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf87e61495bc9341d80f5f5116cde60c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#adf87e61495bc9341d80f5f5116cde60c">CFFT_TEST_BODY</a>(ifft_flag,  suffix,  output_type)</td></tr>
+<tr class="separator:adf87e61495bc9341d80f5f5116cde60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6022b6a526a064792077b4268edacee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#ad6022b6a526a064792077b4268edacee">CFFT_DOWNSHIFT_INPUT_TEST_BODY</a>(ifft_flag,  suffix,  output_type)</td></tr>
+<tr class="separator:ad6022b6a526a064792077b4268edacee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0a00e6d66bc41177ca857230ae0451e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a0a00e6d66bc41177ca857230ae0451e6">JTEST_DEFINE_TEST</a> (cfft_f32_test, cfft_f32)</td></tr>
+<tr class="separator:a0a00e6d66bc41177ca857230ae0451e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3a6e5edb1a296f4e6bf5a3ab27e9aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a6e3a6e5edb1a296f4e6bf5a3ab27e9aa">JTEST_DEFINE_TEST</a> (cfft_f32_ifft_test, cfft_f32)</td></tr>
+<tr class="separator:a6e3a6e5edb1a296f4e6bf5a3ab27e9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b140c1882b04d93f6f804e3db2c2ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#ad5b140c1882b04d93f6f804e3db2c2ef">JTEST_DEFINE_TEST</a> (cfft_q31_test, cfft_q31)</td></tr>
+<tr class="separator:ad5b140c1882b04d93f6f804e3db2c2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095987b6db339ea3db2d3626fefd982a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a095987b6db339ea3db2d3626fefd982a">JTEST_DEFINE_TEST</a> (cfft_q31_ifft_test, cfft_q31)</td></tr>
+<tr class="separator:a095987b6db339ea3db2d3626fefd982a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548020c669b074b280411e0d22176b62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a548020c669b074b280411e0d22176b62">JTEST_DEFINE_TEST</a> (cfft_q15_test, cfft_q15)</td></tr>
+<tr class="separator:a548020c669b074b280411e0d22176b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85abf6a62ab87d2a71677c1b6ff06841"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a85abf6a62ab87d2a71677c1b6ff06841">JTEST_DEFINE_TEST</a> (cfft_q15_ifft_test, cfft_q15)</td></tr>
+<tr class="separator:a85abf6a62ab87d2a71677c1b6ff06841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59751520f58951582bb4dc9bcfe35b0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cfft__tests_8c.html#a59751520f58951582bb4dc9bcfe35b0b">JTEST_DEFINE_GROUP</a> (cfft_tests)</td></tr>
+<tr class="separator:a59751520f58951582bb4dc9bcfe35b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ad6022b6a526a064792077b4268edacee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6022b6a526a064792077b4268edacee">&#9670;&nbsp;</a></span>CFFT_DOWNSHIFT_INPUT_TEST_BODY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_DOWNSHIFT_INPUT_TEST_BODY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ifft_flag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97c2641951f354a81bda1c4c2fc6f866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c2641951f354a81bda1c4c2fc6f866">&#9670;&nbsp;</a></span>CFFT_SNR_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_SNR_THRESHOLD&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf87e61495bc9341d80f5f5116cde60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf87e61495bc9341d80f5f5116cde60c">&#9670;&nbsp;</a></span>CFFT_TEST_BODY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFT_TEST_BODY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ifft_flag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">output_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a59751520f58951582bb4dc9bcfe35b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59751520f58951582bb4dc9bcfe35b0b">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">cfft_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e3a6e5edb1a296f4e6bf5a3ab27e9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3a6e5edb1a296f4e6bf5a3ab27e9aa">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_f32_ifft_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_f32&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a00e6d66bc41177ca857230ae0451e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a00e6d66bc41177ca857230ae0451e6">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_f32_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_f32&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85abf6a62ab87d2a71677c1b6ff06841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85abf6a62ab87d2a71677c1b6ff06841">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_q15_ifft_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_q15&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a548020c669b074b280411e0d22176b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548020c669b074b280411e0d22176b62">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_q15_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_q15&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a095987b6db339ea3db2d3626fefd982a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095987b6db339ea3db2d3626fefd982a">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_q31_ifft_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5b140c1882b04d93f6f804e3db2c2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b140c1882b04d93f6f804e3db2c2ef">&#9670;&nbsp;</a></span>JTEST_DEFINE_TEST() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_TEST </td>
+          <td>(</td>
+          <td class="paramtype">cfft_q31_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cfft_q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

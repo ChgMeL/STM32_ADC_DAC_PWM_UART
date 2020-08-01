@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/complex_math_tests/cmplx_mag_squared_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_eb28061825fd09bf69af27aa5600a935.html">complex_math_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cmplx_mag_squared_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="complex__math__test__data_8h_source.html">complex_math_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="complex__math__templates_8h_source.html">complex_math_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a6ae9b2c2dfb6f70a81af0c4a16066a54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmplx__mag__squared__tests_8c.html#a6ae9b2c2dfb6f70a81af0c4a16066a54">JTEST_ARM_CMPLX_MAG_SQUARED_TEST</a>(suffix)</td></tr>
+<tr class="separator:a6ae9b2c2dfb6f70a81af0c4a16066a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5cea26b1110c97849a99e104c45db0e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmplx__mag__squared__tests_8c.html#a5cea26b1110c97849a99e104c45db0e8">JTEST_ARM_CMPLX_MAG_SQUARED_TEST</a> (f32)</td></tr>
+<tr class="separator:a5cea26b1110c97849a99e104c45db0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8e6e1d317737e58b64dd7b7ff0da1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmplx__mag__squared__tests_8c.html#abb8e6e1d317737e58b64dd7b7ff0da1d">JTEST_ARM_CMPLX_MAG_SQUARED_TEST</a> (q31)</td></tr>
+<tr class="separator:abb8e6e1d317737e58b64dd7b7ff0da1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f702aaf81aaf87569759f893cb101b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmplx__mag__squared__tests_8c.html#a8f702aaf81aaf87569759f893cb101b9">JTEST_ARM_CMPLX_MAG_SQUARED_TEST</a> (q15)</td></tr>
+<tr class="separator:a8f702aaf81aaf87569759f893cb101b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5dab55ddcba546a6473c971ab241d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmplx__mag__squared__tests_8c.html#a5d5dab55ddcba546a6473c971ab241d8">JTEST_DEFINE_GROUP</a> (cmplx_mag_squared_tests)</td></tr>
+<tr class="separator:a5d5dab55ddcba546a6473c971ab241d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a6ae9b2c2dfb6f70a81af0c4a16066a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae9b2c2dfb6f70a81af0c4a16066a54">&#9670;&nbsp;</a></span>JTEST_ARM_CMPLX_MAG_SQUARED_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JTEST_ARM_CMPLX_MAG_SQUARED_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="complex__math__templates_8h.html#ace0cf2296d1031f9e5cbe8d655d24f2f">COMPLEX_MATH_DEFINE_TEST_TEMPLATE_BUF1_BLK</a>(     \</div>
+<div class="line">        cmplx_mag_squared,                          \</div>
+<div class="line">        suffix,                                     \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix),                   \</div>
+<div class="line">        <a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix),                   \</div>
+<div class="line">        <a class="code" href="complex__math__templates_8h.html#a2489d324a172ced1ef59a68443d356ec">COMPLEX_MATH_COMPARE_RE_INTERFACE</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a5cea26b1110c97849a99e104c45db0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cea26b1110c97849a99e104c45db0e8">&#9670;&nbsp;</a></span>JTEST_ARM_CMPLX_MAG_SQUARED_TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_CMPLX_MAG_SQUARED_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f702aaf81aaf87569759f893cb101b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f702aaf81aaf87569759f893cb101b9">&#9670;&nbsp;</a></span>JTEST_ARM_CMPLX_MAG_SQUARED_TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_CMPLX_MAG_SQUARED_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb8e6e1d317737e58b64dd7b7ff0da1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8e6e1d317737e58b64dd7b7ff0da1d">&#9670;&nbsp;</a></span>JTEST_ARM_CMPLX_MAG_SQUARED_TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_CMPLX_MAG_SQUARED_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d5dab55ddcba546a6473c971ab241d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5dab55ddcba546a6473c971ab241d8">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">cmplx_mag_squared_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="acomplex__math__templates_8h_html_a2489d324a172ced1ef59a68443d356ec"><div class="ttname"><a href="complex__math__templates_8h.html#a2489d324a172ced1ef59a68443d356ec">COMPLEX_MATH_COMPARE_RE_INTERFACE</a></div><div class="ttdeci">#define COMPLEX_MATH_COMPARE_RE_INTERFACE(block_size, output_type)</div><div class="ttdef"><b>Definition:</b> complex_math_templates.h:17</div></div>
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="acomplex__math__templates_8h_html_ace0cf2296d1031f9e5cbe8d655d24f2f"><div class="ttname"><a href="complex__math__templates_8h.html#ace0cf2296d1031f9e5cbe8d655d24f2f">COMPLEX_MATH_DEFINE_TEST_TEMPLATE_BUF1_BLK</a></div><div class="ttdeci">#define COMPLEX_MATH_DEFINE_TEST_TEMPLATE_BUF1_BLK(fn_name, suffix, input_type, output_type, comparison_interface)</div><div class="ttdef"><b>Definition:</b> complex_math_templates.h:175</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/arm_nnexamples_nn_test.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_942f58f7027350fa066ed296bd14d9e4.html">NN</a></li><li class="navelem"><a class="el" href="dir_6c13a33f8c7cfbb86cfbd9c5a8f82399.html">NN_Lib_Tests</a></li><li class="navelem"><a class="el" href="dir_0c03c656b849efd85d8a8c71cc871bb1.html">nn_test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл arm_nnexamples_nn_test.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="arm__nnexamples__nn__test_8h_source.html">arm_nnexamples_nn_test.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ae7016e1b1840d375761dc92774846176"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ae7016e1b1840d375761dc92774846176">TEST_POOL</a></td></tr>
+<tr class="separator:ae7016e1b1840d375761dc92774846176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f0bd89057d4bfd9fe4667afe23cefa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a98f0bd89057d4bfd9fe4667afe23cefa">TEST_RELU</a></td></tr>
+<tr class="separator:a98f0bd89057d4bfd9fe4667afe23cefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ccb931183867eb538c7e5cfa8a7c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a86ccb931183867eb538c7e5cfa8a7c50">TEST_IP</a></td></tr>
+<tr class="separator:a86ccb931183867eb538c7e5cfa8a7c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56039539eedff2787babb7efdcd93b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a56039539eedff2787babb7efdcd93b19">TEST_CONV</a></td></tr>
+<tr class="separator:a56039539eedff2787babb7efdcd93b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0788fdf0734ac6938466dd99d5d45fa3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a0788fdf0734ac6938466dd99d5d45fa3">TEST_NONSQUARE</a></td></tr>
+<tr class="separator:a0788fdf0734ac6938466dd99d5d45fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb2204280f38216aa9e3067a7e0651a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a3eb2204280f38216aa9e3067a7e0651a">TEST_NNMULT</a></td></tr>
+<tr class="separator:a3eb2204280f38216aa9e3067a7e0651a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb27c1ff1a17b6bbabfd2174ac6576d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#aafb27c1ff1a17b6bbabfd2174ac6576d">NNMULT_DIM</a>&#160;&#160;&#160;128</td></tr>
+<tr class="separator:aafb27c1ff1a17b6bbabfd2174ac6576d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbfbe84be5f91ffe093bdef9af4c1d70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#afbfbe84be5f91ffe093bdef9af4c1d70">POOL_IM_DIM</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:afbfbe84be5f91ffe093bdef9af4c1d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524275a667693478544a1a2b16bb3b26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a524275a667693478544a1a2b16bb3b26">POOL_IM_CH</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a524275a667693478544a1a2b16bb3b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4030607c6465cfb5fed9ebde289a930a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a4030607c6465cfb5fed9ebde289a930a">RELU_DIM</a>&#160;&#160;&#160;127</td></tr>
+<tr class="separator:a4030607c6465cfb5fed9ebde289a930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98796fea90f06318a05f65e3d0b0bde"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ab98796fea90f06318a05f65e3d0b0bde">IP_ROW_DIM</a>&#160;&#160;&#160;127</td></tr>
+<tr class="separator:ab98796fea90f06318a05f65e3d0b0bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada634186e3cae4a782f31e3811a46f8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ada634186e3cae4a782f31e3811a46f8c">IP_COL_DIM</a>&#160;&#160;&#160;127</td></tr>
+<tr class="separator:ada634186e3cae4a782f31e3811a46f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317ca87d88c08ce9c918c4de6e6979f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a317ca87d88c08ce9c918c4de6e6979f3">RCONV_IM_DIM_X</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a317ca87d88c08ce9c918c4de6e6979f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03d3789f8e807a40ec81d1766ebff6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ab03d3789f8e807a40ec81d1766ebff6c">RCONV_IM_DIM_Y</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:ab03d3789f8e807a40ec81d1766ebff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df8d64b0ee6c7362cfdf37200dae89f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a7df8d64b0ee6c7362cfdf37200dae89f">RCONV_IM_CH</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a7df8d64b0ee6c7362cfdf37200dae89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7490a48e60dfba07440dcd6590f415"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a9b7490a48e60dfba07440dcd6590f415">RCONV_KER_DIM_X</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a9b7490a48e60dfba07440dcd6590f415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952dbdac4c782881a821885817c70990"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a952dbdac4c782881a821885817c70990">RCONV_KER_DIM_Y</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a952dbdac4c782881a821885817c70990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1591be6477d81a29bdfe29f079bd72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#afb1591be6477d81a29bdfe29f079bd72">RCONV_STRIDE_X</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:afb1591be6477d81a29bdfe29f079bd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58abb66947631463ad9d1eed9b11191"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ad58abb66947631463ad9d1eed9b11191">RCONV_STRIDE_Y</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ad58abb66947631463ad9d1eed9b11191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f5678b456c72f063d8dcebe8c77d32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a69f5678b456c72f063d8dcebe8c77d32">RCONV_PADDING_X</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a69f5678b456c72f063d8dcebe8c77d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ad2cc7eed2e376090f5d080965c857"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a50ad2cc7eed2e376090f5d080965c857">RCONV_PADDING_Y</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a50ad2cc7eed2e376090f5d080965c857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0d055bc260b7b17262d54a95d129f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#add0d055bc260b7b17262d54a95d129f8">RCONV_OUT_CH</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:add0d055bc260b7b17262d54a95d129f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fd42e14ef2719536c8ebc2113a18525"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a8fd42e14ef2719536c8ebc2113a18525">RCONV_OUT_DIM_X</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a8fd42e14ef2719536c8ebc2113a18525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c01bac749ee2f7533b2d355273f69f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a8c01bac749ee2f7533b2d355273f69f2">RCONV_OUT_DIM_Y</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a8c01bac749ee2f7533b2d355273f69f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4c1944a5c59d711682edf80927956e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a3d4c1944a5c59d711682edf80927956e">CONV_IM_DIM</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a3d4c1944a5c59d711682edf80927956e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6d221da785104523d5853a834116b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#acf6d221da785104523d5853a834116b8">CONV_IM_CH</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:acf6d221da785104523d5853a834116b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ef9f6339538276bb3e4b1f50a832a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#aad4ef9f6339538276bb3e4b1f50a832a">CONV_KER_DIM</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:aad4ef9f6339538276bb3e4b1f50a832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41492ae370966a2acc351902083f841f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#a41492ae370966a2acc351902083f841f">CONV_OUT_CH</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a41492ae370966a2acc351902083f841f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93269f24aa5ee515a6c3a5b8b456efe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ab93269f24aa5ee515a6c3a5b8b456efe">CONV_OUT_DIM</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:ab93269f24aa5ee515a6c3a5b8b456efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ac325a648f11440f21724b32add51cdec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ac325a648f11440f21724b32add51cdec">test_index</a> = 0</td></tr>
+<tr class="separator:ac325a648f11440f21724b32add51cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c6d172062059b6b388929faa1db865"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ae1c6d172062059b6b388929faa1db865">test_flags</a> [50]</td></tr>
+<tr class="separator:ae1c6d172062059b6b388929faa1db865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad059b8c4717c720451c4dc50dd4cfee4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__nn__test_8cpp.html#ad059b8c4717c720451c4dc50dd4cfee4">test_pass</a></td></tr>
+<tr class="separator:ad059b8c4717c720451c4dc50dd4cfee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="acf6d221da785104523d5853a834116b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6d221da785104523d5853a834116b8">&#9670;&nbsp;</a></span>CONV_IM_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_IM_CH&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d4c1944a5c59d711682edf80927956e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4c1944a5c59d711682edf80927956e">&#9670;&nbsp;</a></span>CONV_IM_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_IM_DIM&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad4ef9f6339538276bb3e4b1f50a832a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ef9f6339538276bb3e4b1f50a832a">&#9670;&nbsp;</a></span>CONV_KER_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_KER_DIM&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41492ae370966a2acc351902083f841f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41492ae370966a2acc351902083f841f">&#9670;&nbsp;</a></span>CONV_OUT_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_OUT_CH&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab93269f24aa5ee515a6c3a5b8b456efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93269f24aa5ee515a6c3a5b8b456efe">&#9670;&nbsp;</a></span>CONV_OUT_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONV_OUT_DIM&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada634186e3cae4a782f31e3811a46f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada634186e3cae4a782f31e3811a46f8c">&#9670;&nbsp;</a></span>IP_COL_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IP_COL_DIM&#160;&#160;&#160;127</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab98796fea90f06318a05f65e3d0b0bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98796fea90f06318a05f65e3d0b0bde">&#9670;&nbsp;</a></span>IP_ROW_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IP_ROW_DIM&#160;&#160;&#160;127</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafb27c1ff1a17b6bbabfd2174ac6576d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb27c1ff1a17b6bbabfd2174ac6576d">&#9670;&nbsp;</a></span>NNMULT_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NNMULT_DIM&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a524275a667693478544a1a2b16bb3b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524275a667693478544a1a2b16bb3b26">&#9670;&nbsp;</a></span>POOL_IM_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POOL_IM_CH&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbfbe84be5f91ffe093bdef9af4c1d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbfbe84be5f91ffe093bdef9af4c1d70">&#9670;&nbsp;</a></span>POOL_IM_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POOL_IM_DIM&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7df8d64b0ee6c7362cfdf37200dae89f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df8d64b0ee6c7362cfdf37200dae89f">&#9670;&nbsp;</a></span>RCONV_IM_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_IM_CH&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a317ca87d88c08ce9c918c4de6e6979f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317ca87d88c08ce9c918c4de6e6979f3">&#9670;&nbsp;</a></span>RCONV_IM_DIM_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_IM_DIM_X&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab03d3789f8e807a40ec81d1766ebff6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03d3789f8e807a40ec81d1766ebff6c">&#9670;&nbsp;</a></span>RCONV_IM_DIM_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_IM_DIM_Y&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b7490a48e60dfba07440dcd6590f415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b7490a48e60dfba07440dcd6590f415">&#9670;&nbsp;</a></span>RCONV_KER_DIM_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_KER_DIM_X&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a952dbdac4c782881a821885817c70990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952dbdac4c782881a821885817c70990">&#9670;&nbsp;</a></span>RCONV_KER_DIM_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_KER_DIM_Y&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add0d055bc260b7b17262d54a95d129f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0d055bc260b7b17262d54a95d129f8">&#9670;&nbsp;</a></span>RCONV_OUT_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_OUT_CH&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fd42e14ef2719536c8ebc2113a18525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fd42e14ef2719536c8ebc2113a18525">&#9670;&nbsp;</a></span>RCONV_OUT_DIM_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_OUT_DIM_X&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c01bac749ee2f7533b2d355273f69f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c01bac749ee2f7533b2d355273f69f2">&#9670;&nbsp;</a></span>RCONV_OUT_DIM_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_OUT_DIM_Y&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69f5678b456c72f063d8dcebe8c77d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f5678b456c72f063d8dcebe8c77d32">&#9670;&nbsp;</a></span>RCONV_PADDING_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_PADDING_X&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50ad2cc7eed2e376090f5d080965c857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ad2cc7eed2e376090f5d080965c857">&#9670;&nbsp;</a></span>RCONV_PADDING_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_PADDING_Y&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb1591be6477d81a29bdfe29f079bd72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1591be6477d81a29bdfe29f079bd72">&#9670;&nbsp;</a></span>RCONV_STRIDE_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_STRIDE_X&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad58abb66947631463ad9d1eed9b11191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58abb66947631463ad9d1eed9b11191">&#9670;&nbsp;</a></span>RCONV_STRIDE_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCONV_STRIDE_Y&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4030607c6465cfb5fed9ebde289a930a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4030607c6465cfb5fed9ebde289a930a">&#9670;&nbsp;</a></span>RELU_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RELU_DIM&#160;&#160;&#160;127</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56039539eedff2787babb7efdcd93b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56039539eedff2787babb7efdcd93b19">&#9670;&nbsp;</a></span>TEST_CONV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_CONV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86ccb931183867eb538c7e5cfa8a7c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ccb931183867eb538c7e5cfa8a7c50">&#9670;&nbsp;</a></span>TEST_IP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_IP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3eb2204280f38216aa9e3067a7e0651a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb2204280f38216aa9e3067a7e0651a">&#9670;&nbsp;</a></span>TEST_NNMULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_NNMULT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0788fdf0734ac6938466dd99d5d45fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0788fdf0734ac6938466dd99d5d45fa3">&#9670;&nbsp;</a></span>TEST_NONSQUARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_NONSQUARE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7016e1b1840d375761dc92774846176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7016e1b1840d375761dc92774846176">&#9670;&nbsp;</a></span>TEST_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_POOL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98f0bd89057d4bfd9fe4667afe23cefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f0bd89057d4bfd9fe4667afe23cefa">&#9670;&nbsp;</a></span>TEST_RELU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_RELU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ae1c6d172062059b6b388929faa1db865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c6d172062059b6b388929faa1db865">&#9670;&nbsp;</a></span>test_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> test_flags[50]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac325a648f11440f21724b32add51cdec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac325a648f11440f21724b32add51cdec">&#9670;&nbsp;</a></span>test_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int test_index = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad059b8c4717c720451c4dc50dd4cfee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad059b8c4717c720451c4dc50dd4cfee4">&#9670;&nbsp;</a></span>test_pass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_pass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

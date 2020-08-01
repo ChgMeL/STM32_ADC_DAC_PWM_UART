@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/arm_nnexamples_cifar10.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_942f58f7027350fa066ed296bd14d9e4.html">NN</a></li><li class="navelem"><a class="el" href="dir_c1b3bd2f03bda3c9ae7ca4ab358d8247.html">Examples</a></li><li class="navelem"><a class="el" href="dir_8a7320b6eee6215725ec8a739b0bd80f.html">ARM</a></li><li class="navelem"><a class="el" href="dir_68cb7fa31f5bfa768831349af47d568b.html">arm_nn_examples</a></li><li class="navelem"><a class="el" href="dir_c73e2eb0a86fc180edd2f1af6728d54b.html">cifar10</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл arm_nnexamples_cifar10.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__nnexamples__cifar10__parameter_8h_source.html">arm_nnexamples_cifar10_parameter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__nnexamples__cifar10__weights_8h_source.html">arm_nnexamples_cifar10_weights.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__nnfunctions_8h_source.html">arm_nnfunctions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__nnexamples__cifar10__inputs_8h_source.html">arm_nnexamples_cifar10_inputs.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__cifar10_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aafa3e1726dde028f2dcce4febc1e9197"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__cifar10_8cpp.html#aafa3e1726dde028f2dcce4febc1e9197">image_data</a> [<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#aea8b1c41a63cf63eb6e7f049e84f22f7">CONV1_IM_CH</a> *<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#a23ded220d27415ee1f6d9ac0bfdf38cb">CONV1_IM_DIM</a> *<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#a23ded220d27415ee1f6d9ac0bfdf38cb">CONV1_IM_DIM</a>] = <a class="el" href="arm__nnexamples__cifar10__inputs_8h.html#a82161fe5498521048731fc21a04577c3">IMG_DATA</a></td></tr>
+<tr class="separator:aafa3e1726dde028f2dcce4febc1e9197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c8e3727f7d3637f03ffb1d9f727313"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__cifar10_8cpp.html#a75c8e3727f7d3637f03ffb1d9f727313">output_data</a> [<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#aa7cda996b7185414b1af9762e37ac66f">IP1_OUT</a>]</td></tr>
+<tr class="separator:a75c8e3727f7d3637f03ffb1d9f727313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f988afc6d7fe29ded1eafbf79a70386"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__cifar10_8cpp.html#a1f988afc6d7fe29ded1eafbf79a70386">col_buffer</a> [2 *5 *5 *32 *2]</td></tr>
+<tr class="separator:a1f988afc6d7fe29ded1eafbf79a70386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19548b1fad7cb85d95f5f276873a5de3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nnexamples__cifar10_8cpp.html#a19548b1fad7cb85d95f5f276873a5de3">scratch_buffer</a> [32 *32 *10 *4]</td></tr>
+<tr class="separator:a19548b1fad7cb85d95f5f276873a5de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a1f988afc6d7fe29ded1eafbf79a70386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f988afc6d7fe29ded1eafbf79a70386">&#9670;&nbsp;</a></span>col_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> col_buffer[2 *5 *5 *32 *2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafa3e1726dde028f2dcce4febc1e9197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa3e1726dde028f2dcce4febc1e9197">&#9670;&nbsp;</a></span>image_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t image_data[<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#aea8b1c41a63cf63eb6e7f049e84f22f7">CONV1_IM_CH</a> *<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#a23ded220d27415ee1f6d9ac0bfdf38cb">CONV1_IM_DIM</a> *<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#a23ded220d27415ee1f6d9ac0bfdf38cb">CONV1_IM_DIM</a>] = <a class="el" href="arm__nnexamples__cifar10__inputs_8h.html#a82161fe5498521048731fc21a04577c3">IMG_DATA</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75c8e3727f7d3637f03ffb1d9f727313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c8e3727f7d3637f03ffb1d9f727313">&#9670;&nbsp;</a></span>output_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> output_data[<a class="el" href="arm__nnexamples__cifar10__parameter_8h.html#aa7cda996b7185414b1af9762e37ac66f">IP1_OUT</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19548b1fad7cb85d95f5f276873a5de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19548b1fad7cb85d95f5f276873a5de3">&#9670;&nbsp;</a></span>scratch_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> scratch_buffer[32 *32 *10 *4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

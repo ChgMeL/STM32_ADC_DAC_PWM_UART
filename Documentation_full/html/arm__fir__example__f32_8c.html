@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/arm_fir_example_f32.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_94aa63e0f0315d3d64a42422f2e40bc3.html">Examples</a></li><li class="navelem"><a class="el" href="dir_70e1a0838c318c6a83ee7353de1353cd.html">ARM</a></li><li class="navelem"><a class="el" href="dir_81fd4815b303d12716fdb86d1fa2732c.html">arm_fir_example</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл arm_fir_example_f32.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_examples_2_a_r_m_2arm__fir__example_2math__helper_8h_source.html">math_helper.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:abc004a7fade488e72310fd96c0a101dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>&#160;&#160;&#160;320</td></tr>
+<tr class="separator:abc004a7fade488e72310fd96c0a101dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d1dd4deffa8e7ed6429e5dd0fe1812"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#af7d1dd4deffa8e7ed6429e5dd0fe1812">SNR_THRESHOLD_F32</a>&#160;&#160;&#160;140.0f</td></tr>
+<tr class="separator:af7d1dd4deffa8e7ed6429e5dd0fe1812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51ded0bbd705f02f73fc60c0b721ced"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:ad51ded0bbd705f02f73fc60c0b721ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7579d94e0a80fb9d376ea6c7897f73b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#a7579d94e0a80fb9d376ea6c7897f73b0">NUM_TAPS</a>&#160;&#160;&#160;29</td></tr>
+<tr class="separator:a7579d94e0a80fb9d376ea6c7897f73b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a52d2cba30e6946c95578be946ac12a65"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#a52d2cba30e6946c95578be946ac12a65">main</a> (void)</td></tr>
+<tr class="separator:a52d2cba30e6946c95578be946ac12a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a35d190391c204b677e2839d76ede6e8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#a35d190391c204b677e2839d76ede6e8b">testInput_f32_1kHz_15kHz</a> [<a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>]</td></tr>
+<tr class="separator:a35d190391c204b677e2839d76ede6e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d0acaa028f1dcd964d2d188e7df331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#a12d0acaa028f1dcd964d2d188e7df331">refOutput</a> [<a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>]</td></tr>
+<tr class="separator:a12d0acaa028f1dcd964d2d188e7df331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae070afd14f437ad1ae0a947e4403dd0e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#ae070afd14f437ad1ae0a947e4403dd0e">firCoeffs32</a> [<a class="el" href="arm__fir__example__f32_8c.html#a7579d94e0a80fb9d376ea6c7897f73b0">NUM_TAPS</a>]</td></tr>
+<tr class="separator:ae070afd14f437ad1ae0a947e4403dd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6558f40a619c2502fbc24c880fd4fb0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a> = <a class="el" href="arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></td></tr>
+<tr class="separator:ab6558f40a619c2502fbc24c880fd4fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d5613bda9a19b2ccae5d6cb79a22bc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#af7d5613bda9a19b2ccae5d6cb79a22bc">numBlocks</a> = <a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>/<a class="el" href="arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></td></tr>
+<tr class="separator:af7d5613bda9a19b2ccae5d6cb79a22bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06013f588a7003278de222913c9d819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__fir__example__f32_8c.html#af06013f588a7003278de222913c9d819">snr</a></td></tr>
+<tr class="separator:af06013f588a7003278de222913c9d819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ad51ded0bbd705f02f73fc60c0b721ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51ded0bbd705f02f73fc60c0b721ced">&#9670;&nbsp;</a></span>BLOCK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCK_SIZE&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7579d94e0a80fb9d376ea6c7897f73b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7579d94e0a80fb9d376ea6c7897f73b0">&#9670;&nbsp;</a></span>NUM_TAPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_TAPS&#160;&#160;&#160;29</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7d1dd4deffa8e7ed6429e5dd0fe1812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d1dd4deffa8e7ed6429e5dd0fe1812">&#9670;&nbsp;</a></span>SNR_THRESHOLD_F32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SNR_THRESHOLD_F32&#160;&#160;&#160;140.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc004a7fade488e72310fd96c0a101dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc004a7fade488e72310fd96c0a101dc">&#9670;&nbsp;</a></span>TEST_LENGTH_SAMPLES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_LENGTH_SAMPLES&#160;&#160;&#160;320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a52d2cba30e6946c95578be946ac12a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d2cba30e6946c95578be946ac12a65">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ab6558f40a619c2502fbc24c880fd4fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6558f40a619c2502fbc24c880fd4fb0">&#9670;&nbsp;</a></span>blockSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t blockSize = <a class="el" href="arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae070afd14f437ad1ae0a947e4403dd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae070afd14f437ad1ae0a947e4403dd0e">&#9670;&nbsp;</a></span>firCoeffs32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> firCoeffs32[<a class="el" href="arm__fir__example__f32_8c.html#a7579d94e0a80fb9d376ea6c7897f73b0">NUM_TAPS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  -0.0018225230f, -0.0015879294f, +0.0000000000f, +0.0036977508f, +0.0080754303f, +0.0085302217f, -0.0000000000f, -0.0173976984f,</div>
+<div class="line">  -0.0341458607f, -0.0333591565f, +0.0000000000f, +0.0676308395f, +0.1522061835f, +0.2229246956f, +0.2504960933f, +0.2229246956f,</div>
+<div class="line">  +0.1522061835f, +0.0676308395f, +0.0000000000f, -0.0333591565f, -0.0341458607f, -0.0173976984f, -0.0000000000f, +0.0085302217f,</div>
+<div class="line">  +0.0080754303f, +0.0036977508f, +0.0000000000f, -0.0015879294f, -0.0018225230f</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af7d5613bda9a19b2ccae5d6cb79a22bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d5613bda9a19b2ccae5d6cb79a22bc">&#9670;&nbsp;</a></span>numBlocks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t numBlocks = <a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>/<a class="el" href="arm__fir__example__f32_8c.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12d0acaa028f1dcd964d2d188e7df331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d0acaa028f1dcd964d2d188e7df331">&#9670;&nbsp;</a></span>refOutput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> refOutput[<a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af06013f588a7003278de222913c9d819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06013f588a7003278de222913c9d819">&#9670;&nbsp;</a></span>snr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> snr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35d190391c204b677e2839d76ede6e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d190391c204b677e2839d76ede6e8b">&#9670;&nbsp;</a></span>testInput_f32_1kHz_15kHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> testInput_f32_1kHz_15kHz[<a class="el" href="arm__signal__converge__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

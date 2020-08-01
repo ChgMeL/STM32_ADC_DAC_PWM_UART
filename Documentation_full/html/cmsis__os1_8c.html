@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/RTOS2/Template/cmsis_os1.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_ab7c9b95ed9aa8a36018c47d395aba29.html">RTOS2</a></li><li class="navelem"><a class="el" href="dir_1390649b6a0ca7eae311eb1b715289b9.html">Template</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cmsis_os1.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_2_template_2cmsis__os_8h_source.html">cmsis_os.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__mail__queue__s.html">os_mail_queue_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a83da65e792d8cb0e250eaf1bbdde7a0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a83da65e792d8cb0e250eaf1bbdde7a0a">SignalMask</a>&#160;&#160;&#160;((1U&lt;&lt;<a class="el" href="_2_template_2cmsis__os_8h.html#a01edde265710d883b6e237d34a6ef4a6">osFeature_Signals</a>)-1U)</td></tr>
+<tr class="separator:a83da65e792d8cb0e250eaf1bbdde7a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a4ae8b3416a2109d986f1f75076b8790e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__mail__queue__s.html">os_mail_queue_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a4ae8b3416a2109d986f1f75076b8790e">os_mail_queue_t</a></td></tr>
+<tr class="separator:a4ae8b3416a2109d986f1f75076b8790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac59b5713cb083702dce759c73fd90dff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ac59b5713cb083702dce759c73fd90dff">osThreadCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#a92f46bd508dcc685135882e2cf37ac8c">osThreadDef_t</a> *thread_def, void *argument)</td></tr>
+<tr class="separator:ac59b5713cb083702dce759c73fd90dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de2730654589d6c3559c4b9e2825553"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a3de2730654589d6c3559c4b9e2825553">osSignalSet</a> (<a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a> thread_id, int32_t signals)</td></tr>
+<tr class="separator:a3de2730654589d6c3559c4b9e2825553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87283a6ebc31ce9ed42baf3ea7e4eab6"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a87283a6ebc31ce9ed42baf3ea7e4eab6">osSignalClear</a> (<a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a> thread_id, int32_t signals)</td></tr>
+<tr class="separator:a87283a6ebc31ce9ed42baf3ea7e4eab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38860acda96df47da6923348d96fc4c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structos_event.html">osEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a38860acda96df47da6923348d96fc4c9">osSignalWait</a> (int32_t signals, uint32_t millisec)</td></tr>
+<tr class="separator:a38860acda96df47da6923348d96fc4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd312bfdca04e0b8162b666e09a1ae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ab8530dd4273f1f5382187732e14fcaa7">osTimerId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#aedd312bfdca04e0b8162b666e09a1ae6">osTimerCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#a2144eb7d94a485f516bf0b09078f883a">osTimerDef_t</a> *timer_def, <a class="el" href="_template_2cmsis__os_8h.html#adac860eb9e1b4b0619271e6595ed83d9">os_timer_type</a> type, void *argument)</td></tr>
+<tr class="separator:aedd312bfdca04e0b8162b666e09a1ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9de56e717016e39e788064e9a291cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#a3263c1ad9fd79b84f908d65e8da44ac2">osMutexId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#ac2907bdcc057de650ea61777a0e92d11">osMutexDef_t</a> *mutex_def)</td></tr>
+<tr class="separator:a5c9de56e717016e39e788064e9a291cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97381e8e55cd47cec390bf57c96d6edb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#aa8968896c84094aa973683c84fa06f84">osSemaphoreId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a97381e8e55cd47cec390bf57c96d6edb">osSemaphoreCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#acf4486afa668a4499003e1a750eb8ab1">osSemaphoreDef_t</a> *semaphore_def, int32_t count)</td></tr>
+<tr class="separator:a97381e8e55cd47cec390bf57c96d6edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc15b0fc8ce1167fe43da33042e62098"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#acc15b0fc8ce1167fe43da33042e62098">osSemaphoreWait</a> (<a class="el" href="_template_2cmsis__os_8h.html#aa8968896c84094aa973683c84fa06f84">osSemaphoreId</a> semaphore_id, uint32_t millisec)</td></tr>
+<tr class="separator:acc15b0fc8ce1167fe43da33042e62098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34af5c4f4ab38f4138ea7f1f9ece3a1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a34af5c4f4ab38f4138ea7f1f9ece3a1a">osPoolCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#ac47b811c41974c0bb74521a50c7983b7">osPoolDef_t</a> *pool_def)</td></tr>
+<tr class="separator:a34af5c4f4ab38f4138ea7f1f9ece3a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4bc93bf17f94ca99363e53e1a763fb5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ab4bc93bf17f94ca99363e53e1a763fb5">osPoolAlloc</a> (<a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a> pool_id)</td></tr>
+<tr class="separator:ab4bc93bf17f94ca99363e53e1a763fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22c2f194e0f0b05494aa0e9c97d7a51"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ab22c2f194e0f0b05494aa0e9c97d7a51">osPoolCAlloc</a> (<a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a> pool_id)</td></tr>
+<tr class="separator:ab22c2f194e0f0b05494aa0e9c97d7a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a861e9c469c9d0daf5721bf174f8e54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a4a861e9c469c9d0daf5721bf174f8e54">osPoolFree</a> (<a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a> pool_id, void *block)</td></tr>
+<tr class="separator:a4a861e9c469c9d0daf5721bf174f8e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b9345cf426304d46565152bc26fb78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#a552ffc97e37e403acff6a59793ad26eb">osMessageQDef_t</a> *queue_def, <a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a> thread_id)</td></tr>
+<tr class="separator:af3b9345cf426304d46565152bc26fb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dcf462fc92de8ffaba6cc004514a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ac0dcf462fc92de8ffaba6cc004514a6d">osMessagePut</a> (<a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a> queue_id, uint32_t info, uint32_t millisec)</td></tr>
+<tr class="separator:ac0dcf462fc92de8ffaba6cc004514a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6892b8f2296cca6becd57ca2d7e1ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structos_event.html">osEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a6c6892b8f2296cca6becd57ca2d7e1ae">osMessageGet</a> (<a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a> queue_id, uint32_t millisec)</td></tr>
+<tr class="separator:a6c6892b8f2296cca6becd57ca2d7e1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa177e7fe5820dd70d8c9e46ded131174"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a> (const <a class="el" href="_template_2cmsis__os_8h.html#ab6d3ddc7d8cea9901544118bed1a3d1c">osMailQDef_t</a> *queue_def, <a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a> thread_id)</td></tr>
+<tr class="separator:aa177e7fe5820dd70d8c9e46ded131174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac985d7f260b80d7891157697b760aa02"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ac985d7f260b80d7891157697b760aa02">osMailAlloc</a> (<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> queue_id, uint32_t millisec)</td></tr>
+<tr class="separator:ac985d7f260b80d7891157697b760aa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e492e5839bf0d2bf66492e70eae3ddb"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a9e492e5839bf0d2bf66492e70eae3ddb">osMailCAlloc</a> (<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> queue_id, uint32_t millisec)</td></tr>
+<tr class="separator:a9e492e5839bf0d2bf66492e70eae3ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000c34eb539a90d1fee8603da2a4d360"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a000c34eb539a90d1fee8603da2a4d360">osMailPut</a> (<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> queue_id, const void *mail)</td></tr>
+<tr class="separator:a000c34eb539a90d1fee8603da2a4d360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ad7e6e7d6c4a80e60da22c57a42ccd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structos_event.html">osEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#ac6ad7e6e7d6c4a80e60da22c57a42ccd">osMailGet</a> (<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> queue_id, uint32_t millisec)</td></tr>
+<tr class="separator:ac6ad7e6e7d6c4a80e60da22c57a42ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c1060cf21393f96b4fd1ed1c0167cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os1_8c.html#a27c1060cf21393f96b4fd1ed1c0167cc">osMailFree</a> (<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> queue_id, void *mail)</td></tr>
+<tr class="separator:a27c1060cf21393f96b4fd1ed1c0167cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a83da65e792d8cb0e250eaf1bbdde7a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83da65e792d8cb0e250eaf1bbdde7a0a">&#9670;&nbsp;</a></span>SignalMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SignalMask&#160;&#160;&#160;((1U&lt;&lt;<a class="el" href="_2_template_2cmsis__os_8h.html#a01edde265710d883b6e237d34a6ef4a6">osFeature_Signals</a>)-1U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a4ae8b3416a2109d986f1f75076b8790e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae8b3416a2109d986f1f75076b8790e">&#9670;&nbsp;</a></span>os_mail_queue_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structos__mail__queue__s.html">os_mail_queue_s</a> <a class="el" href="cmsis__os1_8c.html#a4ae8b3416a2109d986f1f75076b8790e">os_mail_queue_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ac985d7f260b80d7891157697b760aa02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac985d7f260b80d7891157697b760aa02">&#9670;&nbsp;</a></span>osMailAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* osMailAlloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a memory block from a mail. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>mail queue ID obtained with <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to memory block that can be filled with mail or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMailAlloc</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a9e492e5839bf0d2bf66492e70eae3ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e492e5839bf0d2bf66492e70eae3ddb">&#9670;&nbsp;</a></span>osMailCAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* osMailCAlloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a memory block from a mail and set memory block to zero. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>mail queue ID obtained with <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>pointer to memory block that can be filled with mail or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMailCAlloc</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="aa177e7fe5820dd70d8c9e46ded131174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa177e7fe5820dd70d8c9e46ded131174">&#9670;&nbsp;</a></span>osMailCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> osMailCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#ab6d3ddc7d8cea9901544118bed1a3d1c">osMailQDef_t</a> *&#160;</td>
+          <td class="paramname"><em>queue_def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a>&#160;</td>
+          <td class="paramname"><em>thread_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and Initialize mail queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_def</td><td>reference to the mail queue definition obtain with <a class="el" href="_2_template_2cmsis__os_8h.html#ad2deeb66d51ade54e63d8f87ff2ec9d2">osMailQ</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="cmsis__os1_8c.html#ac59b5713cb083702dce759c73fd90dff">osThreadCreate</a> or <a class="el" href="cmsis__os2_8h.html#a8df03548e89fbc56402a5cd584a505da">osThreadGetId</a>) or NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>mail queue ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMailCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a27c1060cf21393f96b4fd1ed1c0167cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c1060cf21393f96b4fd1ed1c0167cc">&#9670;&nbsp;</a></span>osMailFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a> osMailFree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mail</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free a memory block from a mail. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>mail queue ID obtained with <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mail</td><td>pointer to the memory block that was obtained with <a class="el" href="cmsis__os1_8c.html#ac6ad7e6e7d6c4a80e60da22c57a42ccd">osMailGet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>status code that indicates the execution status of the function. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMailFree</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="ac6ad7e6e7d6c4a80e60da22c57a42ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ad7e6e7d6c4a80e60da22c57a42ccd">&#9670;&nbsp;</a></span>osMailGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structos_event.html">osEvent</a> osMailGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a mail from a queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>mail queue ID obtained with <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>event that contains mail information or error code. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMailGet</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a000c34eb539a90d1fee8603da2a4d360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000c34eb539a90d1fee8603da2a4d360">&#9670;&nbsp;</a></span>osMailPut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a> osMailPut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>mail</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Put a Mail into a Queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>mail queue ID obtained with <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mail</td><td>pointer to memory with mail to put into a queue. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>status code that indicates the execution status of the function. </dd></dl>
+
+</div>
+</div>
+<a id="af3b9345cf426304d46565152bc26fb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b9345cf426304d46565152bc26fb78">&#9670;&nbsp;</a></span>osMessageCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a> osMessageCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#a552ffc97e37e403acff6a59793ad26eb">osMessageQDef_t</a> *&#160;</td>
+          <td class="paramname"><em>queue_def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a>&#160;</td>
+          <td class="paramname"><em>thread_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and Initialize a Message Queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_def</td><td>queue definition referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#a2d446a0b4bb90bf05d6f92eedeaabc97">osMessageQ</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="cmsis__os1_8c.html#ac59b5713cb083702dce759c73fd90dff">osThreadCreate</a> or <a class="el" href="cmsis__os2_8h.html#a8df03548e89fbc56402a5cd584a505da">osThreadGetId</a>) or NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>message queue ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMessageCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a6c6892b8f2296cca6becd57ca2d7e1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6892b8f2296cca6becd57ca2d7e1ae">&#9670;&nbsp;</a></span>osMessageGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structos_event.html">osEvent</a> osMessageGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a Message or Wait for a Message from a Queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>message queue ID obtained with <a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>event information that includes status code. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMessageGet</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="ac0dcf462fc92de8ffaba6cc004514a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0dcf462fc92de8ffaba6cc004514a6d">&#9670;&nbsp;</a></span>osMessagePut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a> osMessagePut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a>&#160;</td>
+          <td class="paramname"><em>queue_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Put a Message to a Queue. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_id</td><td>message queue ID obtained with <a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>message information. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>status code that indicates the execution status of the function. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMessagePut</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a5c9de56e717016e39e788064e9a291cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9de56e717016e39e788064e9a291cc">&#9670;&nbsp;</a></span>osMutexCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#a3263c1ad9fd79b84f908d65e8da44ac2">osMutexId</a> osMutexCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#ac2907bdcc057de650ea61777a0e92d11">osMutexDef_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex_def</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and Initialize a Mutex object. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_def</td><td>mutex definition referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#a1122a86faa64b4a0880c76cf68d0c934">osMutex</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>mutex ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="ab4bc93bf17f94ca99363e53e1a763fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4bc93bf17f94ca99363e53e1a763fb5">&#9670;&nbsp;</a></span>osPoolAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* osPoolAlloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a>&#160;</td>
+          <td class="paramname"><em>pool_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a memory block from a memory pool. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_id</td><td>memory pool ID obtain referenced with <a class="el" href="cmsis__os1_8c.html#a34af5c4f4ab38f4138ea7f1f9ece3a1a">osPoolCreate</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>address of the allocated memory block or NULL in case of no memory available. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osPoolAlloc</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="ab22c2f194e0f0b05494aa0e9c97d7a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22c2f194e0f0b05494aa0e9c97d7a51">&#9670;&nbsp;</a></span>osPoolCAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* osPoolCAlloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a>&#160;</td>
+          <td class="paramname"><em>pool_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocate a memory block from a memory pool and set memory block to zero. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_id</td><td>memory pool ID obtain referenced with <a class="el" href="cmsis__os1_8c.html#a34af5c4f4ab38f4138ea7f1f9ece3a1a">osPoolCreate</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>address of the allocated memory block or NULL in case of no memory available. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osPoolCAlloc</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a34af5c4f4ab38f4138ea7f1f9ece3a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34af5c4f4ab38f4138ea7f1f9ece3a1a">&#9670;&nbsp;</a></span>osPoolCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a> osPoolCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#ac47b811c41974c0bb74521a50c7983b7">osPoolDef_t</a> *&#160;</td>
+          <td class="paramname"><em>pool_def</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and Initialize a memory pool. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_def</td><td>memory pool definition referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#a5f0b204a82327533d420210125c90697">osPool</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>memory pool ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osPoolCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a4a861e9c469c9d0daf5721bf174f8e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a861e9c469c9d0daf5721bf174f8e54">&#9670;&nbsp;</a></span>osPoolFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a> osPoolFree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#a08d2e20fd9bbd96220fe068d420f3686">osPoolId</a>&#160;</td>
+          <td class="paramname"><em>pool_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return an allocated memory block back to a specific memory pool. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_id</td><td>memory pool ID obtain referenced with <a class="el" href="cmsis__os1_8c.html#a34af5c4f4ab38f4138ea7f1f9ece3a1a">osPoolCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>address of the allocated memory block that is returned to the memory pool. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>status code that indicates the execution status of the function. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osPoolFree</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a97381e8e55cd47cec390bf57c96d6edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97381e8e55cd47cec390bf57c96d6edb">&#9670;&nbsp;</a></span>osSemaphoreCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#aa8968896c84094aa973683c84fa06f84">osSemaphoreId</a> osSemaphoreCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#acf4486afa668a4499003e1a750eb8ab1">osSemaphoreDef_t</a> *&#160;</td>
+          <td class="paramname"><em>semaphore_def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create and Initialize a Semaphore object used for managing resources. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore_def</td><td>semaphore definition referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#a03761ee8d2c3cd4544e18364ab301dac">osSemaphore</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>number of available resources. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>semaphore ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osSemaphoreCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="acc15b0fc8ce1167fe43da33042e62098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc15b0fc8ce1167fe43da33042e62098">&#9670;&nbsp;</a></span>osSemaphoreWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t osSemaphoreWait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#aa8968896c84094aa973683c84fa06f84">osSemaphoreId</a>&#160;</td>
+          <td class="paramname"><em>semaphore_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait until a Semaphore token becomes available. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore_id</td><td>semaphore object referenced with <a class="el" href="cmsis__os1_8c.html#a97381e8e55cd47cec390bf57c96d6edb">osSemaphoreCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>number of available tokens, or -1 in case of incorrect parameters. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osSemaphoreWait</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a87283a6ebc31ce9ed42baf3ea7e4eab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87283a6ebc31ce9ed42baf3ea7e4eab6">&#9670;&nbsp;</a></span>osSignalClear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t osSignalClear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a>&#160;</td>
+          <td class="paramname"><em>thread_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>signals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clear the specified Signal Flags of an active thread. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os1_8c.html#ac59b5713cb083702dce759c73fd90dff">osThreadCreate</a> or <a class="el" href="cmsis__os2_8h.html#a8df03548e89fbc56402a5cd584a505da">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signals</td><td>specifies the signal flags of the thread that shall be cleared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>previous signal flags of the specified thread or 0x80000000 in case of incorrect parameters or call from ISR. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalClear</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a3de2730654589d6c3559c4b9e2825553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de2730654589d6c3559c4b9e2825553">&#9670;&nbsp;</a></span>osSignalSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t osSignalSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a>&#160;</td>
+          <td class="paramname"><em>thread_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>signals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the specified Signal Flags of an active thread. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os1_8c.html#ac59b5713cb083702dce759c73fd90dff">osThreadCreate</a> or <a class="el" href="cmsis__os2_8h.html#a8df03548e89fbc56402a5cd584a505da">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signals</td><td>specifies the signal flags of the thread that should be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>previous signal flags of the specified thread or 0x80000000 in case of incorrect parameters. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalSet</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="a38860acda96df47da6923348d96fc4c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38860acda96df47da6923348d96fc4c9">&#9670;&nbsp;</a></span>osSignalWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structos_event.html">osEvent</a> osSignalWait </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>signals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait for one or more Signal Flags to become signaled for the current <b>RUNNING</b> thread. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">signals</td><td>wait until all specified signal flags set or 0 for any single signal flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>CMSIS_RTOS_TimeOutValue or 0 in case of no time-out. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>event flag information or error code. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalWait</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="ac59b5713cb083702dce759c73fd90dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59b5713cb083702dce759c73fd90dff">&#9670;&nbsp;</a></span>osThreadCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#adfeb153a84a81309e2d958268197617f">osThreadId</a> osThreadCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#a92f46bd508dcc685135882e2cf37ac8c">osThreadDef_t</a> *&#160;</td>
+          <td class="paramname"><em>thread_def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a thread and add it to Active Threads and set it to state READY. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_def</td><td>thread definition referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#af0c7c6b5e09f8be198312144b5c9e453">osThread</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argument</td><td>pointer that is passed to the thread function as start argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>thread ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+<a id="aedd312bfdca04e0b8162b666e09a1ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd312bfdca04e0b8162b666e09a1ae6">&#9670;&nbsp;</a></span>osTimerCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ab8530dd4273f1f5382187732e14fcaa7">osTimerId</a> osTimerCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_template_2cmsis__os_8h.html#a2144eb7d94a485f516bf0b09078f883a">osTimerDef_t</a> *&#160;</td>
+          <td class="paramname"><em>timer_def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_template_2cmsis__os_8h.html#adac860eb9e1b4b0619271e6595ed83d9">os_timer_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a timer. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer_def</td><td>timer object referenced with <a class="el" href="_2_template_2cmsis__os_8h.html#a1b8d670eaf964b2910fa06885e650678">osTimer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>osTimerOnce for one-shot or osTimerPeriodic for periodic behavior. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argument</td><td>argument to the timer call back function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>timer ID for reference by other functions or NULL in case of error. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

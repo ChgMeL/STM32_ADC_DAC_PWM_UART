@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Исходный файл Drivers/CMSIS/NN/Include/arm_nnsupportfunctions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_942f58f7027350fa066ed296bd14d9e4.html">NN</a></li><li class="navelem"><a class="el" href="dir_4d3b0036c84f3d291cff5a801b0b8175.html">Include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">arm_nnsupportfunctions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="arm__nnsupportfunctions_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2010-2018 Arm Limited or its affiliates. All rights reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the License); you may</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * distributed under the License is distributed on an AS IS BASIS, WITHOUT</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * limitations under the License.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* ----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * Project:      CMSIS NN Library</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * Title:        arm_nnsupportfunctions.h</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Description:  Public header file of support functions for CMSIS NN Library</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * $Date:        13. July 2018</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * $Revision:    V.1.0.0</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Target Processor:  Cortex-M cores</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * -------------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef _ARM_NNSUPPORTFUNCTIONS_H_</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define _ARM_NNSUPPORTFUNCTIONS_H_</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="arm__math_8h.html">arm_math.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="arm__common__tables_8h.html">arm_common_tables.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span>    <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="unionarm__nnword.html">   45</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionarm__nnword.html">arm_nnword</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="unionarm__nnword.html#a28bd9dbf5f26312fb6f1ae07496df471">   47</a></span>&#160;    <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>     <a class="code" href="unionarm__nnword.html#a28bd9dbf5f26312fb6f1ae07496df471">word</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="unionarm__nnword.html#a01e9cb2a6cc9199a6ea12a089a7ed057">   49</a></span>&#160;    <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a>     <a class="code" href="unionarm__nnword.html#a01e9cb2a6cc9199a6ea12a089a7ed057">half_words</a>[2];</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="unionarm__nnword.html#a060f42b14466bd0dadfaf89581f3ef1a">   51</a></span>&#160;    <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a>      <a class="code" href="unionarm__nnword.html#a060f42b14466bd0dadfaf89581f3ef1a">bytes</a>[4];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">   59</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0a49b307e029715fbaa6f3101c806b8c54">ARM_SIGMOID</a> = 0,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0ac24e4db95c986f16c10dca71a4b4e1c5">ARM_TANH</a> = 1,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <a class="code" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span>      <a class="code" href="group__nndata__convert.html#gae349de4dba8d253c89d45794ccf05680">arm_q7_to_q15_no_shift</a>(<span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> * pSrc, <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> * pDst, uint32_t <a class="code" href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span>      <a class="code" href="group__nndata__convert.html#gaba8fd446d5f54760b406ee63b25d1aee">arm_q7_to_q15_reordered_no_shift</a>(<span class="keyword">const</span> <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> * pSrc, <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> * pDst, uint32_t <a class="code" href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#if defined (ARM_MATH_DSP)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="_core_2_include_2cmsis__armcc_8h.html#ab904513442afdf77d4f8c74f23cbb040">__STATIC_FORCEINLINE</a> <span class="keywordtype">void</span> *read_and_pad(<span class="keywordtype">void</span> *<a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>, <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> * out1, <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> * out2)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>     inA = *<a class="code" href="arm__math_8h.html#a9de2e0a5785be82866bcb96012282248">__SIMD32</a>(<a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>)++;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>     inAbuf1 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(<a class="code" href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a>(inA, 8));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>     inAbuf2 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(inA);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#ifndef ARM_MATH_BIG_ENDIAN</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        *out2 = <a class="code" href="arm__math_8h.html#ac4be483b8d98e977a69baf4a292a76fe">__PKHTB</a>(inAbuf1, inAbuf2, 16);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        *out1 = <a class="code" href="arm__math_8h.html#aa505179349146cf6186640b4c8b47714">__PKHBT</a>(inAbuf2, inAbuf1, 16);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        *out1 = <a class="code" href="arm__math_8h.html#ac4be483b8d98e977a69baf4a292a76fe">__PKHTB</a>(inAbuf1, inAbuf2, 16);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        *out2 = <a class="code" href="arm__math_8h.html#aa505179349146cf6186640b4c8b47714">__PKHBT</a>(inAbuf2, inAbuf1, 16);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<a class="code" href="_core_2_include_2cmsis__armcc_8h.html#ab904513442afdf77d4f8c74f23cbb040">__STATIC_FORCEINLINE</a> <span class="keywordtype">void</span> *read_and_pad_reordered(<span class="keywordtype">void</span> *<a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>, <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> * out1, <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> * out2)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a>     inA = *<a class="code" href="arm__math_8h.html#a9de2e0a5785be82866bcb96012282248">__SIMD32</a>(<a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>)++;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#ifndef ARM_MATH_BIG_ENDIAN</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        *out2 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(<a class="code" href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a>(inA, 8));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        *out1 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(inA);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        *out1 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(<a class="code" href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a>(inA, 8));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        *out2 = <a class="code" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>(inA);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___n_n_basic_math.html#ga08f8340aa6533271b3aa6d211614fe22">arm_nn_mult_q15</a>(</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> * pSrcA,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> * pSrcB,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> * pDst,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">const</span> uint16_t out_shift,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  uint32_t <a class="code" href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___n_n_basic_math.html#gad46c9ab012cceda8ce6681c687a58c70">arm_nn_mult_q7</a>(</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> * pSrcA,</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> * pSrcB,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> * pDst,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keyword">const</span> uint16_t out_shift,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  uint32_t <a class="code" href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#ifndef ARM_NN_TRUNCATE</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">    #define NN_ROUND(out_shift) ( 0x1 &lt;&lt; (out_shift - 1) )</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="arm__nnsupportfunctions_8h.html#a4cbd428a2b4a4f6b2a6e4219520c7ce0">  194</a></span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">    #define NN_ROUND(out_shift) 0</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="agroup__nndata__convert_html_gaba8fd446d5f54760b406ee63b25d1aee"><div class="ttname"><a href="group__nndata__convert.html#gaba8fd446d5f54760b406ee63b25d1aee">arm_q7_to_q15_reordered_no_shift</a></div><div class="ttdeci">void arm_q7_to_q15_reordered_no_shift(const q7_t *pSrc, q15_t *pDst, uint32_t blockSize)</div><div class="ttdoc">Converts the elements of the Q7 vector to reordered Q15 vector without left-shift.</div><div class="ttdef"><b>Definition:</b> arm_q7_to_q15_reordered_no_shift.c:78</div></div>
+<div class="ttc" id="aarm__nnsupportfunctions_8h_html_a7f41aa78cd9a0552fae9b348ee4831a0a49b307e029715fbaa6f3101c806b8c54"><div class="ttname"><a href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0a49b307e029715fbaa6f3101c806b8c54">ARM_SIGMOID</a></div><div class="ttdeci">@ ARM_SIGMOID</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:61</div></div>
+<div class="ttc" id="aunionarm__nnword_html_a060f42b14466bd0dadfaf89581f3ef1a"><div class="ttname"><a href="unionarm__nnword.html#a060f42b14466bd0dadfaf89581f3ef1a">arm_nnword::bytes</a></div><div class="ttdeci">q7_t bytes[4]</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:51</div></div>
+<div class="ttc" id="adocs_2_general_2html_2_l_i_c_e_n_s_e_8txt_html_a40e859b9aaa2d8657227ee008c8a6c7b"><div class="ttname"><a href="docs_2_general_2html_2_l_i_c_e_n_s_e_8txt.html#a40e859b9aaa2d8657227ee008c8a6c7b">source</a></div><div class="ttdeci">Apache License January AND DISTRIBUTION Definitions License shall mean the terms and conditions for and distribution as defined by Sections through of this document Licensor shall mean the copyright owner or entity authorized by the copyright owner that is granting the License Legal Entity shall mean the union of the acting entity and all other entities that control are controlled by or are under common control with that entity For the purposes of this definition control direct or to cause the direction or management of such whether by contract or including but not limited to software source documentation source</div><div class="ttdef"><b>Definition:</b> LICENSE.txt:28</div></div>
+<div class="ttc" id="aarm__math_8h_html_ac4be483b8d98e977a69baf4a292a76fe"><div class="ttname"><a href="arm__math_8h.html#ac4be483b8d98e977a69baf4a292a76fe">__PKHTB</a></div><div class="ttdeci">#define __PKHTB(ARG1, ARG2, ARG3)</div><div class="ttdef"><b>Definition:</b> arm_math.h:493</div></div>
+<div class="ttc" id="aarm__math_8h_html"><div class="ttname"><a href="arm__math_8h.html">arm_math.h</a></div></div>
+<div class="ttc" id="aarm__nnsupportfunctions_8h_html_a7f41aa78cd9a0552fae9b348ee4831a0"><div class="ttname"><a href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a></div><div class="ttdeci">arm_nn_activation_type</div><div class="ttdoc">Struct for specifying activation function types.</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:60</div></div>
+<div class="ttc" id="a_core_2_include_2cmsis__armcc_8h_html_ab904513442afdf77d4f8c74f23cbb040"><div class="ttname"><a href="_core_2_include_2cmsis__armcc_8h.html#ab904513442afdf77d4f8c74f23cbb040">__STATIC_FORCEINLINE</a></div><div class="ttdeci">#define __STATIC_FORCEINLINE</div><div class="ttdef"><b>Definition:</b> cmsis_armcc.h:62</div></div>
+<div class="ttc" id="aunionarm__nnword_html_a01e9cb2a6cc9199a6ea12a089a7ed057"><div class="ttname"><a href="unionarm__nnword.html#a01e9cb2a6cc9199a6ea12a089a7ed057">arm_nnword::half_words</a></div><div class="ttdeci">q15_t half_words[2]</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:49</div></div>
+<div class="ttc" id="aarm__common__tables_8h_html"><div class="ttname"><a href="arm__common__tables_8h.html">arm_common_tables.h</a></div></div>
+<div class="ttc" id="aarm__math_8h_html_adc89a3547f5324b7b3b95adec3806bc0"><div class="ttname"><a href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a></div><div class="ttdeci">int32_t q31_t</div><div class="ttdoc">32-bit fractional data type in 1.31 format.</div><div class="ttdef"><b>Definition:</b> arm_math.h:423</div></div>
+<div class="ttc" id="aunionarm__nnword_html"><div class="ttname"><a href="unionarm__nnword.html">arm_nnword</a></div><div class="ttdoc">Union for SIMD access of Q31/Q15/Q7 types.</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:46</div></div>
+<div class="ttc" id="agroup___c_m_s_i_s___core___instruction_interface_html_ga95b9bd281ddeda378b85afdb8f2ced86"><div class="ttname"><a href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a></div><div class="ttdeci">#define __ROR</div><div class="ttdoc">Rotate Right in unsigned value (32 bit)</div><div class="ttdef"><b>Definition:</b> cmsis_armcc.h:493</div></div>
+<div class="ttc" id="aarm__math_8h_html_ac9f7f02a5e0ad5642026dbd0da7418db"><div class="ttname"><a href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a></div><div class="ttdeci">CMSIS_INLINE __STATIC_INLINE uint32_t __SXTB16(uint32_t x)</div><div class="ttdef"><b>Definition:</b> arm_math.h:986</div></div>
+<div class="ttc" id="agroup___n_n_basic_math_html_ga08f8340aa6533271b3aa6d211614fe22"><div class="ttname"><a href="group___n_n_basic_math.html#ga08f8340aa6533271b3aa6d211614fe22">arm_nn_mult_q15</a></div><div class="ttdeci">void arm_nn_mult_q15(q15_t *pSrcA, q15_t *pSrcB, q15_t *pDst, const uint16_t out_shift, uint32_t blockSize)</div><div class="ttdoc">Q7 vector multiplication with variable output shifts.</div><div class="ttdef"><b>Definition:</b> arm_nn_mult_q15.c:58</div></div>
+<div class="ttc" id="aunionarm__nnword_html_a28bd9dbf5f26312fb6f1ae07496df471"><div class="ttname"><a href="unionarm__nnword.html#a28bd9dbf5f26312fb6f1ae07496df471">arm_nnword::word</a></div><div class="ttdeci">q31_t word</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:47</div></div>
+<div class="ttc" id="agroup__nndata__convert_html_gae349de4dba8d253c89d45794ccf05680"><div class="ttname"><a href="group__nndata__convert.html#gae349de4dba8d253c89d45794ccf05680">arm_q7_to_q15_no_shift</a></div><div class="ttdeci">void arm_q7_to_q15_no_shift(const q7_t *pSrc, q15_t *pDst, uint32_t blockSize)</div><div class="ttdoc">Converts the elements of the Q7 vector to Q15 vector without left-shift.</div><div class="ttdef"><b>Definition:</b> arm_q7_to_q15_no_shift.c:59</div></div>
+<div class="ttc" id="aarm__math_8h_html_a9de2e0a5785be82866bcb96012282248"><div class="ttname"><a href="arm__math_8h.html#a9de2e0a5785be82866bcb96012282248">__SIMD32</a></div><div class="ttdeci">#define __SIMD32(addr)</div><div class="ttdoc">definition to read/write two 16 bit values.</div><div class="ttdef"><b>Definition:</b> arm_math.h:482</div></div>
+<div class="ttc" id="aarm__math_8h_html_ab5a8fb21a5b3b983d5f54f31614052ea"><div class="ttname"><a href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a></div><div class="ttdeci">int16_t q15_t</div><div class="ttdoc">16-bit fractional data type in 1.15 format.</div><div class="ttdef"><b>Definition:</b> arm_math.h:418</div></div>
+<div class="ttc" id="aarm__math_8h_html_aa505179349146cf6186640b4c8b47714"><div class="ttname"><a href="arm__math_8h.html#aa505179349146cf6186640b4c8b47714">__PKHBT</a></div><div class="ttdeci">#define __PKHBT(ARG1, ARG2, ARG3)</div><div class="ttdoc">definition to pack two 16 bit values.</div><div class="ttdef"><b>Definition:</b> arm_math.h:491</div></div>
+<div class="ttc" id="aarm__math_8h_html_ae541b6f232c305361e9b416fc9eed263"><div class="ttname"><a href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a></div><div class="ttdeci">int8_t q7_t</div><div class="ttdoc">8-bit fractional data type in 1.7 format.</div><div class="ttdef"><b>Definition:</b> arm_math.h:413</div></div>
+<div class="ttc" id="agroup___n_n_basic_math_html_gad46c9ab012cceda8ce6681c687a58c70"><div class="ttname"><a href="group___n_n_basic_math.html#gad46c9ab012cceda8ce6681c687a58c70">arm_nn_mult_q7</a></div><div class="ttdeci">void arm_nn_mult_q7(q7_t *pSrcA, q7_t *pSrcB, q7_t *pDst, const uint16_t out_shift, uint32_t blockSize)</div><div class="ttdoc">Q7 vector multiplication with variable output shifts.</div><div class="ttdef"><b>Definition:</b> arm_nn_mult_q7.c:57</div></div>
+<div class="ttc" id="aarm__nnsupportfunctions_8h_html_a7f41aa78cd9a0552fae9b348ee4831a0ac24e4db95c986f16c10dca71a4b4e1c5"><div class="ttname"><a href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0ac24e4db95c986f16c10dca71a4b4e1c5">ARM_TANH</a></div><div class="ttdeci">@ ARM_TANH</div><div class="ttdef"><b>Definition:</b> arm_nnsupportfunctions.h:63</div></div>
+<div class="ttc" id="aarm__fir__example__f32_8c_html_ab6558f40a619c2502fbc24c880fd4fb0"><div class="ttname"><a href="arm__fir__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a></div><div class="ttdeci">uint32_t blockSize</div><div class="ttdef"><b>Definition:</b> arm_fir_example_f32.c:173</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

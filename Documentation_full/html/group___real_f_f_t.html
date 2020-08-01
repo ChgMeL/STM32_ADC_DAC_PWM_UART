@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Real FFT Functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Real FFT Functions<div class="ingroups"><a class="el" href="group__group_transforms.html">Transform Functions</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:group___real_f_f_t___table"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t___table.html">Real FFT Tables</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga3df1766d230532bc068fc4ed69d0fcdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga3df1766d230532bc068fc4ed69d0fcdc">arm_rfft_f32</a> (const <a class="el" href="structarm__rfft__instance__f32.html">arm_rfft_instance_f32</a> *S, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst)</td></tr>
+<tr class="memdesc:ga3df1766d230532bc068fc4ed69d0fcdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the floating-point RFFT/RIFFT.  <a href="group___real_f_f_t.html#ga3df1766d230532bc068fc4ed69d0fcdc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3df1766d230532bc068fc4ed69d0fcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga180d8b764d59cbb85d37a2d5f7cd9799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga180d8b764d59cbb85d37a2d5f7cd9799">arm_rfft_fast_f32</a> (<a class="el" href="structarm__rfft__fast__instance__f32.html">arm_rfft_fast_instance_f32</a> *S, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *p, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pOut, uint8_t <a class="el" href="arm__fft__bin__example__f32_8c.html#a379ccb99013d369a41b49619083c16ef">ifftFlag</a>)</td></tr>
+<tr class="memdesc:ga180d8b764d59cbb85d37a2d5f7cd9799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the floating-point real FFT.  <a href="group___real_f_f_t.html#ga180d8b764d59cbb85d37a2d5f7cd9799">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga180d8b764d59cbb85d37a2d5f7cd9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5fceb172551e7c11eb4d0e17ef15aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#gac5fceb172551e7c11eb4d0e17ef15aa3">arm_rfft_fast_init_f32</a> (<a class="el" href="structarm__rfft__fast__instance__f32.html">arm_rfft_fast_instance_f32</a> *S, uint16_t fftLen)</td></tr>
+<tr class="memdesc:gac5fceb172551e7c11eb4d0e17ef15aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the floating-point real FFT.  <a href="group___real_f_f_t.html#gac5fceb172551e7c11eb4d0e17ef15aa3">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac5fceb172551e7c11eb4d0e17ef15aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10717ee326bf50832ef1c25b85a23068"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga10717ee326bf50832ef1c25b85a23068">arm_rfft_init_f32</a> (<a class="el" href="structarm__rfft__instance__f32.html">arm_rfft_instance_f32</a> *S, <a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a> *S_CFFT, uint32_t fftLenReal, uint32_t ifftFlagR, uint32_t bitReverseFlag)</td></tr>
+<tr class="separator:ga10717ee326bf50832ef1c25b85a23068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga053450cc600a55410ba5b5605e96245d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga053450cc600a55410ba5b5605e96245d">arm_rfft_init_q15</a> (<a class="el" href="structarm__rfft__instance__q15.html">arm_rfft_instance_q15</a> *S, uint32_t fftLenReal, uint32_t ifftFlagR, uint32_t bitReverseFlag)</td></tr>
+<tr class="memdesc:ga053450cc600a55410ba5b5605e96245d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q15 RFFT/RIFFT.  <a href="group___real_f_f_t.html#ga053450cc600a55410ba5b5605e96245d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga053450cc600a55410ba5b5605e96245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5abde938abbe72e95c5bab080eb33c45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga5abde938abbe72e95c5bab080eb33c45">arm_rfft_init_q31</a> (<a class="el" href="structarm__rfft__instance__q31.html">arm_rfft_instance_q31</a> *S, uint32_t fftLenReal, uint32_t ifftFlagR, uint32_t bitReverseFlag)</td></tr>
+<tr class="memdesc:ga5abde938abbe72e95c5bab080eb33c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q31 RFFT/RIFFT.  <a href="group___real_f_f_t.html#ga5abde938abbe72e95c5bab080eb33c45">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5abde938abbe72e95c5bab080eb33c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00e615f5db21736ad5b27fb6146f3fc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#ga00e615f5db21736ad5b27fb6146f3fc5">arm_rfft_q15</a> (const <a class="el" href="structarm__rfft__instance__q15.html">arm_rfft_instance_q15</a> *S, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst)</td></tr>
+<tr class="memdesc:ga00e615f5db21736ad5b27fb6146f3fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q15 RFFT/RIFFT.  <a href="group___real_f_f_t.html#ga00e615f5db21736ad5b27fb6146f3fc5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga00e615f5db21736ad5b27fb6146f3fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaeab5646aeea9844e6d42ca8c73fe3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___real_f_f_t.html#gabaeab5646aeea9844e6d42ca8c73fe3a">arm_rfft_q31</a> (const <a class="el" href="structarm__rfft__instance__q31.html">arm_rfft_instance_q31</a> *S, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst)</td></tr>
+<tr class="memdesc:gabaeab5646aeea9844e6d42ca8c73fe3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q31 RFFT/RIFFT.  <a href="group___real_f_f_t.html#gabaeab5646aeea9844e6d42ca8c73fe3a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabaeab5646aeea9844e6d42ca8c73fe3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<dl class="section user"><dt></dt><dd>The CMSIS DSP library includes specialized algorithms for computing the FFT of real data sequences. The FFT is defined over complex data but in many applications the input is real. Real FFT algorithms take advantage of the symmetry properties of the FFT and have a speed advantage over complex algorithms of the same length. </dd></dl>
+<dl class="section user"><dt></dt><dd>The Fast RFFT algorith relays on the mixed radix CFFT that save processor usage. </dd></dl>
+<dl class="section user"><dt></dt><dd>The real length N forward FFT of a sequence is computed using the steps shown below. </dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RFFT.gif" alt=""/>
+<div class="caption">
+Real Fast Fourier Transform</div></div>
+ </dd></dl>
+<dl class="section user"><dt></dt><dd>The real sequence is initially treated as if it were complex to perform a CFFT. Later, a processing stage reshapes the data to obtain half of the frequency spectrum in complex format. Except the first complex number that contains the two real numbers X[0] and X[N/2] all the data is complex. In other words, the first complex sample contains two real values packed. </dd></dl>
+<dl class="section user"><dt></dt><dd>The input for the inverse RFFT should keep the same format as the output of the forward RFFT. A first processing stage pre-process the data to later perform an inverse CFFT. </dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RIFFT.gif" alt=""/>
+<div class="caption">
+Real Inverse Fast Fourier Transform</div></div>
+ </dd></dl>
+<dl class="section user"><dt></dt><dd>The algorithms for floating-point, Q15, and Q31 data are slightly different and we describe each algorithm in turn. </dd></dl>
+<dl class="section user"><dt>Floating-point</dt><dd>The main functions are <a class="el" href="group___real_f_f_t.html#ga180d8b764d59cbb85d37a2d5f7cd9799" title="Processing function for the floating-point real FFT.">arm_rfft_fast_f32()</a> and <a class="el" href="group___real_f_f_t.html#gac5fceb172551e7c11eb4d0e17ef15aa3" title="Initialization function for the floating-point real FFT.">arm_rfft_fast_init_f32()</a>. The older functions <a class="el" href="group___real_f_f_t.html#ga3df1766d230532bc068fc4ed69d0fcdc" title="Processing function for the floating-point RFFT/RIFFT.">arm_rfft_f32()</a> and <a class="el" href="group___real_f_f_t.html#ga10717ee326bf50832ef1c25b85a23068">arm_rfft_init_f32()</a> have been deprecated but are still documented. </dd></dl>
+<dl class="section user"><dt></dt><dd>The FFT of a real N-point sequence has even symmetry in the frequency domain. The second half of the data equals the conjugate of the first half flipped in frequency. Looking at the data, we see that we can uniquely represent the FFT using only N/2 complex numbers. These are packed into the output array in alternating real and imaginary components: </dd></dl>
+<dl class="section user"><dt></dt><dd>X = { real[0], imag[0], real[1], imag[1], real[2], imag[2] ... real[(N/2)-1], imag[(N/2)-1 } </dd></dl>
+<dl class="section user"><dt></dt><dd>It happens that the first complex number (real[0], imag[0]) is actually all real. real[0] represents the DC offset, and imag[0] should be 0. (real[1], imag[1]) is the fundamental frequency, (real[2], imag[2]) is the first harmonic and so on. </dd></dl>
+<dl class="section user"><dt></dt><dd>The real FFT functions pack the frequency domain data in this fashion. The forward transform outputs the data in this form and the inverse transform expects input data in this form. The function always performs the needed bitreversal so that the input and output data is always in normal order. The functions support lengths of [32, 64, 128, ..., 4096] samples. </dd></dl>
+<dl class="section user"><dt>Q15 and Q31</dt><dd>The real algorithms are defined in a similar manner and utilize N/2 complex transforms behind the scenes. </dd></dl>
+<dl class="section user"><dt></dt><dd>The complex transforms used internally include scaling to prevent fixed-point overflows. The overall scaling equals 1/(fftLen/2). </dd></dl>
+<dl class="section user"><dt></dt><dd>A separate instance structure must be defined for each transform used but twiddle factor and bit reversal tables can be reused. </dd></dl>
+<dl class="section user"><dt></dt><dd>There is also an associated initialization function for each data type. The initialization function performs the following operations:<ul>
+<li>Sets the values of the internal structure fields.</li>
+<li>Initializes twiddle factor table and bit reversal table pointers.</li>
+<li>Initializes the internal complex FFT data structure. </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Use of the initialization function is optional. However, if the initialization function is used, then the instance structure cannot be placed into a const data section. To place an instance structure into a const data section, the instance structure should be manually initialized as follows: <pre>
+*arm_rfft_instance_q31 S = {fftLenReal, fftLenBy2, ifftFlagR, bitReverseFlagR, twidCoefRModifier, pTwiddleAReal, pTwiddleBReal, pCfft};
+*arm_rfft_instance_q15 S = {fftLenReal, fftLenBy2, ifftFlagR, bitReverseFlagR, twidCoefRModifier, pTwiddleAReal, pTwiddleBReal, pCfft};
+  </pre> where <code>fftLenReal</code> is the length of the real transform; <code>fftLenBy2</code> length of the internal complex transform. <code>ifftFlagR</code> Selects forward (=0) or inverse (=1) transform. <code>bitReverseFlagR</code> Selects bit reversed output (=0) or normal order output (=1). <code>twidCoefRModifier</code> stride modifier for the twiddle factor table. The value is based on the FFT length; <code>pTwiddleAReal</code>points to the A array of twiddle coefficients; <code>pTwiddleBReal</code>points to the B array of twiddle coefficients; <code>pCfft</code> points to the CFFT Instance structure. The CFFT structure must also be initialized. Refer to <a class="el" href="group___complex_f_f_t.html#ga521f670cd9c571bc61aff9bec89f4c26" title="Processing function for the floating-point Radix-4 CFFT/CIFFT.">arm_cfft_radix4_f32()</a> for details regarding static initialization of the complex FFT instance structure.</dd></dl>
+<p>end of RealFFT_Table group </p>
+<h2 class="groupheader">Функции</h2>
+<a id="ga3df1766d230532bc068fc4ed69d0fcdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3df1766d230532bc068fc4ed69d0fcdc">&#9670;&nbsp;</a></span>arm_rfft_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_rfft_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__rfft__instance__f32.html">arm_rfft_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing function for the floating-point RFFT/RIFFT. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000051">Уст.:</a></b></dt><dd>Do not use this function. It has been superceded by <a class="el" href="group___real_f_f_t.html#ga180d8b764d59cbb85d37a2d5f7cd9799">arm_rfft_fast_f32</a> and will be removed in the future. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*S</td><td>points to an instance of the floating-point RFFT/RIFFT structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pSrc</td><td>points to the input buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pDst</td><td>points to the output buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. </dd></dl>
+
+</div>
+</div>
+<a id="ga180d8b764d59cbb85d37a2d5f7cd9799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga180d8b764d59cbb85d37a2d5f7cd9799">&#9670;&nbsp;</a></span>arm_rfft_fast_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_rfft_fast_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__rfft__fast__instance__f32.html">arm_rfft_fast_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramname"><em>pOut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ifftFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing function for the floating-point real FFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*S</td><td>points to an <a class="el" href="structarm__rfft__fast__instance__f32.html" title="Instance structure for the floating-point RFFT/RIFFT function.">arm_rfft_fast_instance_f32</a> structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*p</td><td>points to the input buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pOut</td><td>points to the output buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ifftFlag</td><td>RFFT if flag is 0, RIFFT if flag is 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none. </dd></dl>
+
+</div>
+</div>
+<a id="gac5fceb172551e7c11eb4d0e17ef15aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5fceb172551e7c11eb4d0e17ef15aa3">&#9670;&nbsp;</a></span>arm_rfft_fast_init_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> arm_rfft_fast_init_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__rfft__fast__instance__f32.html">arm_rfft_fast_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>fftLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization function for the floating-point real FFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*S</td><td>points to an <a class="el" href="structarm__rfft__fast__instance__f32.html" title="Instance structure for the floating-point RFFT/RIFFT function.">arm_rfft_fast_instance_f32</a> structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fftLen</td><td>length of the Real Sequence. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The function returns ARM_MATH_SUCCESS if initialization is successful or ARM_MATH_ARGUMENT_ERROR if <code>fftLen</code> is not a supported value.</dd></dl>
+<dl class="section user"><dt>Description:</dt><dd></dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>fftLen</code> Specifies length of RFFT/CIFFT process. Supported FFT Lengths are 32, 64, 128, 256, 512, 1024, 2048, 4096. </dd></dl>
+<dl class="section user"><dt></dt><dd>This Function also initializes Twiddle factor table pointer and Bit reversal table pointer. </dd></dl>
+
+</div>
+</div>
+<a id="ga10717ee326bf50832ef1c25b85a23068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10717ee326bf50832ef1c25b85a23068">&#9670;&nbsp;</a></span>arm_rfft_init_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> arm_rfft_init_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__rfft__instance__f32.html">arm_rfft_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structarm__cfft__radix4__instance__f32.html">arm_cfft_radix4_instance_f32</a> *&#160;</td>
+          <td class="paramname"><em>S_CFFT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLenReal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ifftFlagR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga053450cc600a55410ba5b5605e96245d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga053450cc600a55410ba5b5605e96245d">&#9670;&nbsp;</a></span>arm_rfft_init_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> arm_rfft_init_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__rfft__instance__q15.html">arm_rfft_instance_q15</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLenReal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ifftFlagR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization function for the Q15 RFFT/RIFFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*S</td><td>points to an instance of the Q15 RFFT/RIFFT structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fftLenReal</td><td>length of the FFT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ifftFlagR</td><td>flag that selects forward (ifftFlagR=0) or inverse (ifftFlagR=1) transform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitReverseFlag</td><td>flag that enables (bitReverseFlag=1) or disables (bitReverseFlag=0) bit reversal of output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The function returns ARM_MATH_SUCCESS if initialization is successful or ARM_MATH_ARGUMENT_ERROR if <code>fftLenReal</code> is not a supported value.</dd></dl>
+<dl class="section user"><dt>Description:</dt><dd></dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>fftLenReal</code> Specifies length of RFFT/RIFFT Process. Supported FFT Lengths are 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192. </dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>ifftFlagR</code> controls whether a forward or inverse transform is computed. Set(=1) ifftFlagR to calculate RIFFT, otherwise RFFT is calculated. </dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>bitReverseFlag</code> controls whether output is in normal order or bit reversed order. Set(=1) bitReverseFlag for output to be in normal order otherwise output is in bit reversed order. </dd></dl>
+<dl class="section user"><dt></dt><dd>This function also initializes Twiddle factor table. </dd></dl>
+
+</div>
+</div>
+<a id="ga5abde938abbe72e95c5bab080eb33c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5abde938abbe72e95c5bab080eb33c45">&#9670;&nbsp;</a></span>arm_rfft_init_q31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> arm_rfft_init_q31 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__rfft__instance__q31.html">arm_rfft_instance_q31</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>fftLenReal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ifftFlagR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bitReverseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization function for the Q31 RFFT/RIFFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*S</td><td>points to an instance of the Q31 RFFT/RIFFT structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fftLenReal</td><td>length of the FFT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ifftFlagR</td><td>flag that selects forward (ifftFlagR=0) or inverse (ifftFlagR=1) transform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitReverseFlag</td><td>flag that enables (bitReverseFlag=1) or disables (bitReverseFlag=0) bit reversal of output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The function returns ARM_MATH_SUCCESS if initialization is successful or ARM_MATH_ARGUMENT_ERROR if <code>fftLenReal</code> is not a supported value.</dd></dl>
+<dl class="section user"><dt>Description:</dt><dd></dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>fftLenReal</code> Specifies length of RFFT/RIFFT Process. Supported FFT Lengths are 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192. </dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>ifftFlagR</code> controls whether a forward or inverse transform is computed. Set(=1) ifftFlagR to calculate RIFFT, otherwise RFFT is calculated. </dd></dl>
+<dl class="section user"><dt></dt><dd>The parameter <code>bitReverseFlag</code> controls whether output is in normal order or bit reversed order. Set(=1) bitReverseFlag for output to be in normal order otherwise output is in bit reversed order. </dd></dl>
+<dl class="section user"><dt>7</dt><dd>This function also initializes Twiddle factor table. </dd></dl>
+
+</div>
+</div>
+<a id="ga00e615f5db21736ad5b27fb6146f3fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00e615f5db21736ad5b27fb6146f3fc5">&#9670;&nbsp;</a></span>arm_rfft_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_rfft_q15 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__rfft__instance__q15.html">arm_rfft_instance_q15</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing function for the Q15 RFFT/RIFFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*S</td><td>points to an instance of the Q15 RFFT/RIFFT structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pSrc</td><td>points to the input buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pDst</td><td>points to the output buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<dl class="section user"><dt>Input an output formats:</dt><dd></dd></dl>
+<dl class="section user"><dt></dt><dd>Internally input is downscaled by 2 for every stage to avoid saturations inside CFFT/CIFFT process. Hence the output format is different for different RFFT sizes. The input and output formats for different RFFT sizes and number of bits to upscale are mentioned in the tables below for RFFT and RIFFT: </dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RFFTQ15.gif" alt=""/>
+<div class="caption">
+Input and Output Formats for Q15 RFFT</div></div>
+ </dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RIFFTQ15.gif" alt=""/>
+<div class="caption">
+Input and Output Formats for Q15 RIFFT</div></div>
+ </dd></dl>
+
+</div>
+</div>
+<a id="gabaeab5646aeea9844e6d42ca8c73fe3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabaeab5646aeea9844e6d42ca8c73fe3a">&#9670;&nbsp;</a></span>arm_rfft_q31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_rfft_q31 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarm__rfft__instance__q31.html">arm_rfft_instance_q31</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing function for the Q31 RFFT/RIFFT. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*S</td><td>points to an instance of the Q31 RFFT/RIFFT structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pSrc</td><td>points to the input buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pDst</td><td>points to the output buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<dl class="section user"><dt>Input an output formats:</dt><dd></dd></dl>
+<dl class="section user"><dt></dt><dd>Internally input is downscaled by 2 for every stage to avoid saturations inside CFFT/CIFFT process. Hence the output format is different for different RFFT sizes. The input and output formats for different RFFT sizes and number of bits to upscale are mentioned in the tables below for RFFT and RIFFT: </dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RFFTQ31.gif" alt=""/>
+<div class="caption">
+Input and Output Formats for Q31 RFFT</div></div>
+</dd></dl>
+<dl class="section user"><dt></dt><dd><div class="image">
+<img src="RIFFTQ31.gif" alt=""/>
+<div class="caption">
+Input and Output Formats for Q31 RIFFT</div></div>
+ </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

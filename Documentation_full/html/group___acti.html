@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Neural Network Activation Functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Neural Network Activation Functions<div class="ingroups"><a class="el" href="group__group_n_n.html">Neural Network Functions</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Perform activation layers, including ReLU (Rectified Linear Unit), sigmoid and tanh.  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga8932b57c8d0ee757511af2d40dcc11e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___acti.html#ga8932b57c8d0ee757511af2d40dcc11e7">arm_nn_activations_direct_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *data, uint16_t <a class="el" href="_a_r_m_c_m33___f_p__config_8txt.html#a41fe889d037f1749eac19d8753fcdda0">size</a>, uint16_t int_width, <a class="el" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a> type)</td></tr>
+<tr class="memdesc:ga8932b57c8d0ee757511af2d40dcc11e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q15 neural network activation function using direct table look-up.  <a href="group___acti.html#ga8932b57c8d0ee757511af2d40dcc11e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8932b57c8d0ee757511af2d40dcc11e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79f11131ae6767d60e03b1f6506b1af8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___acti.html#ga79f11131ae6767d60e03b1f6506b1af8">arm_nn_activations_direct_q7</a> (<a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *data, uint16_t <a class="el" href="_a_r_m_c_m33___f_p__config_8txt.html#a41fe889d037f1749eac19d8753fcdda0">size</a>, uint16_t int_width, <a class="el" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a> type)</td></tr>
+<tr class="memdesc:ga79f11131ae6767d60e03b1f6506b1af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q7 neural network activation function using direct table look-up.  <a href="group___acti.html#ga79f11131ae6767d60e03b1f6506b1af8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga79f11131ae6767d60e03b1f6506b1af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53bcc00e54b802919bb3c89c143ee5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___acti.html#ga53bcc00e54b802919bb3c89c143ee5ba">arm_relu_q15</a> (<a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *data, uint16_t <a class="el" href="_a_r_m_c_m33___f_p__config_8txt.html#a41fe889d037f1749eac19d8753fcdda0">size</a>)</td></tr>
+<tr class="memdesc:ga53bcc00e54b802919bb3c89c143ee5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q15 RELU function.  <a href="group___acti.html#ga53bcc00e54b802919bb3c89c143ee5ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga53bcc00e54b802919bb3c89c143ee5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga638e803b4fe00426f401783a6255ca30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___acti.html#ga638e803b4fe00426f401783a6255ca30">arm_relu_q7</a> (<a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *data, uint16_t <a class="el" href="_a_r_m_c_m33___f_p__config_8txt.html#a41fe889d037f1749eac19d8753fcdda0">size</a>)</td></tr>
+<tr class="memdesc:ga638e803b4fe00426f401783a6255ca30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q7 RELU function.  <a href="group___acti.html#ga638e803b4fe00426f401783a6255ca30">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga638e803b4fe00426f401783a6255ca30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Perform activation layers, including ReLU (Rectified Linear Unit), sigmoid and tanh. </p>
+<h2 class="groupheader">Функции</h2>
+<a id="ga8932b57c8d0ee757511af2d40dcc11e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8932b57c8d0ee757511af2d40dcc11e7">&#9670;&nbsp;</a></span>arm_nn_activations_direct_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_nn_activations_direct_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>int_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Q15 neural network activation function using direct table look-up. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>pointer to input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>number of elements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int_width</td><td>bit-width of the integer part, assume to be smaller than 3 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of activation functions </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<p>This is the direct table look-up approach.</p>
+<p>Assume here the integer part of the fixed-point is &lt;= 3. More than 3 just not making much sense, makes no difference with saturation followed by any of these activation functions. </p>
+
+</div>
+</div>
+<a id="ga79f11131ae6767d60e03b1f6506b1af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79f11131ae6767d60e03b1f6506b1af8">&#9670;&nbsp;</a></span>arm_nn_activations_direct_q7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_nn_activations_direct_q7 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>int_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arm__nnsupportfunctions_8h.html#a7f41aa78cd9a0552fae9b348ee4831a0">arm_nn_activation_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Q7 neural network activation function using direct table look-up. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>pointer to input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>number of elements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int_width</td><td>bit-width of the integer part, assume to be smaller than 3 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of activation functions </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<p>This is the direct table look-up approach.</p>
+<p>Assume here the integer part of the fixed-point is &lt;= 3. More than 3 just not making much sense, makes no difference with saturation followed by any of these activation functions. </p>
+
+</div>
+</div>
+<a id="ga53bcc00e54b802919bb3c89c143ee5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53bcc00e54b802919bb3c89c143ee5ba">&#9670;&nbsp;</a></span>arm_relu_q15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_relu_q15 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Q15 RELU function. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>pointer to input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>number of elements </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<p>Optimized relu with QSUB instructions. </p>
+
+</div>
+</div>
+<a id="ga638e803b4fe00426f401783a6255ca30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga638e803b4fe00426f401783a6255ca30">&#9670;&nbsp;</a></span>arm_relu_q7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_relu_q7 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Q7 RELU function. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>pointer to input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>number of elements </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>none.</dd></dl>
+<p>Optimized relu with QSUB instructions. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

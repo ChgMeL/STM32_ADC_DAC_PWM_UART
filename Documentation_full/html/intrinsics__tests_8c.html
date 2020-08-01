@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/intrinsics_tests/intrinsics_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_76bad1904fd98d3707ccab5e428ea18b.html">intrinsics_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл intrinsics_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="intrinsics__templates_8h_source.html">intrinsics_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="intrinsics__test__data_8h_source.html">intrinsics_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afef50a8c1a4558bb5bd13829dfb5279f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#afef50a8c1a4558bb5bd13829dfb5279f">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a937a37e831677294ecde7195ec9d68ee">__QADD8</a>, q31)</td></tr>
+<tr class="separator:afef50a8c1a4558bb5bd13829dfb5279f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc65330db7aff580cedfcf701c15b877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#adc65330db7aff580cedfcf701c15b877">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a4690314b420f463093f1a2f68b5fb143">__QSUB8</a>, q31)</td></tr>
+<tr class="separator:adc65330db7aff580cedfcf701c15b877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5457dd11ae5e8197f7e405b2d58ba174"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a5457dd11ae5e8197f7e405b2d58ba174">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a08bea9cb2c311d925224c0d6829edb8c">__QADD16</a>, q31)</td></tr>
+<tr class="separator:a5457dd11ae5e8197f7e405b2d58ba174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9212e61ed3efc26daeeaaf301f2a2665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a9212e61ed3efc26daeeaaf301f2a2665">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#af3d7aff37a4472f1f2bc88eb3b97b526">__SHADD16</a>, q31)</td></tr>
+<tr class="separator:a9212e61ed3efc26daeeaaf301f2a2665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81188febbb8e5fc99ec6d0702844103"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#ac81188febbb8e5fc99ec6d0702844103">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a6e4703dc08d1b82eab7f5ef96edb59bb">__QSUB16</a>, q31)</td></tr>
+<tr class="separator:ac81188febbb8e5fc99ec6d0702844103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5a6413588d55b8ef501b9d25bd535b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#acb5a6413588d55b8ef501b9d25bd535b">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a0987d147320a596bbdb537d70b23de73">__SHSUB16</a>, q31)</td></tr>
+<tr class="separator:acb5a6413588d55b8ef501b9d25bd535b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e8d1e3dcc2f27861bef308f0f0d5b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a98e8d1e3dcc2f27861bef308f0f0d5b3">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#aad6f7afa72d784b95e6357c215a919bb">__QASX</a>, q31)</td></tr>
+<tr class="separator:a98e8d1e3dcc2f27861bef308f0f0d5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021f6785ea3de81054ffc80bfe8758aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a021f6785ea3de81054ffc80bfe8758aa">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#af60f220d422ebc524411f712544feecf">__SHASX</a>, q31)</td></tr>
+<tr class="separator:a021f6785ea3de81054ffc80bfe8758aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36294dcc0b65f2b4389ad75334083c7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a36294dcc0b65f2b4389ad75334083c7e">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a391f5f1d2e7cefaccfece0a49141ad47">__QSAX</a>, q31)</td></tr>
+<tr class="separator:a36294dcc0b65f2b4389ad75334083c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6962733bd6a48c830cead88aa2ec38f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#ab6962733bd6a48c830cead88aa2ec38f">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#abbfbf3cfac1971b4b380c0cde120a85b">__SHSAX</a>, q31)</td></tr>
+<tr class="separator:ab6962733bd6a48c830cead88aa2ec38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af688db3ce45eeb0e160e4997938798eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#af688db3ce45eeb0e160e4997938798eb">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a7375d1deba32929dc97008bfa7085d46">__SMUSDX</a>, q31)</td></tr>
+<tr class="separator:af688db3ce45eeb0e160e4997938798eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789dcd68b48641bc60f2fadba512dacf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a789dcd68b48641bc60f2fadba512dacf">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a9c58d7b4648a973d91e27544bc190e60">__SMUADX</a>, q31)</td></tr>
+<tr class="separator:a789dcd68b48641bc60f2fadba512dacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2da36a52834cdebaec46e59a3675a47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#ad2da36a52834cdebaec46e59a3675a47">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#ab9f3cfbfb0f12975ab91ddb179160dcb">__QADD</a>, q31)</td></tr>
+<tr class="separator:ad2da36a52834cdebaec46e59a3675a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09f0fe359e9f7dd6cf1c4649d59925d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#ac09f0fe359e9f7dd6cf1c4649d59925d">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a15e896d0146c280e600d00f609832350">__QSUB</a>, q31)</td></tr>
+<tr class="separator:ac09f0fe359e9f7dd6cf1c4649d59925d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449a2facc4c3f353f89bdf041fba7a87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a449a2facc4c3f353f89bdf041fba7a87">INTRINSICS_TEST_TEMPLATE_ELT3</a> (<a class="el" href="arm__math_8h.html#aa611fdbf6c56c46553701d6596a79aaf">__SMLAD</a>, q31)</td></tr>
+<tr class="separator:a449a2facc4c3f353f89bdf041fba7a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa945be9591e88273f05ac60a6638c91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#aaa945be9591e88273f05ac60a6638c91">INTRINSICS_TEST_TEMPLATE_ELT3</a> (<a class="el" href="arm__math_8h.html#a7fc670277db1ad9ac34d52d771c7c305">__SMLADX</a>, q31)</td></tr>
+<tr class="separator:aaa945be9591e88273f05ac60a6638c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70859dea454d0157600d9829f170c0d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a70859dea454d0157600d9829f170c0d4">INTRINSICS_TEST_TEMPLATE_ELT3</a> (<a class="el" href="arm__math_8h.html#a5d61b7d886888f9f1f35c079eb5d01c9">__SMLSDX</a>, q31)</td></tr>
+<tr class="separator:a70859dea454d0157600d9829f170c0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a7a312c076b8f87b497d364772660d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#ae5a7a312c076b8f87b497d364772660d">INTRINSICS_TEST_TEMPLATE_ELT4</a> (<a class="el" href="arm__math_8h.html#a7aed02041f489a4f65dbd7093073d94e">__SMLALD</a>, q31, q63)</td></tr>
+<tr class="separator:ae5a7a312c076b8f87b497d364772660d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2ac4ff5914f05fa95132f7b7b23693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#aaf2ac4ff5914f05fa95132f7b7b23693">INTRINSICS_TEST_TEMPLATE_ELT4</a> (<a class="el" href="arm__math_8h.html#a3bdab9022ab56e30f6346a043050dfc4">__SMLALDX</a>, q31, q63)</td></tr>
+<tr class="separator:aaf2ac4ff5914f05fa95132f7b7b23693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbf8379245edce5b9b902aad123c097"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#aafbf8379245edce5b9b902aad123c097">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a2eed05660fedbe3fbd0b6dbb1315cfc3">__SMUAD</a>, q31)</td></tr>
+<tr class="separator:aafbf8379245edce5b9b902aad123c097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6424935cec852adea32928a6a6200d32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a6424935cec852adea32928a6a6200d32">INTRINSICS_TEST_TEMPLATE_ELT2</a> (<a class="el" href="arm__math_8h.html#a6b293f62ad7eb225fa9ce0f39458eba3">__SMUSD</a>, q31)</td></tr>
+<tr class="separator:a6424935cec852adea32928a6a6200d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cece3adc104b17fe7fd1ee57e2618b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a1cece3adc104b17fe7fd1ee57e2618b0">INTRINSICS_TEST_TEMPLATE_ELT1</a> (<a class="el" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>, q31)</td></tr>
+<tr class="separator:a1cece3adc104b17fe7fd1ee57e2618b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f29d2c6bed7e6418f82be85d1d26bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrinsics__tests_8c.html#a97f29d2c6bed7e6418f82be85d1d26bf">JTEST_DEFINE_GROUP</a> (intrinsics_tests)</td></tr>
+<tr class="separator:a97f29d2c6bed7e6418f82be85d1d26bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a1cece3adc104b17fe7fd1ee57e2618b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cece3adc104b17fe7fd1ee57e2618b0">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ac9f7f02a5e0ad5642026dbd0da7418db">__SXTB16</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2da36a52834cdebaec46e59a3675a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2da36a52834cdebaec46e59a3675a47">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[1/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab9f3cfbfb0f12975ab91ddb179160dcb">__QADD</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5457dd11ae5e8197f7e405b2d58ba174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5457dd11ae5e8197f7e405b2d58ba174">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[2/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a08bea9cb2c311d925224c0d6829edb8c">__QADD16</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afef50a8c1a4558bb5bd13829dfb5279f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef50a8c1a4558bb5bd13829dfb5279f">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[3/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a937a37e831677294ecde7195ec9d68ee">__QADD8</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98e8d1e3dcc2f27861bef308f0f0d5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e8d1e3dcc2f27861bef308f0f0d5b3">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[4/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#aad6f7afa72d784b95e6357c215a919bb">__QASX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36294dcc0b65f2b4389ad75334083c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36294dcc0b65f2b4389ad75334083c7e">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[5/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a391f5f1d2e7cefaccfece0a49141ad47">__QSAX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac09f0fe359e9f7dd6cf1c4649d59925d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09f0fe359e9f7dd6cf1c4649d59925d">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[6/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a15e896d0146c280e600d00f609832350">__QSUB</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac81188febbb8e5fc99ec6d0702844103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81188febbb8e5fc99ec6d0702844103">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[7/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a6e4703dc08d1b82eab7f5ef96edb59bb">__QSUB16</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc65330db7aff580cedfcf701c15b877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc65330db7aff580cedfcf701c15b877">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[8/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4690314b420f463093f1a2f68b5fb143">__QSUB8</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9212e61ed3efc26daeeaaf301f2a2665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9212e61ed3efc26daeeaaf301f2a2665">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[9/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#af3d7aff37a4472f1f2bc88eb3b97b526">__SHADD16</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a021f6785ea3de81054ffc80bfe8758aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021f6785ea3de81054ffc80bfe8758aa">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[10/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#af60f220d422ebc524411f712544feecf">__SHASX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6962733bd6a48c830cead88aa2ec38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6962733bd6a48c830cead88aa2ec38f">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[11/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#abbfbf3cfac1971b4b380c0cde120a85b">__SHSAX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb5a6413588d55b8ef501b9d25bd535b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5a6413588d55b8ef501b9d25bd535b">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[12/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a0987d147320a596bbdb537d70b23de73">__SHSUB16</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafbf8379245edce5b9b902aad123c097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbf8379245edce5b9b902aad123c097">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[13/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a2eed05660fedbe3fbd0b6dbb1315cfc3">__SMUAD</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a789dcd68b48641bc60f2fadba512dacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789dcd68b48641bc60f2fadba512dacf">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[14/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a9c58d7b4648a973d91e27544bc190e60">__SMUADX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6424935cec852adea32928a6a6200d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6424935cec852adea32928a6a6200d32">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[15/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a6b293f62ad7eb225fa9ce0f39458eba3">__SMUSD</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af688db3ce45eeb0e160e4997938798eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af688db3ce45eeb0e160e4997938798eb">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT2() <span class="overload">[16/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a7375d1deba32929dc97008bfa7085d46">__SMUSDX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a449a2facc4c3f353f89bdf041fba7a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449a2facc4c3f353f89bdf041fba7a87">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT3() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#aa611fdbf6c56c46553701d6596a79aaf">__SMLAD</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa945be9591e88273f05ac60a6638c91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa945be9591e88273f05ac60a6638c91">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT3() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a7fc670277db1ad9ac34d52d771c7c305">__SMLADX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70859dea454d0157600d9829f170c0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70859dea454d0157600d9829f170c0d4">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT3() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a5d61b7d886888f9f1f35c079eb5d01c9">__SMLSDX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5a7a312c076b8f87b497d364772660d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a7a312c076b8f87b497d364772660d">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT4() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a7aed02041f489a4f65dbd7093073d94e">__SMLALD</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q63&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf2ac4ff5914f05fa95132f7b7b23693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2ac4ff5914f05fa95132f7b7b23693">&#9670;&nbsp;</a></span>INTRINSICS_TEST_TEMPLATE_ELT4() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTRINSICS_TEST_TEMPLATE_ELT4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a3bdab9022ab56e30f6346a043050dfc4">__SMLALDX</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">q63&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97f29d2c6bed7e6418f82be85d1d26bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f29d2c6bed7e6418f82be85d1d26bf">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">intrinsics_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

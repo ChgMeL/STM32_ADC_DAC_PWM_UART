@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Структура osEvent</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Поля данных</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура osEvent</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Event structure contains detailed information about an event.  
+ <a href="structos_event.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_template_2cmsis__os_8h_source.html">cmsis_os.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Поля данных</h2></td></tr>
+<tr class="memitem:ad477a289f1f03ac45407b64268d707d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_event.html#ad477a289f1f03ac45407b64268d707d3">status</a></td></tr>
+<tr class="memdesc:ad477a289f1f03ac45407b64268d707d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">status code: event or error information  <a href="structos_event.html#ad477a289f1f03ac45407b64268d707d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad477a289f1f03ac45407b64268d707d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd2813cb98e9fe3f2bdf7baf2b561de"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structos_event.html#a9e0a00edabf3b8a5dafff624fff7bbfc">v</a></td></tr>
+<tr class="memdesc:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">message as 32-bit value  <a href="unionos_event_1_1_0d118.html#a9e0a00edabf3b8a5dafff624fff7bbfc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117104b82864d3b23ec174af6d392709"><td class="memItemLeft" >&#160;&#160;&#160;void *&#160;&#160;&#160;<a class="el" href="structos_event.html#a117104b82864d3b23ec174af6d392709">p</a></td></tr>
+<tr class="memdesc:a117104b82864d3b23ec174af6d392709"><td class="mdescLeft">&#160;</td><td class="mdescRight">message or mail as void pointer  <a href="unionos_event_1_1_0d118.html#a117104b82864d3b23ec174af6d392709">Подробнее...</a><br /></td></tr>
+<tr class="separator:a117104b82864d3b23ec174af6d392709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0dda1bf7e74f1576261d493fba232b6"><td class="memItemLeft" >&#160;&#160;&#160;int32_t&#160;&#160;&#160;<a class="el" href="structos_event.html#ad0dda1bf7e74f1576261d493fba232b6">signals</a></td></tr>
+<tr class="memdesc:ad0dda1bf7e74f1576261d493fba232b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal flags  <a href="unionos_event_1_1_0d118.html#ad0dda1bf7e74f1576261d493fba232b6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad0dda1bf7e74f1576261d493fba232b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd2813cb98e9fe3f2bdf7baf2b561de"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_event.html#accd2813cb98e9fe3f2bdf7baf2b561de">value</a></td></tr>
+<tr class="memdesc:accd2813cb98e9fe3f2bdf7baf2b561de"><td class="mdescLeft">&#160;</td><td class="mdescRight">event value  <a href="structos_event.html#accd2813cb98e9fe3f2bdf7baf2b561de">Подробнее...</a><br /></td></tr>
+<tr class="separator:accd2813cb98e9fe3f2bdf7baf2b561de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc07176b288648bbda1eb9a8550060dc"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:ac86175a4b1706bee596f3018322df26e"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;&#160;&#160;<a class="el" href="structos_event.html#ac86175a4b1706bee596f3018322df26e">mail_id</a></td></tr>
+<tr class="memdesc:ac86175a4b1706bee596f3018322df26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">mail id obtained by <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>  <a href="unionos_event_1_1_0d119.html#ac86175a4b1706bee596f3018322df26e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac86175a4b1706bee596f3018322df26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af394cbe21dde7377974e63af38cd87b0"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a>&#160;&#160;&#160;<a class="el" href="structos_event.html#af394cbe21dde7377974e63af38cd87b0">message_id</a></td></tr>
+<tr class="memdesc:af394cbe21dde7377974e63af38cd87b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">message id obtained by <a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a>  <a href="unionos_event_1_1_0d119.html#af394cbe21dde7377974e63af38cd87b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:af394cbe21dde7377974e63af38cd87b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc07176b288648bbda1eb9a8550060dc"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_event.html#abc07176b288648bbda1eb9a8550060dc">def</a></td></tr>
+<tr class="memdesc:abc07176b288648bbda1eb9a8550060dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">event definition  <a href="structos_event.html#abc07176b288648bbda1eb9a8550060dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:abc07176b288648bbda1eb9a8550060dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37842c0991083d3c25a1cbca185c0d58"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structos_event.html#a9e0a00edabf3b8a5dafff624fff7bbfc">v</a></td></tr>
+<tr class="memdesc:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">message as 32-bit value  <a href="unionos_event_1_1_0d120.html#a9e0a00edabf3b8a5dafff624fff7bbfc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e0a00edabf3b8a5dafff624fff7bbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117104b82864d3b23ec174af6d392709"><td class="memItemLeft" >&#160;&#160;&#160;void *&#160;&#160;&#160;<a class="el" href="structos_event.html#a117104b82864d3b23ec174af6d392709">p</a></td></tr>
+<tr class="memdesc:a117104b82864d3b23ec174af6d392709"><td class="mdescLeft">&#160;</td><td class="mdescRight">message or mail as void pointer  <a href="unionos_event_1_1_0d120.html#a117104b82864d3b23ec174af6d392709">Подробнее...</a><br /></td></tr>
+<tr class="separator:a117104b82864d3b23ec174af6d392709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0dda1bf7e74f1576261d493fba232b6"><td class="memItemLeft" >&#160;&#160;&#160;int32_t&#160;&#160;&#160;<a class="el" href="structos_event.html#ad0dda1bf7e74f1576261d493fba232b6">signals</a></td></tr>
+<tr class="memdesc:ad0dda1bf7e74f1576261d493fba232b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal flags  <a href="unionos_event_1_1_0d120.html#ad0dda1bf7e74f1576261d493fba232b6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad0dda1bf7e74f1576261d493fba232b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37842c0991083d3c25a1cbca185c0d58"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_event.html#a37842c0991083d3c25a1cbca185c0d58">value</a></td></tr>
+<tr class="memdesc:a37842c0991083d3c25a1cbca185c0d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">event value  <a href="structos_event.html#a37842c0991083d3c25a1cbca185c0d58">Подробнее...</a><br /></td></tr>
+<tr class="separator:a37842c0991083d3c25a1cbca185c0d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5131b4b94746e7e3fb6787adb8290fe"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:ac86175a4b1706bee596f3018322df26e"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a>&#160;&#160;&#160;<a class="el" href="structos_event.html#ac86175a4b1706bee596f3018322df26e">mail_id</a></td></tr>
+<tr class="memdesc:ac86175a4b1706bee596f3018322df26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">mail id obtained by <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a>  <a href="unionos_event_1_1_0d121.html#ac86175a4b1706bee596f3018322df26e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac86175a4b1706bee596f3018322df26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af394cbe21dde7377974e63af38cd87b0"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a>&#160;&#160;&#160;<a class="el" href="structos_event.html#af394cbe21dde7377974e63af38cd87b0">message_id</a></td></tr>
+<tr class="memdesc:af394cbe21dde7377974e63af38cd87b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">message id obtained by <a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a>  <a href="unionos_event_1_1_0d121.html#af394cbe21dde7377974e63af38cd87b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:af394cbe21dde7377974e63af38cd87b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5131b4b94746e7e3fb6787adb8290fe"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_event.html#af5131b4b94746e7e3fb6787adb8290fe">def</a></td></tr>
+<tr class="memdesc:af5131b4b94746e7e3fb6787adb8290fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">event definition  <a href="structos_event.html#af5131b4b94746e7e3fb6787adb8290fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5131b4b94746e7e3fb6787adb8290fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Event structure contains detailed information about an event. </p>
+<p>Event structure contains detailed information about an event. </p><dl class="section note"><dt>Заметки</dt><dd>MUST REMAIN UNCHANGED: <b>os_event</b> shall be consistent in every CMSIS-RTOS. However the struct may be extended at the end. </dd></dl>
+</div><h2 class="groupheader">Поля</h2>
+<a id="abc07176b288648bbda1eb9a8550060dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc07176b288648bbda1eb9a8550060dc">&#9670;&nbsp;</a></span>def <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  def</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event definition </p>
+
+</div>
+</div>
+<a id="af5131b4b94746e7e3fb6787adb8290fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5131b4b94746e7e3fb6787adb8290fe">&#9670;&nbsp;</a></span>def <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  def</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event definition </p>
+
+</div>
+</div>
+<a id="ac86175a4b1706bee596f3018322df26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86175a4b1706bee596f3018322df26e">&#9670;&nbsp;</a></span>mail_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#a1dac049fb7725a8af8b26c71cbb373b5">osMailQId</a> mail_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mail id obtained by <a class="el" href="cmsis__os1_8c.html#aa177e7fe5820dd70d8c9e46ded131174">osMailCreate</a> </p>
+
+</div>
+</div>
+<a id="af394cbe21dde7377974e63af38cd87b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af394cbe21dde7377974e63af38cd87b0">&#9670;&nbsp;</a></span>message_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ad9ec70c32c6c521970636b521e12d17f">osMessageQId</a> message_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>message id obtained by <a class="el" href="cmsis__os1_8c.html#af3b9345cf426304d46565152bc26fb78">osMessageCreate</a> </p>
+
+</div>
+</div>
+<a id="a117104b82864d3b23ec174af6d392709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117104b82864d3b23ec174af6d392709">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>message or mail as void pointer </p>
+
+</div>
+</div>
+<a id="ad0dda1bf7e74f1576261d493fba232b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0dda1bf7e74f1576261d493fba232b6">&#9670;&nbsp;</a></span>signals</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t signals</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>signal flags </p>
+
+</div>
+</div>
+<a id="ad477a289f1f03ac45407b64268d707d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad477a289f1f03ac45407b64268d707d3">&#9670;&nbsp;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_template_2cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e">osStatus</a> status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>status code: event or error information </p>
+
+</div>
+</div>
+<a id="a9e0a00edabf3b8a5dafff624fff7bbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0a00edabf3b8a5dafff624fff7bbfc">&#9670;&nbsp;</a></span>v</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>message as 32-bit value </p>
+
+</div>
+</div>
+<a id="accd2813cb98e9fe3f2bdf7baf2b561de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd2813cb98e9fe3f2bdf7baf2b561de">&#9670;&nbsp;</a></span>value <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event value </p>
+
+</div>
+</div>
+<a id="a37842c0991083d3c25a1cbca185c0d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37842c0991083d3c25a1cbca185c0d58">&#9670;&nbsp;</a></span>value <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event value </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>Drivers/CMSIS/RTOS/Template/<a class="el" href="_template_2cmsis__os_8h_source.html">cmsis_os.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

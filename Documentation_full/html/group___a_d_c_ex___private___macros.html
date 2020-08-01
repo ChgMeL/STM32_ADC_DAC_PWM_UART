@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: ADCEx Private Macros</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">ADCEx Private Macros<div class="ingroups"><a class="el" href="group___s_t_m32_f0xx___h_a_l___driver.html">STM32F0xx_HAL_Driver</a> &raquo; <a class="el" href="group___a_d_c_ex.html">ADCEx</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gafc2b5a27b9e60b2822591a19cbca11ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c_ex___private___macros.html#gafc2b5a27b9e60b2822591a19cbca11ff">ADC_IS_CHANNEL_INTERNAL</a>(__CHANNEL__)</td></tr>
+<tr class="memdesc:gafc2b5a27b9e60b2822591a19cbca11ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the selected ADC channel is an internal channel VrefInt/TempSensor/Vbat Note: On STM32F0, availability of internal channel Vbat depends on devices lines.  <a href="group___a_d_c_ex___private___macros.html#gafc2b5a27b9e60b2822591a19cbca11ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc2b5a27b9e60b2822591a19cbca11ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27b743f3afcb778ad1885debb677080b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c_ex___private___macros.html#ga27b743f3afcb778ad1885debb677080b">ADC_CHANNEL_INTERNAL_PATH</a>(__CHANNEL__)</td></tr>
+<tr class="memdesc:ga27b743f3afcb778ad1885debb677080b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the internal measurement path to be enabled/disabled corresponding to the selected ADC internal channel VrefInt/TempSensor/Vbat. Note: On STM32F0, availability of internal channel Vbat depends on devices lines.  <a href="group___a_d_c_ex___private___macros.html#ga27b743f3afcb778ad1885debb677080b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga27b743f3afcb778ad1885debb677080b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3f646d603911820b104dd134c42f028"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c_ex___private___macros.html#gab3f646d603911820b104dd134c42f028">IS_ADC_EXTTRIG</a>(REGTRIG)</td></tr>
+<tr class="separator:gab3f646d603911820b104dd134c42f028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba41910dcb2b449c613a5ef638862e77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c_ex___private___macros.html#gaba41910dcb2b449c613a5ef638862e77">IS_ADC_CHANNEL</a>(CHANNEL)</td></tr>
+<tr class="separator:gaba41910dcb2b449c613a5ef638862e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Макросы</h2>
+<a id="ga27b743f3afcb778ad1885debb677080b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27b743f3afcb778ad1885debb677080b">&#9670;&nbsp;</a></span>ADC_CHANNEL_INTERNAL_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_CHANNEL_INTERNAL_PATH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__CHANNEL__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"> (( (__CHANNEL__) == <a class="code" href="group___a_d_c__channels.html#ga8f0da1e8fa8504c92a368f6eb8e229b3">ADC_CHANNEL_TEMPSENSOR</a>                                    \</div>
+<div class="line">  )?                                                                           \</div>
+<div class="line">   (<a class="code" href="group___peripheral___registers___bits___definition.html#gaec05330012f52f35421531c72819fada">ADC_CCR_TSEN</a>)                                                              \</div>
+<div class="line">   :                                                                           \</div>
+<div class="line">   (                                                                           \</div>
+<div class="line">     ( (__CHANNEL__) == <a class="code" href="group___a_d_c__channels.html#ga2647a044275a295693e8fb01db3172f9">ADC_CHANNEL_VREFINT</a>                                    \</div>
+<div class="line">     )?                                                                        \</div>
+<div class="line">      (<a class="code" href="group___peripheral___registers___bits___definition.html#gaecc47464aaa52f565d8daa9cf1a86054">ADC_CCR_VREFEN</a>)                                                         \</div>
+<div class="line">      :                                                                        \</div>
+<div class="line">      (<a class="code" href="group___peripheral___registers___bits___definition.html#gaaeefa6f00268db0df10fb97112a9f456">ADC_CCR_VBATEN</a>)                                                         \</div>
+<div class="line">   )                                                                           \</div>
+<div class="line"> )</div>
+</div><!-- fragment -->
+<p>Select the internal measurement path to be enabled/disabled corresponding to the selected ADC internal channel VrefInt/TempSensor/Vbat. Note: On STM32F0, availability of internal channel Vbat depends on devices lines. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;strong&gt;CHANNEL&lt;/strong&gt;</td><td>ADC channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Bit</td><td>of register ADC_CCR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafc2b5a27b9e60b2822591a19cbca11ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc2b5a27b9e60b2822591a19cbca11ff">&#9670;&nbsp;</a></span>ADC_IS_CHANNEL_INTERNAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_IS_CHANNEL_INTERNAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__CHANNEL__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"> (((__CHANNEL__) == <a class="code" href="group___a_d_c__channels.html#ga8f0da1e8fa8504c92a368f6eb8e229b3">ADC_CHANNEL_TEMPSENSOR</a>) ||                                 \</div>
+<div class="line">  ((__CHANNEL__) == <a class="code" href="group___a_d_c__channels.html#ga2647a044275a295693e8fb01db3172f9">ADC_CHANNEL_VREFINT</a>)    ||                                 \</div>
+<div class="line">  ((__CHANNEL__) == <a class="code" href="group___a_d_c__channels.html#ga60210f1e9305301dea9e42afedd9093f">ADC_CHANNEL_VBAT</a>)                                          \</div>
+<div class="line"> )</div>
+</div><!-- fragment -->
+<p>Test if the selected ADC channel is an internal channel VrefInt/TempSensor/Vbat Note: On STM32F0, availability of internal channel Vbat depends on devices lines. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;strong&gt;CHANNEL&lt;/strong&gt;</td><td>ADC channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaba41910dcb2b449c613a5ef638862e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba41910dcb2b449c613a5ef638862e77">&#9670;&nbsp;</a></span>IS_ADC_CHANNEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ADC_CHANNEL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CHANNEL</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">                                 (((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga3c5075aee5af4eae02f1a72d6216199c">ADC_CHANNEL_0</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gaeb119201733a871c94971c51843ffaac">ADC_CHANNEL_1</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gad576132ebd78a3429be34f44e474c914">ADC_CHANNEL_2</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga56dba5d35f1f7bcad41e4f9a7da3b125">ADC_CHANNEL_3</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga66f19737ad81a0a62eb97854d0e41a54">ADC_CHANNEL_4</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga716f2836f655c753c629de439ce50ecf">ADC_CHANNEL_5</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga418f0223ea88773157638097391716a5">ADC_CHANNEL_6</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga03b8138c2d87274f94ba675a7e18e666">ADC_CHANNEL_7</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gab0917f6b66213f33f2e2ea8781df5aa9">ADC_CHANNEL_8</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga95f485ecc05187c3d475238a88beef1c">ADC_CHANNEL_9</a>)           || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gaa55df8c97225d32b495959896897567c">ADC_CHANNEL_10</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gaf36361a33c07b04f8ab1d58d232bc434">ADC_CHANNEL_11</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0">ADC_CHANNEL_12</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#gad7550270d90a1a12b00cd9f8ad9f1fc2">ADC_CHANNEL_13</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga9caff32bcda5dd83f662bf398ab14d36">ADC_CHANNEL_14</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga66f41aad197a6de160dd8958c90653a2">ADC_CHANNEL_15</a>)          || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga8f0da1e8fa8504c92a368f6eb8e229b3">ADC_CHANNEL_TEMPSENSOR</a>)  || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga2647a044275a295693e8fb01db3172f9">ADC_CHANNEL_VREFINT</a>)     || \</div>
+<div class="line">                                 ((CHANNEL) == <a class="code" href="group___a_d_c__channels.html#ga60210f1e9305301dea9e42afedd9093f">ADC_CHANNEL_VBAT</a>)          )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gab3f646d603911820b104dd134c42f028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3f646d603911820b104dd134c42f028">&#9670;&nbsp;</a></span>IS_ADC_EXTTRIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ADC_EXTTRIG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">REGTRIG</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">                                 (((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#gabd4ea0756910a3cdd6942254473a40b3">ADC_EXTERNALTRIGCONV_T1_TRGO</a>)  || \</div>
+<div class="line">                                 ((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#ga112435eac802af17d8a61d30a1e6d1dc">ADC_EXTERNALTRIGCONV_T1_CC4</a>)   || \</div>
+<div class="line">                                 ((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#gaa964f17f527400095888ca28c65507c4">ADC_EXTERNALTRIGCONV_T2_TRGO</a>)  || \</div>
+<div class="line">                                 ((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#ga41bef7b6bfdb6641a97e89aa4abc405e">ADC_EXTERNALTRIGCONV_T3_TRGO</a>)  || \</div>
+<div class="line">                                 ((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#ga3c78f17752bc26b7f69139668e4f793b">ADC_EXTERNALTRIGCONV_T15_TRGO</a>) || \</div>
+<div class="line">                                 ((REGTRIG) == <a class="code" href="group___a_d_c___external__trigger__source___regular.html#ga349ec6a1c2a362fba718cbfd068e50dc">ADC_SOFTWARE_START</a>))</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup___a_d_c__channels_html_gad7550270d90a1a12b00cd9f8ad9f1fc2"><div class="ttname"><a href="group___a_d_c__channels.html#gad7550270d90a1a12b00cd9f8ad9f1fc2">ADC_CHANNEL_13</a></div><div class="ttdeci">#define ADC_CHANNEL_13</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:100</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga66f41aad197a6de160dd8958c90653a2"><div class="ttname"><a href="group___a_d_c__channels.html#ga66f41aad197a6de160dd8958c90653a2">ADC_CHANNEL_15</a></div><div class="ttdeci">#define ADC_CHANNEL_15</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:102</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gaf36361a33c07b04f8ab1d58d232bc434"><div class="ttname"><a href="group___a_d_c__channels.html#gaf36361a33c07b04f8ab1d58d232bc434">ADC_CHANNEL_11</a></div><div class="ttdeci">#define ADC_CHANNEL_11</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:98</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_ga349ec6a1c2a362fba718cbfd068e50dc"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#ga349ec6a1c2a362fba718cbfd068e50dc">ADC_SOFTWARE_START</a></div><div class="ttdeci">#define ADC_SOFTWARE_START</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:62</div></div>
+<div class="ttc" id="agroup___peripheral___registers___bits___definition_html_gaaeefa6f00268db0df10fb97112a9f456"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#gaaeefa6f00268db0df10fb97112a9f456">ADC_CCR_VBATEN</a></div><div class="ttdeci">#define ADC_CCR_VBATEN</div><div class="ttdef"><b>Definition:</b> stm32f051x8.h:963</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_ga41bef7b6bfdb6641a97e89aa4abc405e"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#ga41bef7b6bfdb6641a97e89aa4abc405e">ADC_EXTERNALTRIGCONV_T3_TRGO</a></div><div class="ttdeci">#define ADC_EXTERNALTRIGCONV_T3_TRGO</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:61</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga66f19737ad81a0a62eb97854d0e41a54"><div class="ttname"><a href="group___a_d_c__channels.html#ga66f19737ad81a0a62eb97854d0e41a54">ADC_CHANNEL_4</a></div><div class="ttdeci">#define ADC_CHANNEL_4</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:91</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga60210f1e9305301dea9e42afedd9093f"><div class="ttname"><a href="group___a_d_c__channels.html#ga60210f1e9305301dea9e42afedd9093f">ADC_CHANNEL_VBAT</a></div><div class="ttdeci">#define ADC_CHANNEL_VBAT</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:111</div></div>
+<div class="ttc" id="agroup___peripheral___registers___bits___definition_html_gaec05330012f52f35421531c72819fada"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#gaec05330012f52f35421531c72819fada">ADC_CCR_TSEN</a></div><div class="ttdeci">#define ADC_CCR_TSEN</div><div class="ttdef"><b>Definition:</b> stm32f051x8.h:959</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga95f485ecc05187c3d475238a88beef1c"><div class="ttname"><a href="group___a_d_c__channels.html#ga95f485ecc05187c3d475238a88beef1c">ADC_CHANNEL_9</a></div><div class="ttdeci">#define ADC_CHANNEL_9</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:96</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga418f0223ea88773157638097391716a5"><div class="ttname"><a href="group___a_d_c__channels.html#ga418f0223ea88773157638097391716a5">ADC_CHANNEL_6</a></div><div class="ttdeci">#define ADC_CHANNEL_6</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:93</div></div>
+<div class="ttc" id="agroup___peripheral___registers___bits___definition_html_gaecc47464aaa52f565d8daa9cf1a86054"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#gaecc47464aaa52f565d8daa9cf1a86054">ADC_CCR_VREFEN</a></div><div class="ttdeci">#define ADC_CCR_VREFEN</div><div class="ttdef"><b>Definition:</b> stm32f051x8.h:956</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga8f0da1e8fa8504c92a368f6eb8e229b3"><div class="ttname"><a href="group___a_d_c__channels.html#ga8f0da1e8fa8504c92a368f6eb8e229b3">ADC_CHANNEL_TEMPSENSOR</a></div><div class="ttdeci">#define ADC_CHANNEL_TEMPSENSOR</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:106</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga56dba5d35f1f7bcad41e4f9a7da3b125"><div class="ttname"><a href="group___a_d_c__channels.html#ga56dba5d35f1f7bcad41e4f9a7da3b125">ADC_CHANNEL_3</a></div><div class="ttdeci">#define ADC_CHANNEL_3</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:90</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gad576132ebd78a3429be34f44e474c914"><div class="ttname"><a href="group___a_d_c__channels.html#gad576132ebd78a3429be34f44e474c914">ADC_CHANNEL_2</a></div><div class="ttdeci">#define ADC_CHANNEL_2</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:89</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga9caff32bcda5dd83f662bf398ab14d36"><div class="ttname"><a href="group___a_d_c__channels.html#ga9caff32bcda5dd83f662bf398ab14d36">ADC_CHANNEL_14</a></div><div class="ttdeci">#define ADC_CHANNEL_14</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:101</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gaeb119201733a871c94971c51843ffaac"><div class="ttname"><a href="group___a_d_c__channels.html#gaeb119201733a871c94971c51843ffaac">ADC_CHANNEL_1</a></div><div class="ttdeci">#define ADC_CHANNEL_1</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:88</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga2647a044275a295693e8fb01db3172f9"><div class="ttname"><a href="group___a_d_c__channels.html#ga2647a044275a295693e8fb01db3172f9">ADC_CHANNEL_VREFINT</a></div><div class="ttdeci">#define ADC_CHANNEL_VREFINT</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:107</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gab0917f6b66213f33f2e2ea8781df5aa9"><div class="ttname"><a href="group___a_d_c__channels.html#gab0917f6b66213f33f2e2ea8781df5aa9">ADC_CHANNEL_8</a></div><div class="ttdeci">#define ADC_CHANNEL_8</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:95</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga03b8138c2d87274f94ba675a7e18e666"><div class="ttname"><a href="group___a_d_c__channels.html#ga03b8138c2d87274f94ba675a7e18e666">ADC_CHANNEL_7</a></div><div class="ttdeci">#define ADC_CHANNEL_7</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:94</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0"><div class="ttname"><a href="group___a_d_c__channels.html#gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0">ADC_CHANNEL_12</a></div><div class="ttdeci">#define ADC_CHANNEL_12</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:99</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_gaa55df8c97225d32b495959896897567c"><div class="ttname"><a href="group___a_d_c__channels.html#gaa55df8c97225d32b495959896897567c">ADC_CHANNEL_10</a></div><div class="ttdeci">#define ADC_CHANNEL_10</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:97</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga716f2836f655c753c629de439ce50ecf"><div class="ttname"><a href="group___a_d_c__channels.html#ga716f2836f655c753c629de439ce50ecf">ADC_CHANNEL_5</a></div><div class="ttdeci">#define ADC_CHANNEL_5</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:92</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_gabd4ea0756910a3cdd6942254473a40b3"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#gabd4ea0756910a3cdd6942254473a40b3">ADC_EXTERNALTRIGCONV_T1_TRGO</a></div><div class="ttdeci">#define ADC_EXTERNALTRIGCONV_T1_TRGO</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:59</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_ga112435eac802af17d8a61d30a1e6d1dc"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#ga112435eac802af17d8a61d30a1e6d1dc">ADC_EXTERNALTRIGCONV_T1_CC4</a></div><div class="ttdeci">#define ADC_EXTERNALTRIGCONV_T1_CC4</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:60</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_gaa964f17f527400095888ca28c65507c4"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#gaa964f17f527400095888ca28c65507c4">ADC_EXTERNALTRIGCONV_T2_TRGO</a></div><div class="ttdeci">#define ADC_EXTERNALTRIGCONV_T2_TRGO</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:65</div></div>
+<div class="ttc" id="agroup___a_d_c___external__trigger__source___regular_html_ga3c78f17752bc26b7f69139668e4f793b"><div class="ttname"><a href="group___a_d_c___external__trigger__source___regular.html#ga3c78f17752bc26b7f69139668e4f793b">ADC_EXTERNALTRIGCONV_T15_TRGO</a></div><div class="ttdeci">#define ADC_EXTERNALTRIGCONV_T15_TRGO</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:69</div></div>
+<div class="ttc" id="agroup___a_d_c__channels_html_ga3c5075aee5af4eae02f1a72d6216199c"><div class="ttname"><a href="group___a_d_c__channels.html#ga3c5075aee5af4eae02f1a72d6216199c">ADC_CHANNEL_0</a></div><div class="ttdeci">#define ADC_CHANNEL_0</div><div class="ttdef"><b>Definition:</b> stm32f0xx_hal_adc_ex.h:87</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

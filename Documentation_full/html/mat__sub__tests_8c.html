@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/matrix_tests/mat_sub_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_6eae90b41458321f46b38a6168afb4f9.html">matrix_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл mat_sub_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix__test__data_8h_source.html">matrix_test_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ref_8h_source.html">ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix__templates_8h_source.html">matrix_templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ad221146b3d69315b81e4570b0aed7904"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mat__sub__tests_8c.html#ad221146b3d69315b81e4570b0aed7904">JTEST_ARM_MAT_SUB_TEST</a>(suffix)</td></tr>
+<tr class="separator:ad221146b3d69315b81e4570b0aed7904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8906a82fbd51ca4dad13dd4413cb6d6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mat__sub__tests_8c.html#a8906a82fbd51ca4dad13dd4413cb6d6f">JTEST_ARM_MAT_SUB_TEST</a> (f32)</td></tr>
+<tr class="separator:a8906a82fbd51ca4dad13dd4413cb6d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5e9ff278483c604fbece350854dcce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mat__sub__tests_8c.html#afb5e9ff278483c604fbece350854dcce">JTEST_ARM_MAT_SUB_TEST</a> (q31)</td></tr>
+<tr class="separator:afb5e9ff278483c604fbece350854dcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc23b0565e688dbfa18ed884c2d2031"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mat__sub__tests_8c.html#a0bc23b0565e688dbfa18ed884c2d2031">JTEST_ARM_MAT_SUB_TEST</a> (q15)</td></tr>
+<tr class="separator:a0bc23b0565e688dbfa18ed884c2d2031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7a355abfda98f7bf40a81d3ef472af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mat__sub__tests_8c.html#a1e7a355abfda98f7bf40a81d3ef472af">JTEST_DEFINE_GROUP</a> (mat_sub_tests)</td></tr>
+<tr class="separator:a1e7a355abfda98f7bf40a81d3ef472af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ad221146b3d69315b81e4570b0aed7904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad221146b3d69315b81e4570b0aed7904">&#9670;&nbsp;</a></span>JTEST_ARM_MAT_SUB_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JTEST_ARM_MAT_SUB_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="matrix__templates_8h.html#ab3ae753997fe495cfc1d6c954f3109c9">MATRIX_DEFINE_TEST_TEMPLATE_ELT2</a>(           \</div>
+<div class="line">        mat_sub,                                \</div>
+<div class="line">        suffix,                                 \</div>
+<div class="line">        <a class="code" href="matrix__templates_8h.html#aa7e3e7291338936895059fe986a9f39b">MATRIX_TEST_CONFIG_ADDITIVE_OUTPUT</a>,     \</div>
+<div class="line">        <a class="code" href="matrix__templates_8h.html#aaca05f686f0c7295dbf0e934f4b1a71c">MATRIX_TEST_VALID_ADDITIVE_DIMENSIONS</a>,  \</div>
+<div class="line">        <a class="code" href="matrix__templates_8h.html#a4b004bf273e17b12e8d91c073bde1037">MATRIX_COMPARE_INTERFACE</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a8906a82fbd51ca4dad13dd4413cb6d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8906a82fbd51ca4dad13dd4413cb6d6f">&#9670;&nbsp;</a></span>JTEST_ARM_MAT_SUB_TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAT_SUB_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bc23b0565e688dbfa18ed884c2d2031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc23b0565e688dbfa18ed884c2d2031">&#9670;&nbsp;</a></span>JTEST_ARM_MAT_SUB_TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAT_SUB_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb5e9ff278483c604fbece350854dcce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb5e9ff278483c604fbece350854dcce">&#9670;&nbsp;</a></span>JTEST_ARM_MAT_SUB_TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_ARM_MAT_SUB_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e7a355abfda98f7bf40a81d3ef472af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7a355abfda98f7bf40a81d3ef472af">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">mat_sub_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="amatrix__templates_8h_html_aaca05f686f0c7295dbf0e934f4b1a71c"><div class="ttname"><a href="matrix__templates_8h.html#aaca05f686f0c7295dbf0e934f4b1a71c">MATRIX_TEST_VALID_ADDITIVE_DIMENSIONS</a></div><div class="ttdeci">#define MATRIX_TEST_VALID_ADDITIVE_DIMENSIONS(input_type, matrix_a_ptr, matrix_b_ptr)</div><div class="ttdef"><b>Definition:</b> matrix_templates.h:129</div></div>
+<div class="ttc" id="amatrix__templates_8h_html_aa7e3e7291338936895059fe986a9f39b"><div class="ttname"><a href="matrix__templates_8h.html#aa7e3e7291338936895059fe986a9f39b">MATRIX_TEST_CONFIG_ADDITIVE_OUTPUT</a></div><div class="ttdeci">#define MATRIX_TEST_CONFIG_ADDITIVE_OUTPUT(input_type, matrix_a_ptr, matrix_b_ptr)</div><div class="ttdef"><b>Definition:</b> matrix_templates.h:159</div></div>
+<div class="ttc" id="amatrix__templates_8h_html_a4b004bf273e17b12e8d91c073bde1037"><div class="ttname"><a href="matrix__templates_8h.html#a4b004bf273e17b12e8d91c073bde1037">MATRIX_COMPARE_INTERFACE</a></div><div class="ttdeci">#define MATRIX_COMPARE_INTERFACE(output_type, output_content_type)</div><div class="ttdef"><b>Definition:</b> matrix_templates.h:17</div></div>
+<div class="ttc" id="amatrix__templates_8h_html_ab3ae753997fe495cfc1d6c954f3109c9"><div class="ttname"><a href="matrix__templates_8h.html#ab3ae753997fe495cfc1d6c954f3109c9">MATRIX_DEFINE_TEST_TEMPLATE_ELT2</a></div><div class="ttdeci">#define MATRIX_DEFINE_TEST_TEMPLATE_ELT2(fn_name, suffix, output_config_interface, dim_validation_interface, comparison_interface)</div><div class="ttdef"><b>Definition:</b> matrix_templates.h:321</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

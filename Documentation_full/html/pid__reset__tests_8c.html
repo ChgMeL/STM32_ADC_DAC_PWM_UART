@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32_ADC_DAC_PWM_UART: Файл Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/controller_tests/pid_reset_tests.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32_ADC_DAC_PWM_UART
+   &#160;<span id="projectnumber">1.02</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html">CMSIS</a></li><li class="navelem"><a class="el" href="dir_60b8f31fb651d203fe07303e094e8d11.html">DSP</a></li><li class="navelem"><a class="el" href="dir_8559e105130e1d2141d07a532571a732.html">DSP_Lib_TestSuite</a></li><li class="navelem"><a class="el" href="dir_c09c1273c6fb9614bd82013b14ebe203.html">Common</a></li><li class="navelem"><a class="el" href="dir_826ad3e5a41263e740cb9fb6e52325d7.html">src</a></li><li class="navelem"><a class="el" href="dir_a779b4ec7bcff94165b19b705851d39b.html">controller_tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл pid_reset_tests.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="jtest_8h_source.html">jtest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arr__desc_8h_source.html">arr_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arm__math_8h_source.html">arm_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__abbrev_8h_source.html">type_abbrev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__templates_8h_source.html">test_templates.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:add28aa69b58258cd70f8708f539cae90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#add28aa69b58258cd70f8708f539cae90">ARM_PID_RESET_TEST</a>(suffix)</td></tr>
+<tr class="separator:add28aa69b58258cd70f8708f539cae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a615a1f580996a25d3c23773280ba90ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#a615a1f580996a25d3c23773280ba90ca">ARR_DESC_DEFINE</a> (<a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>, zeroes, 3, <a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0))</td></tr>
+<tr class="separator:a615a1f580996a25d3c23773280ba90ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b6d2f0c4efb4a6f11f8b7036b68e5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#ae4b6d2f0c4efb4a6f11f8b7036b68e5a">ARM_PID_RESET_TEST</a> (f32)</td></tr>
+<tr class="separator:ae4b6d2f0c4efb4a6f11f8b7036b68e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7af384e08fedf9237f4938cfec3fc58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#aa7af384e08fedf9237f4938cfec3fc58">ARM_PID_RESET_TEST</a> (q31)</td></tr>
+<tr class="separator:aa7af384e08fedf9237f4938cfec3fc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcbdaf09074733bc94d9b0e98807e4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#a9dcbdaf09074733bc94d9b0e98807e4f">ARM_PID_RESET_TEST</a> (q15)</td></tr>
+<tr class="separator:a9dcbdaf09074733bc94d9b0e98807e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7498a5a146b1e077ee5cb637d7c42f6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pid__reset__tests_8c.html#a7498a5a146b1e077ee5cb637d7c42f6d">JTEST_DEFINE_GROUP</a> (pid_reset_tests)</td></tr>
+<tr class="separator:a7498a5a146b1e077ee5cb637d7c42f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="add28aa69b58258cd70f8708f539cae90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add28aa69b58258cd70f8708f539cae90">&#9670;&nbsp;</a></span>ARM_PID_RESET_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_PID_RESET_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="jtest__test__define_8h.html#ab2888383445d5ac789089c7ed58eea95">JTEST_DEFINE_TEST</a>(arm_pid_reset_##suffix##_test,                    \</div>
+<div class="line">                      arm_pid_reset_##suffix)                           \</div>
+<div class="line">    {                                                                   \</div>
+<div class="line">        <span class="comment">/* Initialise the pid_instance */</span>                               \</div>
+<div class="line">        arm_pid_instance_##suffix pid_inst = { 0 };                     \</div>
+<div class="line">            pid_inst.state[0] = (<a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix)) 0xffffffff;  \</div>
+<div class="line">            pid_inst.state[1] = (<a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix)) 0xffffffff;  \</div>
+<div class="line">            pid_inst.state[2] = (<a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix)) 0xffffffff;  \</div>
+<div class="line">                                                                        \</div>
+<div class="line">            <span class="comment">/* Display cycle count and run test */</span>                      \</div>
+<div class="line">            JTEST_COUNT_CYCLES(arm_pid_reset_##suffix(&amp;pid_inst));      \</div>
+<div class="line">                                                                        \</div>
+<div class="line">            <span class="comment">/* Test correctness */</span>                                      \</div>
+<div class="line">            TEST_ASSERT_BUFFERS_EQUAL(                                  \</div>
+<div class="line">                pid_inst.state,                                         \</div>
+<div class="line">                zeroes.data_ptr,                                        \</div>
+<div class="line">                3 * <span class="keyword">sizeof</span>(<a class="code" href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a>(suffix)));                  \</div>
+<div class="line">                                                                        \</div>
+<div class="line">            return <a class="code" href="jtest__test__ret_8h.html#a832a63e472e7cca93833fe48082044daa87696ae9d915772fcbb2c20fab74b8b4">JTEST_TEST_PASSED</a>;                                   \</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>Define a JTEST_TEST_t for the function arm_pid_reset_xxx function having suffix. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ae4b6d2f0c4efb4a6f11f8b7036b68e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b6d2f0c4efb4a6f11f8b7036b68e5a">&#9670;&nbsp;</a></span>ARM_PID_RESET_TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARM_PID_RESET_TEST </td>
+          <td>(</td>
+          <td class="paramtype">f32&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dcbdaf09074733bc94d9b0e98807e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcbdaf09074733bc94d9b0e98807e4f">&#9670;&nbsp;</a></span>ARM_PID_RESET_TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARM_PID_RESET_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q15&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7af384e08fedf9237f4938cfec3fc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7af384e08fedf9237f4938cfec3fc58">&#9670;&nbsp;</a></span>ARM_PID_RESET_TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARM_PID_RESET_TEST </td>
+          <td>(</td>
+          <td class="paramtype">q31&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a615a1f580996a25d3c23773280ba90ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615a1f580996a25d3c23773280ba90ca">&#9670;&nbsp;</a></span>ARR_DESC_DEFINE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ARR_DESC_DEFINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">zeroes&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">3&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="util_8h.html#a6dc512e444c5edcd4cede1702f5e77aa">CURLY</a>(0)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7498a5a146b1e077ee5cb637d7c42f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7498a5a146b1e077ee5cb637d7c42f6d">&#9670;&nbsp;</a></span>JTEST_DEFINE_GROUP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JTEST_DEFINE_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">pid_reset_tests&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="atype__abbrev_8h_html_aa4dddf6ca3e40ac1cbc65d87b416a17b"><div class="ttname"><a href="type__abbrev_8h.html#aa4dddf6ca3e40ac1cbc65d87b416a17b">TYPE_FROM_ABBREV</a></div><div class="ttdeci">#define TYPE_FROM_ABBREV(abbrev)</div><div class="ttdef"><b>Definition:</b> type_abbrev.h:11</div></div>
+<div class="ttc" id="ajtest__test__ret_8h_html_a832a63e472e7cca93833fe48082044daa87696ae9d915772fcbb2c20fab74b8b4"><div class="ttname"><a href="jtest__test__ret_8h.html#a832a63e472e7cca93833fe48082044daa87696ae9d915772fcbb2c20fab74b8b4">JTEST_TEST_PASSED</a></div><div class="ttdeci">@ JTEST_TEST_PASSED</div><div class="ttdef"><b>Definition:</b> jtest_test_ret.h:13</div></div>
+<div class="ttc" id="ajtest__test__define_8h_html_ab2888383445d5ac789089c7ed58eea95"><div class="ttname"><a href="jtest__test__define_8h.html#ab2888383445d5ac789089c7ed58eea95">JTEST_DEFINE_TEST</a></div><div class="ttdeci">#define JTEST_DEFINE_TEST(...)</div><div class="ttdef"><b>Definition:</b> jtest_test_define.h:98</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
