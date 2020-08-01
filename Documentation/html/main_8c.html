@@ -172,14 +172,23 @@ $(function() {
 <td class="markdownTableBodyCenter">Микроконтроллер </td><td class="markdownTableBodyCenter">STM32F051R8T6  </td></tr>
 </table>
 <h2><center>Структура проекта</center></h2>
-<p>STM32_ADC_DAC_PWM_UART.ioc (Проект STM32ClubMX) <br  />
- <a class="el" href="main_8c.html" title=":">Core\src\main.c</a> (Основная программа) MDK-ARM\STM32_ADC_DAC_PWM_UART.uvprojx (Проект Keil v5) <br  />
- DataSheets</p><ul>
-<li>STM32F051x4_DataSheet.pdf (Справочный материал по микроконтроллеру)</li>
-<li><p class="startli">STM32F0DISCOVERY_DataSheet.pdf (Справочный материал по отладочной плате)</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Путь </th><th class="markdownTableHeadLeft">Название файла </th><th class="markdownTableHeadLeft">Описание файла  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">STM32_ADC_DAC_PWM_UART.ioc </td><td class="markdownTableBodyLeft">Проект STM32ClubMX  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Core\src </td><td class="markdownTableBodyLeft"><a class="el" href="main_8c.html" title=":">main.c</a> </td><td class="markdownTableBodyLeft">Основная программа  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">MDK-ARM </td><td class="markdownTableBodyLeft">STM32_ADC_DAC_PWM_UART.uvprojx </td><td class="markdownTableBodyLeft">Проект Keil v5  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft" rowspan="2">DataSheets </td><td class="markdownTableBodyLeft">STM32F051x4_DataSheet.pdf </td><td class="markdownTableBodyLeft">Справочный материал по микроконтроллеру  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">STM32F0DISCOVERY_DataSheet.pdf </td><td class="markdownTableBodyLeft">Справочный материал по отладочной плате  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Documentation </td><td class="markdownTableBodyLeft">index.html </td><td class="markdownTableBodyLeft">Документация Doxygen в html формате  </td></tr>
+</table>
 <h2><center>Используемые контакты</center></h2>
-</li>
-</ul>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Назначение </th><th class="markdownTableHeadCenter">Номер контакта </th><th class="markdownTableHeadCenter">Дополнительная информация  </th></tr>
@@ -194,7 +203,7 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">UART_TX </td><td class="markdownTableBodyCenter">PA9  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">OSC_IN </td><td class="markdownTableBodyCenter">PF0 </td><td class="markdownTableBodyCenter" rowspan="2">Внешний кварцевый резонатор  </td></tr>
+<td class="markdownTableBodyCenter">OSC_IN </td><td class="markdownTableBodyCenter">PF0 </td><td class="markdownTableBodyCenter" rowspan="2">Внешний источник частоты  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">OSC_OUT </td><td class="markdownTableBodyCenter">PF1  </td></tr>
 </table>
@@ -367,10 +376,6 @@ $(function() {
   </table>
   </dd>
 </dl>
-<p>&lt; массив для хранения усредненный даннаых за 10 мс.</p>
-<p>&lt; переменная усреденных данных АЦП за 10мс</p>
-<p>&lt; переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART</p>
-<p>&lt; Общий счтчик для усреденных значний за 10 мс</p>
 
 </div>
 </div>

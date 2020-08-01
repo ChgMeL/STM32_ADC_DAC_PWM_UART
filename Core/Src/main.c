@@ -46,13 +46,20 @@
   ******************************************************************************
   *
 	*													<h2><center>Структура проекта</center></h2>
-	*
-	*	STM32_ADC_DAC_PWM_UART.ioc 									(Проект STM32ClubMX)										
-	*	Core\src\main.c 														(Основная программа)
-	*	MDK-ARM\STM32_ADC_DAC_PWM_UART.uvprojx			(Проект Keil v5)																										
-	* DataSheets
-	*					- STM32F051x4_DataSheet.pdf					(Справочный материал по микроконтроллеру)
-	*					- STM32F0DISCOVERY_DataSheet.pdf		(Справочный материал по отладочной плате)
+	*|		Путь											|		  Название файла 						|		Описание файла															|					
+	*|  :------------- 							| :----------- 									| :--------------------													|
+	*|															|	STM32_ADC_DAC_PWM_UART.ioc		|	Проект STM32ClubMX														|
+	*|	Core\src										|	main.c 												|	Основная программа														|
+	*|	MDK-ARM											|	STM32_ADC_DAC_PWM_UART.uvprojx|	Проект Keil v5																|
+	*|	DataSheets									|	STM32F051x4_DataSheet.pdf			|	Справочный материал по микроконтроллеру				|
+	*|	^														|	STM32F0DISCOVERY_DataSheet.pdf|	Справочный материал по отладочной плате				|
+	*|	Documentation								|	index.html										|	Документация Doxygen в html	формате						|
+	*	 																		
+	*	
+	*																										
+	* 
+	*	
+	*	
 	* 
 	*					
 	*					
@@ -67,7 +74,7 @@
 	*|		PWM_OUTPUT		|			PA5				|									TIM2_CH1								|
 	*|		UART_RX				|			PA10			| Baud rate:115200, parity:None  					|
 	*|		UART_TX				|			PA9				|						^															|
-	*|		OSC_IN				|			PF0				|		 	Внешний кварцевый резонатор					|
+	*|		OSC_IN				|			PF0				|		 	Внешний источник частоты						|
 	*|		OSC_OUT				|			PF1				|				^																	|
 	*
 	* @warning *** ! : Максимальное значение АЦП может быть 3В !
@@ -179,10 +186,10 @@ void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};										///<  массив для хранения усредненный даннаых за 10 мс.
-	uint32_t ADC_avg_value = 0;																							///<  переменная усреденных данных АЦП за 10мс
-	uint32_t ADC_Res_avg_to_UART = 0;																				///<  переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART
-	int j = 0;																															///< 	Общий счтчик для усреденных значний за 10 мс
+	uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};										//  массив для хранения усредненный данных за 10 мс.
+	uint32_t ADC_avg_value = 0;																							//  переменная усреденных данных АЦП за 10мс
+	uint32_t ADC_Res_avg_to_UART = 0;																				//  переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART
+	int j = 0;																															// 	Общий счетчик для усреденных значний за 10 мс
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -210,12 +217,12 @@ int main(void)
   MX_DAC1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-	HAL_ADCEx_Calibration_Start(&hadc);																			// Колибровка АЦП
+	HAL_ADCEx_Calibration_Start(&hadc);																			// Калибровка АЦП
 	HAL_ADC_Start_DMA(&hadc, (uint32_t*)&ADC_to_memory, 2*SAMPLES_NUMBER);	// АЦП в режиме DMA
-	HAL_TIM_Base_Start(&htim1);																							// Считчик 1(Частота 10кГц)
-	HAL_TIM_Base_Start(&htim2);																							// Счетчик 2 (для ЦАП и ШИМ сигнала с частотой = 100 Гц)
+	HAL_TIM_Base_Start(&htim1);																							// Счетчик #1 (Частота 10кГц)
+	HAL_TIM_Base_Start(&htim2);																							// Счетчик #2 (Для ЦАП и ШИМ сигнала с частотой = 100 Гц)
 	//============================================== TIMER PWM OUTPUT ================================================================/
-	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																// Счетчик 1 канал 1 как выход ШИМ
+	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																// Счетчик #1 канал 1 как выход ШИМ
 																							
 	//============================================== DAC SETTINGS ====================================================================/
 	HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);																		// ЦАП канал 1
@@ -240,7 +247,7 @@ int main(void)
 			adc_state = NO_INTERRUPT;																						// Сбрасываем прерывания АЦП
 			ADC_avg_value /= SAMPLES_NUMBER;																		// Высчитываем среднее значение
 	
-			ADC_avg_to_UART[j] = ADC_avg_value; 																// Добавляем среднее значение в массив для будущей отправки в UART за 1 секунду.
+			ADC_avg_to_UART[j] = ADC_avg_value; 																// Добавляем среднее значение в массив для будущей отправки в UART за 1 секунду
 			if (j == SAMPLES_NUMBER - 1)																				// Если массив для отправки в UART заполнен данными - высчитываем сумму
 			{
 				for (int i = 0; i < SAMPLES_NUMBER; i++)
