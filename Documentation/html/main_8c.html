@@ -101,7 +101,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:a70af21c671abfcc773614a9a4f63d920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</a> (void)</td></tr>
-<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <a href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для настройки генератора частоты , PLL и т.д.  <a href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">Подробнее...</a><br /></td></tr>
 <tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af20a88180db1113be1e89266917d148b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af20a88180db1113be1e89266917d148b">HAL_ADC_ConvCpltCallback</a> (ADC_HandleTypeDef *<a class="el" href="main_8c.html#a62fcafba91cf315db7e0e0c8f22c656f">hadc</a>)</td></tr>
 <tr class="memdesc:af20a88180db1113be1e89266917d148b"><td class="mdescLeft">&#160;</td><td class="mdescRight">АЦП выполнил все преобразования и ставит флаг(неблокирующий) об этом действии <br  />
@@ -112,7 +112,7 @@ $(function() {
  огда АЦП выполнил половину преобрзований, тогда отправляет об этом окончании в основную программу  <a href="main_8c.html#ad7e3dafc08886b97b9c9e23267645b9e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad7e3dafc08886b97b9c9e23267645b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <a href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная программа: Получает данные о 100 преобразований с АЦП, вычисляет среднее значение и выдает каждые 10 мс в ЦАП и PWM сигнал, а так же вычисляет среднее значение за 1 c и отправляет данные по UART порту в режиме DMA.  <a href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">Подробнее...</a><br /></td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
 <tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <a href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Подробнее...</a><br /></td></tr>
@@ -121,18 +121,27 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Переменные</h2></td></tr>
 <tr class="memitem:a62fcafba91cf315db7e0e0c8f22c656f"><td class="memItemLeft" align="right" valign="top">ADC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a62fcafba91cf315db7e0e0c8f22c656f">hadc</a></td></tr>
+<tr class="memdesc:a62fcafba91cf315db7e0e0c8f22c656f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с АЦП  <a href="main_8c.html#a62fcafba91cf315db7e0e0c8f22c656f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a62fcafba91cf315db7e0e0c8f22c656f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556a7c43d0d5bbeccebc55d3f97e0fd5"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a556a7c43d0d5bbeccebc55d3f97e0fd5">hdma_adc</a></td></tr>
+<tr class="memdesc:a556a7c43d0d5bbeccebc55d3f97e0fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с АЦП в режиме DMA.  <a href="main_8c.html#a556a7c43d0d5bbeccebc55d3f97e0fd5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a556a7c43d0d5bbeccebc55d3f97e0fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25a57382819e79fbde3687939c0fd0b"><td class="memItemLeft" align="right" valign="top">DAC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa25a57382819e79fbde3687939c0fd0b">hdac1</a></td></tr>
+<tr class="memdesc:aa25a57382819e79fbde3687939c0fd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с ЦАП  <a href="main_8c.html#aa25a57382819e79fbde3687939c0fd0b">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa25a57382819e79fbde3687939c0fd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25fc663547539bc49fecc0011bd76ab5"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a25fc663547539bc49fecc0011bd76ab5">htim1</a></td></tr>
+<tr class="memdesc:a25fc663547539bc49fecc0011bd76ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с счетчиком #1 <br  />
+  <a href="main_8c.html#a25fc663547539bc49fecc0011bd76ab5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a25fc663547539bc49fecc0011bd76ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c80fd5510e2990a59a5c90d745c716c"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2c80fd5510e2990a59a5c90d745c716c">htim2</a></td></tr>
+<tr class="memdesc:a2c80fd5510e2990a59a5c90d745c716c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с счетчиком #2 <br  />
+  <a href="main_8c.html#a2c80fd5510e2990a59a5c90d745c716c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2c80fd5510e2990a59a5c90d745c716c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
+<tr class="memdesc:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с UART.  <a href="main_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af94ab36bfe698db3e6beea96d10a90"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5af94ab36bfe698db3e6beea96d10a90">hdma_usart1_tx</a></td></tr>
+<tr class="memdesc:a5af94ab36bfe698db3e6beea96d10a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для работы с UART в режиме DMA (в режиме только передача)  <a href="main_8c.html#a5af94ab36bfe698db3e6beea96d10a90">Подробнее...</a><br /></td></tr>
 <tr class="separator:a5af94ab36bfe698db3e6beea96d10a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d571fa3304208daef56ba063ae9d5c0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0d571fa3304208daef56ba063ae9d5c0">trans_str</a> [63]</td></tr>
 <tr class="memdesc:a0d571fa3304208daef56ba063ae9d5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная для хранения текса в формате string для отправки по UART.  <a href="main_8c.html#a0d571fa3304208daef56ba063ae9d5c0">Подробнее...</a><br /></td></tr>
@@ -362,7 +371,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>The application entry point. </p>
+<p>Основная программа: Получает данные о 100 преобразований с АЦП, вычисляет среднее значение и выдает каждые 10 мс в ЦАП и PWM сигнал, а так же вычисляет среднее значение за 1 c и отправляет данные по UART порту в режиме DMA. </p>
 <dl class="retval"><dt>Возвращаемые значения</dt><dd>
   <table class="retval">
     <tr><td class="paramname">int</td><td></td></tr>
@@ -388,15 +397,13 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>System Clock Configuration. </p>
+<p>Функция для настройки генератора частоты , PLL и т.д. </p>
 <dl class="retval"><dt>Возвращаемые значения</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<p>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</p>
-<p>Initializes the CPU, AHB and APB buses clocks</p>
 
 </div>
 </div>
@@ -445,6 +452,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Переменная для работы с АЦП </p>
+
 </div>
 </div>
 <a id="aa25a57382819e79fbde3687939c0fd0b"></a>
@@ -458,6 +467,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Переменная для работы с ЦАП </p>
 
 </div>
 </div>
@@ -473,6 +484,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Переменная для работы с АЦП в режиме DMA. </p>
+
 </div>
 </div>
 <a id="a5af94ab36bfe698db3e6beea96d10a90"></a>
@@ -486,6 +499,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Переменная для работы с UART в режиме DMA (в режиме только передача) </p>
 
 </div>
 </div>
@@ -501,6 +516,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Переменная для работы с счетчиком #1 <br  />
+ </p>
+
 </div>
 </div>
 <a id="a2c80fd5510e2990a59a5c90d745c716c"></a>
@@ -515,6 +533,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Переменная для работы с счетчиком #2 <br  />
+ </p>
+
 </div>
 </div>
 <a id="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
@@ -528,6 +549,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Переменная для работы с UART. </p>
 
 </div>
 </div>
