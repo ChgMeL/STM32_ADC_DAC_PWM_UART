@@ -10,7 +10,7 @@
   ***************************************************************************
   *                  <h3><center>Общая информация</center></h3>
   * 
-  * @brief      Работа с АЦП в режиме DMA, ЦАП, ШИМ сигналом и UART в режиме DMA.
+  * @brief      Работа с АЦП в режиме DMA, ЦАП, PWM сигналом и UART в режиме DMA.
   *  
   * @author     Маленков К.С.
   * @version    1.02
@@ -65,7 +65,7 @@
 	*					
 	*******************************************************************************
   *******************************************************************************
-	*											<h2><center>Используемые контакты</center></h2>
+	*											<h2><center>спользуемые контакты</center></h2>
   *
 	*|		Назначение		|	Номер контакта|					Дополнительная информация				|
 	*|  :-------------: | :-----------: | :------------------------------------:  | 
@@ -115,16 +115,16 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc;																											///< Переменная АЦП
-DMA_HandleTypeDef hdma_adc;																									///< Переменная АЦП в режиме DMA
+ADC_HandleTypeDef hadc;
+DMA_HandleTypeDef hdma_adc;
 
-DAC_HandleTypeDef hdac1;																										///< Переменная ЦАП 
+DAC_HandleTypeDef hdac1;
 
-TIM_HandleTypeDef htim1;																										///< Переменная Счетчика №1
-TIM_HandleTypeDef htim2;																										///< Переменная Счетчика №2
+TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 
-UART_HandleTypeDef huart1;																									///< Переменная для работы с UART1
-DMA_HandleTypeDef hdma_usart1_tx;																						///< Переменная для работы с UART1 в режиме DMA
+UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 char trans_str[63];																													///< Переменная для хранения текса в формате string для отправки по UART
@@ -180,7 +180,7 @@ void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
 /* USER CODE END 0 */
 
 /**
-  * @brief  В этом программе выполняется основное условие задачи
+  * @brief  The application entry point.
   * @retval int
   */
 int main(void)
@@ -220,9 +220,9 @@ int main(void)
 	HAL_ADCEx_Calibration_Start(&hadc);																			// Калибровка АЦП
 	HAL_ADC_Start_DMA(&hadc, (uint32_t*)&ADC_to_memory, 2*SAMPLES_NUMBER);	// АЦП в режиме DMA
 	HAL_TIM_Base_Start(&htim1);																							// Счетчик #1 (Частота 10кГц)
-	HAL_TIM_Base_Start(&htim2);																							// Счетчик #2 (Для ЦАП и ШИМ сигнала с частотой = 100 Гц)
+	HAL_TIM_Base_Start(&htim2);																							// Счетчик #2 (Для ЦАП и PWM сигнала с частотой = 100 Гц)
 	//============================================== TIMER PWM OUTPUT ================================================================/
-	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																// Счетчик #1 канал 1 как выход ШИМ
+	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);																// Счетчик #1 канал 1 как выход PWM
 																							
 	//============================================== DAC SETTINGS ====================================================================/
 	HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);																		// ЦАП канал 1
@@ -263,7 +263,7 @@ int main(void)
 			}
 			j++;																																
 			HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_1, DAC_ALIGN_12B_R, ADC_avg_value);	// Записываем в ЦАП среднее значение за 10мс
-			TIM2->CCR1 = ADC_avg_value*80000/4095;															// Записываем в регистр ШИМ сигнала за 10 мс										
+			TIM2->CCR1 = ADC_avg_value*80000/4095;															// Записываем в регистр PWM сигнала за 10 мс										
 			ADC_avg_value = 0;																									// Обнуляем среднее значение за 10мс.
 		}	
 			
@@ -276,7 +276,7 @@ int main(void)
 }
 
 /**
-  * @brief Настройка параметров работы с частотой
+  * @brief System Clock Configuration
   * @retval None
   */
 void SystemClock_Config(void)
@@ -285,11 +285,11 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  // Initializes the RCC Oscillators according to the specified parameters
-	// in the RCC_OscInitTypeDef structure.
-  //
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI14|RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
   RCC_OscInitStruct.HSI14State = RCC_HSI14_ON;
   RCC_OscInitStruct.HSI14CalibrationValue = 16;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
@@ -297,8 +297,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  // Initializes the CPU, AHB and APB buses clocks
-  //
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
