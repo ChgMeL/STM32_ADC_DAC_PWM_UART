@@ -115,16 +115,16 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc;
-DMA_HandleTypeDef hdma_adc;
+ADC_HandleTypeDef hadc;																											///< Переменная для работы с АЦП
+DMA_HandleTypeDef hdma_adc;																									///< Переменная для работы с АЦП в режиме DMA
 
-DAC_HandleTypeDef hdac1;
+DAC_HandleTypeDef hdac1;																										///< Переменная для работы с ЦАП
 
-TIM_HandleTypeDef htim1;
-TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim1;																										///< Переменная для работы с счетчиком #1																										
+TIM_HandleTypeDef htim2;																										///< Переменная для работы с счетчиком #2							
 
-UART_HandleTypeDef huart1;
-DMA_HandleTypeDef hdma_usart1_tx;
+UART_HandleTypeDef huart1;																									///< Переменная для работы с UART
+DMA_HandleTypeDef hdma_usart1_tx;																						///< Переменная для работы с UART в режиме DMA (в режиме только передача)
 
 /* USER CODE BEGIN PV */
 char trans_str[63];																													///< Переменная для хранения текса в формате string для отправки по UART
@@ -180,15 +180,17 @@ void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
+* @brief  Основная программа:
+*					Получает данные о 100 преобразований с АЦП, вычисляет среднее значение  и выдает каждые 10 мс в ЦАП 
+*					и PWM сигнал, а так же вычисляет среднее значение за 1 c и отправляет данные по UART  порту в режиме DMA
   * @retval int
   */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};										//  массив для хранения усредненный данных за 10 мс.
-	uint32_t ADC_avg_value = 0;																							//  переменная усреденных данных АЦП за 10мс
-	uint32_t ADC_Res_avg_to_UART = 0;																				//  переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART
+	uint32_t ADC_avg_to_UART		[SAMPLES_NUMBER] = {0,};										//  Массив для хранения усредненный данных за 10 мс.
+	uint32_t ADC_avg_value = 0;																							//  Переменная усреденных данных АЦП за 10мс
+	uint32_t ADC_Res_avg_to_UART = 0;																				//  Переменная хранения усредненный данных АЦП за 1 секунду для отправки в UART
 	int j = 0;																															// 	Общий счетчик для усреденных значний за 10 мс
   /* USER CODE END 1 */
 
@@ -276,7 +278,7 @@ int main(void)
 }
 
 /**
-  * @brief System Clock Configuration
+* @brief Функция для настройки генератора частоты , PLL и т.д.
   * @retval None
   */
 void SystemClock_Config(void)
@@ -285,9 +287,6 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI14|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
   RCC_OscInitStruct.HSI14State = RCC_HSI14_ON;
@@ -297,8 +296,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
